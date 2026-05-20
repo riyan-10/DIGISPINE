@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DigiSpine — The Digital Backbone of Your Business</title>
   <meta name="description" content="DigiSpine helps brands grow with data-driven strategies, creative marketing, and powerful digital solutions.">
-  <link rel="icon" type="image/png" sizes="32x32 64x64 128x128 256x256" href="Logos/digi_spine_icon.png">
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="64x64" href="Logos/digi_spine_icon.png">
+  <link rel="shortcut icon" href="Logos/digi_spine_icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="Logos/digi_spine_logo.png">
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -209,11 +212,12 @@
     }
 
     .header-nav.navbar-scrolled {
-      background: var(--ds-navy);
+      background: rgba(10, 61, 112, 0.45);
       padding: 1rem 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255,255,255,0.08);
     }
 
     .nav-container {
@@ -1603,44 +1607,67 @@
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
       const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(60, 1, 0.1, 1000);
+      const FOV = 60;
+      const camera = new THREE.PerspectiveCamera(FOV, 1, 0.1, 1000);
       camera.position.z = 300;
 
-      // Mouse tracking (normalised -1..1)
-      const mouse = { x: 0, y: 0 };
-      heroSection.addEventListener('mousemove', (e) => {
-        const rect = heroSection.getBoundingClientRect();
-        mouse.x = ((e.clientX - rect.left) / rect.width)  * 2 - 1;
-        mouse.y = -((e.clientY - rect.top)  / rect.height) * 2 + 1;
+      // Dynamic world-space bounds derived from camera FOV — recalculated on resize
+      let boundsW = 420, boundsH = 320;
+      function updateBounds() {
+        const halfH = camera.position.z * Math.tan(FOV * Math.PI / 180 / 2);
+        boundsH = halfH * 1.05; // 5% overscan so wrap is invisible
+        boundsW = boundsH * camera.aspect * 1.05;
+      }
+
+      // Mouse in world-space coords (updated via document listener)
+      const mouseWorld = { x: 9999, y: 9999 }; // start far off-screen
+      document.addEventListener('mousemove', (e) => {
+        const rect = canvas.getBoundingClientRect();
+        // Only active while hero section canvas is in the viewport
+        if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+        // Convert screen px → NDC → world-space at z=0 plane
+        const ndcX =  ((e.clientX - rect.left) / rect.width)  * 2 - 1;
+        const ndcY = -((e.clientY - rect.top)  / rect.height) * 2 + 1;
+        const halfH = camera.position.z * Math.tan(FOV * Math.PI / 180 / 2);
+        mouseWorld.x = ndcX * halfH * camera.aspect;
+        mouseWorld.y = ndcY * halfH;
       });
+      // Push mouse off-canvas when it leaves the window
+      document.addEventListener('mouseleave', () => { mouseWorld.x = 9999; mouseWorld.y = 9999; });
 
       // Particle colours
       const colours = [0xF1F1F1, 0xF1F1F1, 0x1E8BC3, 0x155CA2];
 
-      // Build particles
+      // Evenly distribute particles using a grid with random jitter
       const PARTICLE_COUNT = 120;
-      const positions = [];
+      const positions  = [];
       const velocities = [];
       const particleColors = [];
 
+      const cols = Math.ceil(Math.sqrt(PARTICLE_COUNT * (16 / 9)));
+      const rows = Math.ceil(PARTICLE_COUNT / cols);
       for (let i = 0; i < PARTICLE_COUNT; i++) {
+        const col = i % cols;
+        const row = Math.floor(i / cols);
+        // Grid position + jitter up to 50% of cell size
+        const cellW = (boundsW * 2) / cols;
+        const cellH = (boundsH * 2) / rows;
         positions.push({
-          x: (Math.random() - 0.5) * 800,
-          y: (Math.random() - 0.5) * 600,
-          z: (Math.random() - 0.5) * 100
+          x: -boundsW + col * cellW + cellW * 0.5 + (Math.random() - 0.5) * cellW,
+          y: -boundsH + row * cellH + cellH * 0.5 + (Math.random() - 0.5) * cellH,
+          z: (Math.random() - 0.5) * 50
         });
-        velocities.push({
-          x: (Math.random() - 0.5) * 0.3,
-          y: (Math.random() - 0.5) * 0.3
-        });
+        // Random direction, consistent slow speed
+        const angle = Math.random() * Math.PI * 2;
+        const speed = 0.12 + Math.random() * 0.12;
+        velocities.push({ x: Math.cos(angle) * speed, y: Math.sin(angle) * speed });
         particleColors.push(colours[Math.floor(Math.random() * colours.length)]);
       }
 
-      // Point geometry
+      // Build BufferGeometry
       const geometry = new THREE.BufferGeometry();
       const posArr = new Float32Array(PARTICLE_COUNT * 3);
       const colArr = new Float32Array(PARTICLE_COUNT * 3);
-
       for (let i = 0; i < PARTICLE_COUNT; i++) {
         posArr[i * 3]     = positions[i].x;
         posArr[i * 3 + 1] = positions[i].y;
@@ -1650,31 +1677,22 @@
         colArr[i * 3 + 1] = c.g;
         colArr[i * 3 + 2] = c.b;
       }
-
       geometry.setAttribute('position', new THREE.BufferAttribute(posArr, 3));
       geometry.setAttribute('color',    new THREE.BufferAttribute(colArr, 3));
 
       const pointsMat = new THREE.PointsMaterial({
-        size: 2.5,
-        vertexColors: true,
-        transparent: true,
-        opacity: 0.75,
-        sizeAttenuation: true
+        size: 2.5, vertexColors: true, transparent: true, opacity: 0.75, sizeAttenuation: true
       });
-      const pointCloud = new THREE.Points(geometry, pointsMat);
-      scene.add(pointCloud);
+      scene.add(new THREE.Points(geometry, pointsMat));
 
-      // Line geometry (updated every frame)
-      const lineMat = new THREE.LineBasicMaterial({
-        color: 0x1E8BC3,
-        transparent: true,
-        opacity: 0.12
-      });
+      const lineMat = new THREE.LineBasicMaterial({ color: 0x1E8BC3, transparent: true, opacity: 0.15 });
       let lineObj = null;
 
-      const CONNECTION_DIST = 130;
-      const REPEL_DIST   = 120;
-      const REPEL_FORCE  = 1.2;
+      const CONNECTION_DIST_SQ = 120 * 120; // use squared distance to avoid sqrt in inner loop
+      const REPEL_DIST   = 110;
+      const REPEL_FORCE  = 0.6;  // gentler — prevents runaway accumulation
+      const DAMPING      = 0.98; // bleeds off excess speed each frame
+      const MAX_SPEED    = 1.2;  // hard cap
 
       function resize() {
         const w = heroSection.offsetWidth;
@@ -1682,19 +1700,13 @@
         renderer.setSize(w, h);
         camera.aspect = w / h;
         camera.updateProjectionMatrix();
+        updateBounds();
       }
       resize();
       window.addEventListener('resize', resize);
 
       function animate() {
         requestAnimationFrame(animate);
-
-        // Convert mouse from NDC to world-space (approximate, z=0 plane)
-        const halfW = heroSection.offsetWidth  / 2;
-        const halfH = heroSection.offsetHeight / 2;
-        const mx = mouse.x * halfW * (camera.position.z / 300);
-        const my = mouse.y * halfH * (camera.position.z / 300);
-
         const posAttr = geometry.attributes.position;
 
         for (let i = 0; i < PARTICLE_COUNT; i++) {
@@ -1702,45 +1714,56 @@
           positions[i].x += velocities[i].x;
           positions[i].y += velocities[i].y;
 
-          // Mouse repulsion
-          const dx = positions[i].x - mx;
-          const dy = positions[i].y - my;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < REPEL_DIST && dist > 0.01) {
-            const force = (REPEL_DIST - dist) / REPEL_DIST * REPEL_FORCE;
-            positions[i].x += (dx / dist) * force;
-            positions[i].y += (dy / dist) * force;
+          // Mouse repulsion in correct world-space
+          const dx = positions[i].x - mouseWorld.x;
+          const dy = positions[i].y - mouseWorld.y;
+          const distSq = dx * dx + dy * dy;
+          if (distSq < REPEL_DIST * REPEL_DIST && distSq > 0.0001) {
+            const dist  = Math.sqrt(distSq);
+            const force = ((REPEL_DIST - dist) / REPEL_DIST) * REPEL_FORCE;
+            velocities[i].x += (dx / dist) * force;
+            velocities[i].y += (dy / dist) * force;
           }
 
-          // Wrap edges
-          if (positions[i].x >  420) positions[i].x = -420;
-          if (positions[i].x < -420) positions[i].x =  420;
-          if (positions[i].y >  320) positions[i].y = -320;
-          if (positions[i].y < -320) positions[i].y =  320;
+          // Velocity damping — prevents particles from perpetually accelerating
+          velocities[i].x *= DAMPING;
+          velocities[i].y *= DAMPING;
+
+          // Hard speed cap — avoids pile-ups at edges after repulsion bursts
+          const spd = Math.sqrt(velocities[i].x ** 2 + velocities[i].y ** 2);
+          if (spd > MAX_SPEED) {
+            velocities[i].x = (velocities[i].x / spd) * MAX_SPEED;
+            velocities[i].y = (velocities[i].y / spd) * MAX_SPEED;
+          }
+
+          // Seamless toroidal wrap using dynamic bounds
+          if (positions[i].x >  boundsW) positions[i].x -= boundsW * 2;
+          if (positions[i].x < -boundsW) positions[i].x += boundsW * 2;
+          if (positions[i].y >  boundsH) positions[i].y -= boundsH * 2;
+          if (positions[i].y < -boundsH) positions[i].y += boundsH * 2;
 
           posAttr.setXYZ(i, positions[i].x, positions[i].y, positions[i].z);
         }
         posAttr.needsUpdate = true;
 
-        // Re-build connection lines
+        // Connection lines — use squared distance check for performance
         if (lineObj) { scene.remove(lineObj); lineObj.geometry.dispose(); }
         const linePoints = [];
         for (let a = 0; a < PARTICLE_COUNT; a++) {
           for (let b = a + 1; b < PARTICLE_COUNT; b++) {
             const ddx = positions[a].x - positions[b].x;
             const ddy = positions[a].y - positions[b].y;
-            if (Math.sqrt(ddx*ddx + ddy*ddy) < CONNECTION_DIST) {
+            if (ddx * ddx + ddy * ddy < CONNECTION_DIST_SQ) {
               linePoints.push(new THREE.Vector3(positions[a].x, positions[a].y, positions[a].z));
               linePoints.push(new THREE.Vector3(positions[b].x, positions[b].y, positions[b].z));
             }
           }
         }
         if (linePoints.length > 0) {
-          const lineGeo = new THREE.BufferGeometry().setFromPoints(linePoints);
-          lineObj = new THREE.LineSegments(lineGeo, lineMat);
+          const lg = new THREE.BufferGeometry().setFromPoints(linePoints);
+          lineObj = new THREE.LineSegments(lg, lineMat);
           scene.add(lineObj);
         }
-
         renderer.render(scene, camera);
       }
       animate();
