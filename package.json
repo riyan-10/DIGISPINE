@@ -1,0 +1,14 @@
+{
+  "name": "digispine-website",
+  "version": "0.1.0",
+  "private": true,
+  "description": "DigiSpine four-page website concept",
+  "type": "module",
+  "scripts": {
+    "render": "node scripts/render.mjs",
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node --check assets/app.js && node --check assets/cinema.js && node --check assets/spine-renderer.js && node scripts/check.mjs && node scripts/check-cinema.mjs"
+  },
+  "engines": { "node": ">=20" }
+}
