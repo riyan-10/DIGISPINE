@@ -5,8 +5,8 @@
 - [x] Diagnose successful `dist/` build versus Vercel's configured `public` expectation.
 - [x] Add version-controlled Vercel output/build settings and pin Node 24.x.
 - [x] Validate configuration, source checks and a fresh isolated static build (four pages and required modules in `dist/`).
-- [ ] Push correction to `main`, which the user confirmed triggers Vercel automatically.
-- [ ] Check Vercel's GitHub deployment status and record the result.
+- [x] Push correction to `main`, which the user confirmed triggers Vercel automatically (commit `2d01610`).
+- [x] Check Vercel's GitHub deployment status and record the result: **success**.
 
 ## GitHub checkpoint — 23 October 2026
 

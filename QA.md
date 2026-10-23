@@ -5,7 +5,7 @@
 - Supplied deployment log shows `npm run build` succeeded, then `STATIC_BUILD_NO_OUT_DIR` because Vercel expected `public` while the build writes `dist`.
 - Added explicit `vercel.json` static framework/build/output settings and pinned the supported Node 24.x major.
 - `npm run check` and `npm run build` passed. An isolated temporary checkout containing only source scripts, assets and config built from scratch; configured `dist/` contains all four pages and required JS modules, with project notes excluded from public output.
-- Remote push and Vercel result are checked after these local validations. Do not infer hosted deployment success from local build success.
+- Verified guarded push of fix commit `2d016109a46cd1ffcde69b0d69dd4e600149256f` and GitHub's Vercel **success** status. Local checkout synchronized cleanly. Hosted result: https://vercel.com/riyan-10s-projects/digispine/7ojCBqGH9j3nPfaBUL3LD5nkop7H.
 
 ## Revision 2 — cinematic homepage (current)
 

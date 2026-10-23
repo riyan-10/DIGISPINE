@@ -36,7 +36,9 @@ Started 23 October 2026 (Asia/Kolkata). This is the user's first freelance proje
 
 The user clarified that GitHub pushes already trigger the existing Vercel production deployment. The earlier push-only/deployment-separate assumption was incorrect for this repository. Treat subsequent `main` pushes as deployments. User supplied a failure log for commit `90f3abf`: `npm run build` successfully created `dist/`, but Vercel expected `public` and failed with `STATIC_BUILD_NO_OUT_DIR`. The Node engine and npm `cache-dir` messages were warnings, not the failing step.
 
-Added root `vercel.json` declaring `framework: null`, build command `npm run build` and `outputDirectory: dist`, following Vercel's official file-based configuration. Pinned `engines.node` to supported `24.x` (also the locally tested major) to remove the open-ended major-upgrade warning. No npm config was changed because the reported cache warning comes from the build environment and did not cause failure. Fix validation and push/redeployment are in progress. No website design or content changes are included.
+Added root `vercel.json` declaring `framework: null`, build command `npm run build` and `outputDirectory: dist`, following Vercel's official file-based configuration. Pinned `engines.node` to supported `24.x` (also the locally tested major) to remove the open-ended major-upgrade warning. No npm config was changed because the reported cache warning comes from the build environment and did not cause failure. No website design or content changes are included.
+
+Verified: source checks, normal build and a fresh isolated build all passed. Fix commit `2d016109a46cd1ffcde69b0d69dd4e600149256f` was pushed to `main` without force. GitHub's Vercel status reports **success**, linked to https://vercel.com/riyan-10s-projects/digispine/7ojCBqGH9j3nPfaBUL3LD5nkop7H. Local Git metadata was synchronized and the checkout was clean. This follow-up records the verified deployment; the website design/content still needs the previously listed client inputs and wider device QA.
 
 ### GitHub source checkpoint — 23 October 2026
 

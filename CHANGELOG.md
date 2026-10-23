@@ -5,7 +5,8 @@
 - User clarified that `main` already auto-deploys to Vercel and supplied `STATIC_BUILD_NO_OUT_DIR` logs.
 - Confirmed build completed successfully in `dist/` while Vercel expected `public`; the Node/npm messages are warnings.
 - Added `vercel.json` with static framework, explicit build command and `dist` output. Pinned Node to supported/tested 24.x. Updated README and the project record with the existing deployment relationship.
-- Local verification and guarded GitHub push/redeployment are in progress; deployment success is not yet claimed.
+- Local source checks and both normal/isolated builds passed. Pushed guarded fix commit `2d016109a46cd1ffcde69b0d69dd4e600149256f` to `main` and synchronized the local checkout.
+- Verified GitHub's Vercel status is **success** for the fix. Deployment: https://vercel.com/riyan-10s-projects/digispine/7ojCBqGH9j3nPfaBUL3LD5nkop7H.
 
 ## 23 October 2026 — source pushed successfully
 
