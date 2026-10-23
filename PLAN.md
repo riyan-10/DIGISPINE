@@ -4,8 +4,8 @@
 
 - [x] User explicitly authorized pushing the current project to the existing repository.
 - [x] Verify connected account has write access and rerun source checks/build.
-- [ ] Commit/push website, project records and preserved original to `main`.
-- [ ] Verify remote commit and synchronize the local checkout.
+- [x] Commit/push website, project records and preserved original to `main` (source commit `1518543`).
+- [x] Confirm GitHub accepted the guarded branch update and record the successful source checkpoint.
 
 ## Revision 2 — cinematic direction (current)
 

@@ -32,6 +32,12 @@ Started 23 October 2026 (Asia/Kolkata). This is the user's first freelance proje
 
 ## Current state
 
+### GitHub source checkpoint — 23 October 2026
+
+The user explicitly requested a push. The website, shared logo geometry, four pages, project records, original-page archive and historical preview screenshots were committed to `riyan-10/DIGISPINE` and `main` was advanced successfully through the connected GitHub account. Source commit: `15185433f608b36019d1b4d4da8ded0380995db1`. The update used the previous head as an expected SHA and did not force-push. This follow-up records the successful source checkpoint; Git history identifies the final documentation commit. Source checks and build passed. `dist/` stays ignored. Comprehensive device QA and client content remain pending. This is a GitHub source update, not a new hosting deployment.
+
+Earlier references below to uncommitted/local-only work describe prior stages and are superseded by this checkpoint.
+
 ### Revision requested after review
 
 Latest user feedback: the new sequence **is visible**. The internal cut in the approximated logo was wrong; the user requested the actual DigiSpine D assembling instead of a spine, with a very smooth handoff into the full wordmark.
