@@ -10,5 +10,5 @@
     "build": "node scripts/build.mjs",
     "check": "node --check assets/app.js && node --check assets/cinema.js && node --check assets/spine-renderer.js && node scripts/check.mjs && node scripts/check-cinema.mjs"
   },
-  "engines": { "node": ">=20" }
+  "engines": { "node": "24.x" }
 }

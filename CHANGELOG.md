@@ -1,5 +1,12 @@
 # Work log
 
+## 23 October 2026 — Vercel deployment configuration fix
+
+- User clarified that `main` already auto-deploys to Vercel and supplied `STATIC_BUILD_NO_OUT_DIR` logs.
+- Confirmed build completed successfully in `dist/` while Vercel expected `public`; the Node/npm messages are warnings.
+- Added `vercel.json` with static framework, explicit build command and `dist` output. Pinned Node to supported/tested 24.x. Updated README and the project record with the existing deployment relationship.
+- Local verification and guarded GitHub push/redeployment are in progress; deployment success is not yet claimed.
+
 ## 23 October 2026 — source pushed successfully
 
 - Created source commit `15185433f608b36019d1b4d4da8ded0380995db1` containing the cinematic website, corrected D geometry, four pages, project documentation, original-page archive and historical preview evidence.

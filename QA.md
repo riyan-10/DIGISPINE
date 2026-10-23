@@ -1,5 +1,12 @@
 # Verification record — 23 October 2026
 
+## Vercel configuration fix
+
+- Supplied deployment log shows `npm run build` succeeded, then `STATIC_BUILD_NO_OUT_DIR` because Vercel expected `public` while the build writes `dist`.
+- Added explicit `vercel.json` static framework/build/output settings and pinned the supported Node 24.x major.
+- `npm run check` and `npm run build` passed. An isolated temporary checkout containing only source scripts, assets and config built from scratch; configured `dist/` contains all four pages and required JS modules, with project notes excluded from public output.
+- Remote push and Vercel result are checked after these local validations. Do not infer hosted deployment success from local build success.
+
 ## Revision 2 — cinematic homepage (current)
 
 ### Corrected D follow-up

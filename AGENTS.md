@@ -7,3 +7,4 @@
 - Preserve the supplied brand assets in `Logos/` and the original page in `archive/original-index.html`.
 - Check keyboard access, mobile layouts, reduced motion, and all four pages when changing shared navigation or interaction code.
 - Do not publish publicly, push to GitHub, or connect live enquiry services unless requested.
+- The existing Vercel project auto-deploys pushes to `main`. Treat a `main` push as a deployment. Keep `vercel.json` output directory aligned with the static build (`dist/`).

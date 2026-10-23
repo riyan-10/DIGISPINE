@@ -4,7 +4,7 @@ A four-page local design concept for the DigiSpine freelance project. Revision 2
 
 ## Run
 
-Requires Node.js 20 or later. No dependency installation is required.
+Requires Node.js 24.x. No dependency installation is required.
 
 ```sh
 npm run dev
@@ -38,6 +38,8 @@ npm run build   # regenerate pages and copy public files to dist/
 Read `PROJECT_NOTES.md` for context and decisions, `PLAN.md` for tasks, `CHANGELOG.md` for session history, and `QA.md` for verification. `AGENTS.md` tells future coding sessions to maintain these records.
 
 ## Before launch
+
+The existing Vercel project auto-deploys `main`. `vercel.json` declares a static site, runs `npm run build`, and publishes `dist/`. The output directory is tracked in configuration so a dashboard default such as `public` cannot conflict with the build. Node is pinned to the supported 24.x major.
 
 Content and service offerings are provisional. The Contact page prepares a local text brief; it does **not** send enquiries or store personal data. The prototype has `noindex,nofollow` metadata. Connect real enquiry delivery, approve business content and contact details, add appropriate legal/social metadata, then revisit indexing before launch. No CMS, analytics, live backend, external fonts or third-party animation libraries are included.
 

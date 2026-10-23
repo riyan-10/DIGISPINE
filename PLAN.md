@@ -1,5 +1,13 @@
 # DigiSpine implementation plan
 
+## Vercel output-directory fix — 23 October 2026
+
+- [x] Diagnose successful `dist/` build versus Vercel's configured `public` expectation.
+- [x] Add version-controlled Vercel output/build settings and pin Node 24.x.
+- [x] Validate configuration, source checks and a fresh isolated static build (four pages and required modules in `dist/`).
+- [ ] Push correction to `main`, which the user confirmed triggers Vercel automatically.
+- [ ] Check Vercel's GitHub deployment status and record the result.
+
 ## GitHub checkpoint — 23 October 2026
 
 - [x] User explicitly authorized pushing the current project to the existing repository.

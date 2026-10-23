@@ -32,6 +32,12 @@ Started 23 October 2026 (Asia/Kolkata). This is the user's first freelance proje
 
 ## Current state
 
+### Vercel deployment correction — 23 October 2026
+
+The user clarified that GitHub pushes already trigger the existing Vercel production deployment. The earlier push-only/deployment-separate assumption was incorrect for this repository. Treat subsequent `main` pushes as deployments. User supplied a failure log for commit `90f3abf`: `npm run build` successfully created `dist/`, but Vercel expected `public` and failed with `STATIC_BUILD_NO_OUT_DIR`. The Node engine and npm `cache-dir` messages were warnings, not the failing step.
+
+Added root `vercel.json` declaring `framework: null`, build command `npm run build` and `outputDirectory: dist`, following Vercel's official file-based configuration. Pinned `engines.node` to supported `24.x` (also the locally tested major) to remove the open-ended major-upgrade warning. No npm config was changed because the reported cache warning comes from the build environment and did not cause failure. Fix validation and push/redeployment are in progress. No website design or content changes are included.
+
 ### GitHub source checkpoint — 23 October 2026
 
 The user explicitly requested a push. The website, shared logo geometry, four pages, project records, original-page archive and historical preview screenshots were committed to `riyan-10/DIGISPINE` and `main` was advanced successfully through the connected GitHub account. Source commit: `15185433f608b36019d1b4d4da8ded0380995db1`. The update used the previous head as an expected SHA and did not force-push. This follow-up records the successful source checkpoint; Git history identifies the final documentation commit. Source checks and build passed. `dist/` stays ignored. Comprehensive device QA and client content remain pending. This is a GitHub source update, not a new hosting deployment.
