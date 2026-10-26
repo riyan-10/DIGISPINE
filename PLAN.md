@@ -8,7 +8,7 @@
 - [x] Add real WhatsApp/email/call routes and a reviewed audit-request handoff; preserve downloadable brief support.
 - [x] Preserve approved D choreography, blue branding, four pages and original files; keep unapproved client proof/sample metrics out.
 - [x] Run build, source/link/content checks and audit handoff checks; record browser verification limitations honestly.
-- [ ] Push source/docs, confirm Vercel status and synchronize local Git state.
+- [x] Push source/docs, confirm Vercel status and synchronize local Git state (source `44d6c4d`, Vercel **success**).
 
 ## Client content intake — 23 October 2026
 
@@ -87,7 +87,8 @@ The user rejected the restrained first sample: movement felt limited and the box
 
 ## Phase 4 — after client input
 - [ ] Review/approve concept and provisional service list.
-- [ ] Replace draft copy and add approved real portfolio content.
+- [x] Replace draft copy with client portfolio text (26 October 2026).
+- [ ] Add approved real project imagery and case-study results when supplied.
 - [ ] Confirm dynamic/CMS scope and implement only agreed features.
 - [ ] Connect and test real enquiry delivery and spam protection.
 - [ ] Confirm domain, hosting, legal content, metadata and social preview.

@@ -9,7 +9,8 @@
 - Added supplied WhatsApp/email/call destinations. Audit form prepares a request for review, then provides visitor-initiated WhatsApp/email handoff; copy/download remain. Business name is required; other details are optional. Input changes clear old send links. Website protocols and whitespace are validated. No messages were sent during tests; no automatic scoring/backend/storage was added.
 - Ignored raw client PDFs in Git; adapted content and project records are included in source, while internal notes/PDFs are excluded from the static public build.
 - Passed syntax/link checks (83 local references), content consistency and Unicode encoding checks, DOM-fixture event-handler tests, existing geometry/alignment checks and a clean isolated Vercel-configured build. Browser access remains blocked from prior attempts; no new browser/device verification is claimed.
-- Source push and deployment verification are the next step after these checks.
+- Pushed guarded source commit `44d6c4d83063b5d6b2febab2ab89b62adda2bbd5` to `main`; GitHub's Vercel status returned **success**. Deployment reference: https://vercel.com/riyan-10s-projects/digispine/9Soo8bBSmrxz9eihtN9KAqTX367G.
+- Synchronized local Git metadata and confirmed a clean checkout. Original PDFs remain local/ignored. This follow-up records the deployed source and verification limits.
 
 ## 23 October 2026 — client portfolio content assessment
 

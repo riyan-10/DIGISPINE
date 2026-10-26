@@ -8,7 +8,7 @@
 - All four pages load shared app JS as a module and load portfolio CSS; audit fields have explicit labels. Direct contact links and the disabled default submit button provide the no-JS path without fallback GET submission.
 - Normal and fresh isolated builds passed. Public `dist/` contains all pages and required new CSS/modules; raw client PDFs and project notes are absent. Source PDFs are Git-ignored.
 - Blue styling, traced D shape and cinematic JS/renderer were preserved. Current screenshots, desktop/mobile layout, real touch, OS reduced motion and native app handoff remain pending: previously blocked browser access was not bypassed. Prior screenshots are historical evidence only.
-- GitHub push and the existing Vercel auto-deployment are verified after the above source/build checks.
+- Verified source commit `44d6c4d83063b5d6b2febab2ab89b62adda2bbd5` on `main` and Vercel **success** status: https://vercel.com/riyan-10s-projects/digispine/9Soo8bBSmrxz9eihtN9KAqTX367G. Local checkout synchronized cleanly; hosted success does not replace the pending visual/device checks.
 
 ## Vercel configuration fix
 

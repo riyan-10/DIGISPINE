@@ -42,7 +42,9 @@ Contact now creates a reviewed audit request, with optional website/name/reply e
 
 The concise portfolio supplies the six services/CTA; the long version supplies methods, package depth and market context. Source mapping remains in `docs/CONTENT_REVIEW.md`. No fabricated instant score, measured results, global-client claims, experience counter or popularity badge. Client names/logos and case-study visuals remain pending confirmation. Noindex remains during review. Raw source PDFs stay local and are ignored by Git; neither PDFs nor project notes enter `dist/`.
 
-Verification: syntax, 83 local link/asset references, content/contact consistency, Unicode-safe handoff links, a DOM-fixture simulation of the actual form handlers, existing D geometry/alignment checks, and both normal/fresh isolated builds passed. No external messages were sent by testing. Browser access was previously rejected; it was not bypassed. Current visual/device/native-form/external-app checks remain pending; simulation and old screenshots are not browser evidence. Source push and Vercel status check follow these passed validations.
+Verification: syntax, 83 local link/asset references, content/contact consistency, Unicode-safe handoff links, a DOM-fixture simulation of the actual form handlers, existing D geometry/alignment checks, and both normal/fresh isolated builds passed. No external messages were sent by testing. Browser access was previously rejected; it was not bypassed. Current visual/device/native-form/external-app checks remain pending; simulation and old screenshots are not browser evidence.
+
+Pushed source commit `44d6c4d83063b5d6b2febab2ab89b62adda2bbd5` to `main` with an expected-SHA guard and no force. Verified GitHub's Vercel status is **success**, with deployment reference https://vercel.com/riyan-10s-projects/digispine/9Soo8bBSmrxz9eihtN9KAqTX367G. Synchronized local Git metadata without changing working files; checkout was clean and PDFs remained local/ignored. This documentation follow-up records the verified result; final client approval, device QA and project evidence remain pending.
 
 ### Client portfolios received — 23 October 2026
 
