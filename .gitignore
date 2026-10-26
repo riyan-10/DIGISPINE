@@ -2,3 +2,6 @@ dist/
 .DS_Store
 node_modules/
 *.log
+
+# Client-provided source documents; website uses adapted content, not downloads.
+Digispine-Portfolio*.pdf

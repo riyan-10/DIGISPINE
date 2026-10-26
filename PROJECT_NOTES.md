@@ -32,6 +32,26 @@ Started 23 October 2026 (Asia/Kolkata). This is the user's first freelance proje
 
 ## Current state
 
+### Portfolio implementation authorized — 26 October 2026
+
+After clarifying that the portfolio intake had only been reviewed locally, the user authorized proceeding. Current scope: adapt all four pages from the supplied PDFs, retain the approved blue cinematic D sequence, use six consistent service categories, add the methodology/framework/packages/industry positioning, and replace the prototype-only contact journey with real visitor-initiated WhatsApp/email audit requests. Then push the website and notes to GitHub and verify the existing Vercel deployment.
+
+Implemented: shared service data now drives six Home chapters, six Services sections and six audit-interest options. Home copy uses the discovered/trusted/chosen positioning; the approved D geometry, scroll choreography and blue theme are unchanged. Added five growth layers, Foundation/Growth/Scale engagement plans, eight industry categories, the S.P.I.N.E. method, sourced Kerala/India/UAE context, reporting approach and audit/call/roadmap/delivery process across the four pages. Header/footer CTAs consistently lead to the free growth audit, with the supplied phone/email/WhatsApp destinations.
+
+Contact now creates a reviewed audit request, with optional website/name/reply email/goals and a required business name. It generates correctly encoded WhatsApp and email links; visitors complete sending in their own app. Direct channels also work without JS. Copy/download support remains. Editing any field invalidates the prior request and removes stale send links. Whitespace-only business names/goals and non-HTTP website schemes are rejected. No automatic enquiry delivery, server storage or scoring engine was added.
+
+The concise portfolio supplies the six services/CTA; the long version supplies methods, package depth and market context. Source mapping remains in `docs/CONTENT_REVIEW.md`. No fabricated instant score, measured results, global-client claims, experience counter or popularity badge. Client names/logos and case-study visuals remain pending confirmation. Noindex remains during review. Raw source PDFs stay local and are ignored by Git; neither PDFs nor project notes enter `dist/`.
+
+Verification: syntax, 83 local link/asset references, content/contact consistency, Unicode-safe handoff links, a DOM-fixture simulation of the actual form handlers, existing D geometry/alignment checks, and both normal/fresh isolated builds passed. No external messages were sent by testing. Browser access was previously rejected; it was not bypassed. Current visual/device/native-form/external-app checks remain pending; simulation and old screenshots are not browser evidence. Source push and Vercel status check follow these passed validations.
+
+### Client portfolios received — 23 October 2026
+
+The client supplied `Digispine-Portfolio (3).pdf` (7 pages) and `Digispine-Portfolio.pdf` (15 pages) as content sources; the user asked whether they are useful. Both were read in full and all 22 pages were visually reviewed. Detailed content/page mapping, source-page references, claim checks and missing inputs are saved in `docs/CONTENT_REVIEW.md`.
+
+They provide a substantial starting point: specific growth-system positioning, six outward-facing services, five growth layers, S.P.I.N.E. methodology, audit offer, three packages, industry focus, client-name list, engagement process, Kerala/UAE context, and phone/email. Recommendation: use the short source for Home/CTAs and the expanded one for Services/About while preserving the approved D animation. Missing material is primarily actual project work/assets/results, client-display permission, team detail and confirmation of current package/offer/contact particulars. Audit scores are samples; five-year experience, popularity and geography claims need correct attribution. Both PDFs use purple/cyan, unlike the approved blue brand direction; do not recolour automatically.
+
+This was a content review only. Website files were not changed and nothing was pushed/deployed. Client PDFs remain unchanged. The existing GitHub/Vercel deployment behaviour is unaffected.
+
 ### Vercel deployment correction — 23 October 2026
 
 The user clarified that GitHub pushes already trigger the existing Vercel production deployment. The earlier push-only/deployment-separate assumption was incorrect for this repository. Treat subsequent `main` pushes as deployments. User supplied a failure log for commit `90f3abf`: `npm run build` successfully created `dist/`, but Vercel expected `public` and failed with `STATIC_BUILD_NO_OUT_DIR`. The Node engine and npm `cache-dir` messages were warnings, not the failing step.

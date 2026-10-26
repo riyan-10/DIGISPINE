@@ -1,5 +1,15 @@
 # Verification record — 23 October 2026
 
+## Portfolio integration — 26 October 2026
+
+- `npm run check` passed: module syntax, four-page structure/83 local references, existing D mesh/hole/projection checks, shared six-service consistency, five method stages, three plans and supplied contact routes.
+- Audit-message checks round-trip ampersands, fragments, newlines, accented text and Malayalam through WhatsApp/email query encoding without injecting additional query parameters. Destinations match the PDF-provided phone/email. No external links were opened and no messages were sent by these tests.
+- Actual `assets/app.js` handlers ran in a minimal DOM fixture: required business name, reviewed result/focus, exact send links, stale-link removal on input/change, forbidden website protocol, whitespace-only values and optional website/goals passed. This is a code-level interaction simulation, not browser-native form or external app verification.
+- All four pages load shared app JS as a module and load portfolio CSS; audit fields have explicit labels. Direct contact links and the disabled default submit button provide the no-JS path without fallback GET submission.
+- Normal and fresh isolated builds passed. Public `dist/` contains all pages and required new CSS/modules; raw client PDFs and project notes are absent. Source PDFs are Git-ignored.
+- Blue styling, traced D shape and cinematic JS/renderer were preserved. Current screenshots, desktop/mobile layout, real touch, OS reduced motion and native app handoff remain pending: previously blocked browser access was not bypassed. Prior screenshots are historical evidence only.
+- GitHub push and the existing Vercel auto-deployment are verified after the above source/build checks.
+
 ## Vercel configuration fix
 
 - Supplied deployment log shows `npm run build` succeeded, then `STATIC_BUILD_NO_OUT_DIR` because Vercel expected `public` while the build writes `dist`.

@@ -1,5 +1,23 @@
 # Work log
 
+## 26 October 2026 — portfolio copy and audit journey
+
+- User authorized applying the previously reviewed content and pushing to the existing GitHub/Vercel flow.
+- Replaced provisional copy across Home, Services, About and Contact with client-sourced positioning and service detail. Shared catalogue keeps six services consistent across chapters, detailed sections and interest options.
+- Added five growth layers, Foundation/Growth/Scale plans, eight industry categories, S.P.I.N.E. methodology, engagement steps, reporting narrative and sourced Kerala/India/UAE context.
+- Preserved approved D geometry/wordmark choreography and blue visual direction. Added responsive content sections and two service artworks. No client logos, numeric results, sample scores, experience counter or popularity claim were invented/published.
+- Added supplied WhatsApp/email/call destinations. Audit form prepares a request for review, then provides visitor-initiated WhatsApp/email handoff; copy/download remain. Business name is required; other details are optional. Input changes clear old send links. Website protocols and whitespace are validated. No messages were sent during tests; no automatic scoring/backend/storage was added.
+- Ignored raw client PDFs in Git; adapted content and project records are included in source, while internal notes/PDFs are excluded from the static public build.
+- Passed syntax/link checks (83 local references), content consistency and Unicode encoding checks, DOM-fixture event-handler tests, existing geometry/alignment checks and a clean isolated Vercel-configured build. Browser access remains blocked from prior attempts; no new browser/device verification is claimed.
+- Source push and deployment verification are the next step after these checks.
+
+## 23 October 2026 — client portfolio content assessment
+
+- Reviewed the client's 7-page short portfolio and 15-page expanded portfolio: full text extraction and visual inspection of all 22 pages.
+- Created `docs/CONTENT_REVIEW.md` with exact source pages, four-page content mapping, six service categories, S.P.I.N.E. method, audit offer, package/engagement details and contact information.
+- Identified missing project visuals/measured results and confirmation needs: client attribution/permissions, experience, package inclusions, geography, audit scoring and purple-versus-blue branding. Sample scores are not real results.
+- Recommended using both sources now as a copy base while requesting targeted missing evidence. No website edits, client messages, push or deployment were performed.
+
 ## 23 October 2026 — Vercel deployment configuration fix
 
 - User clarified that `main` already auto-deploys to Vercel and supplied `STATIC_BUILD_NO_OUT_DIR` logs.

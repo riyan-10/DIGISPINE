@@ -1,3 +1,5 @@
+import { buildAuditRequest, buildAuditLinks } from './audit-request.js';
+
 const motion = matchMedia('(prefers-reduced-motion: reduce)');
 const menuButton = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('.navigation');
@@ -46,57 +48,80 @@ if (form) {
   const result = document.querySelector('#brief-result');
   const output = document.querySelector('#brief-output');
   const status = document.querySelector('#brief-status');
-  let brief = '';
+  const whatsapp = document.querySelector('[data-send-whatsapp]');
+  const email = document.querySelector('[data-send-email]');
   const goals = form.elements.namedItem('message');
-  const validateGoals = () => goals.setCustomValidity(goals.value.trim().length < 20 ? 'Please describe your goals in at least 20 characters.' : '');
-  goals.addEventListener('input', validateGoals);
+  const company = form.elements.namedItem('company');
+  const website = form.elements.namedItem('website');
+  let request = '';
+
+  function validateFields() {
+    company.setCustomValidity(company.value.trim() ? '' : 'Please enter your business name.');
+    goals.setCustomValidity(goals.value.length > 0 && goals.value.trim().length < 20 ? 'Please describe your goal in at least 20 characters, or leave this optional field empty.' : '');
+    let websiteError = '';
+    if (website.value.trim()) {
+      try {
+        const address = new URL(website.value.trim());
+        if (!['https:', 'http:'].includes(address.protocol)) websiteError = 'Please use a website or social profile starting with https:// or http://.';
+      } catch {
+        websiteError = 'Please include a complete address, such as https://yourbrand.com.';
+      }
+    }
+    website.setCustomValidity(websiteError);
+  }
+
+  function invalidateRequest() {
+    validateFields();
+    if (result.hidden) return;
+    result.hidden = true;
+    request = '';
+    for (const link of [whatsapp, email]) {
+      link.removeAttribute('href');
+      link.setAttribute('aria-disabled', 'true');
+    }
+    status.textContent = 'Details changed. Prepare your request again to include the updates.';
+  }
+  form.addEventListener('input', invalidateRequest);
+  form.addEventListener('change', invalidateRequest);
   form.addEventListener('submit', event => {
     event.preventDefault();
-    validateGoals();
+    validateFields();
     if (!form.reportValidity()) return;
     const data = new FormData(form);
-    const services = data.getAll('service');
-    brief = [
-      'DIGISPINE — PROJECT BRIEF',
-      `Prepared: ${new Date().toLocaleDateString('en-IN', { timeZone: 'Asia/Kolkata' })}`,
-      '', `Name: ${String(data.get('name')).trim()}`, `Email: ${String(data.get('email')).trim()}`,
-      `Brand / business: ${String(data.get('company')).trim() || 'Not specified'}`,
-      `Interested in: ${services.length ? services.join(', ') : 'Help choosing a direction'}`,
-      `Timeline: ${data.get('timeline')}`, '', 'PROJECT GOALS', String(data.get('message')).trim(),
-      '', 'Prepared locally. This brief has not been sent to DigiSpine.'
-    ].join('\n');
-    output.textContent = brief;
+    request = buildAuditRequest({
+      company: data.get('company'), website: data.get('website'), name: data.get('name'),
+      email: data.get('email'), services: data.getAll('service'), timeline: data.get('timeline'), message: data.get('message')
+    });
+    const links = buildAuditLinks(request);
+    whatsapp.href = links.whatsapp;
+    email.href = links.email;
+    for (const link of [whatsapp, email]) link.removeAttribute('aria-disabled');
+    output.textContent = request;
     result.hidden = false;
     result.focus();
-    status.textContent = 'Your brief is ready. Download or copy it to share. Nothing has been sent.';
-  });
-  form.addEventListener('input', () => {
-    if (!result.hidden) {
-      result.hidden = true;
-      brief = '';
-      status.textContent = 'Details changed. Prepare your brief again to include your updates.';
-    }
+    status.textContent = 'Your request is ready to review. Open WhatsApp or email to send it. Nothing has been sent yet.';
   });
   document.querySelector('[data-download-brief]').addEventListener('click', () => {
-    if (!brief) return;
-    const url = URL.createObjectURL(new Blob([brief], { type: 'text/plain;charset=utf-8' }));
+    if (!request) return;
+    const url = URL.createObjectURL(new Blob([request], { type: 'text/plain;charset=utf-8' }));
     const link = document.createElement('a');
     link.href = url;
-    link.download = 'digispine-project-brief.txt';
+    link.download = 'digispine-audit-request.txt';
     document.body.append(link);
     link.click();
     link.remove();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
-    status.textContent = 'Brief downloaded. Share the file with your DigiSpine contact.';
+    status.textContent = 'Request downloaded. You can share it with the DigiSpine team.';
   });
   document.querySelector('[data-copy-brief]').addEventListener('click', async () => {
+    if (!request) return;
     try {
-      await navigator.clipboard.writeText(brief);
-      status.textContent = 'Brief copied. You can paste it into a message to your DigiSpine contact.';
+      await navigator.clipboard.writeText(request);
+      status.textContent = 'Request copied. Paste it into a message to DigiSpine when you are ready.';
     } catch {
-      status.textContent = 'Clipboard access is unavailable. Download the brief, or select and copy the text below.';
+      status.textContent = 'Clipboard access is unavailable. Download the request, or select and copy the text above.';
     }
   });
-  // The disabled default submit button also blocks accidental GET submission if JS is unavailable.
+  // A disabled default submit button prevents accidental GET submission without JS.
   form.querySelector('[type="submit"]').disabled = false;
 }

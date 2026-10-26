@@ -22,13 +22,17 @@ npm run build   # regenerate pages and copy public files to dist/
 
 - `scripts/render.mjs`: page content and shared HTML templates; edit here, then render.
 - `scripts/home.mjs`: cinematic homepage content and structure.
+- `scripts/content.mjs`: shared service catalogue and client-sourced methods, layers, packages and process.
+- `scripts/pages.mjs`, `scripts/sections.mjs`: sourced interior pages and reusable content sections.
 - `assets/styles.css`: shared responsive design and interior-page styling.
+- `assets/portfolio.css`: responsive layouts for the six services, methods, packages and audit enquiry.
 - `assets/cinema.css`: full-screen brand sequence and responsive chapter layouts.
 - `assets/cinema.js`: native-scroll timeline, typography, motion preferences and chapter choreography.
 - `assets/brand-shape.js`: logo contours traced from the supplied favicon, including the actual inner cut.
 - `assets/logo-geometry.js`: closed, beveled logo fragments preserving the cutout.
 - `assets/spine-renderer.js`: local WebGL renderer, lighting, camera and D-to-wordmark alignment. Falls back to vector graphics when unavailable (filename retained from the earlier spine concept).
-- `assets/app.js`: shared menu, reveal animation and brief builder.
+- `assets/app.js`: shared menu, reveal animation and reviewed audit-request builder.
+- `assets/audit-request.js`: supplied contact destinations and Unicode-safe WhatsApp/email handoff links.
 - `index.html`, `services.html`, `about.html`, `contact.html`: generated static pages, also usable without a build.
 - `archive/original-index.html`: unchanged original website.
 - `Logos/`: untouched supplied brand assets.
@@ -41,6 +45,8 @@ Read `PROJECT_NOTES.md` for context and decisions, `PLAN.md` for tasks, `CHANGEL
 
 The existing Vercel project auto-deploys `main`. `vercel.json` declares a static site, runs `npm run build`, and publishes `dist/`. The output directory is tracked in configuration so a dashboard default such as `public` cannot conflict with the build. Node is pinned to the supported 24.x major.
 
-Content and service offerings are provisional. The Contact page prepares a local text brief; it does **not** send enquiries or store personal data. The prototype has `noindex,nofollow` metadata. Connect real enquiry delivery, approve business content and contact details, add appropriate legal/social metadata, then revisit indexing before launch. No CMS, analytics, live backend, external fonts or third-party animation libraries are included.
+Copy is adapted from the two supplied client portfolios; source-page references and pending evidence are recorded in `docs/CONTENT_REVIEW.md`. The Contact page prepares an audit request for review, then gives the visitor WhatsApp/email links to send it from their own app. Download and copy remain available. The page does not automatically transmit or persist the request, and it does not produce an automated audit score. Direct phone, email and WhatsApp routes work without JavaScript. Source PDFs stay local and are ignored by Git.
+
+The review-stage site retains `noindex,nofollow`. Final package details, client/project evidence, legal/social metadata, real-device checks and any future server-based form/CMS scope remain to be agreed. No CMS, analytics, live backend, external fonts or third-party animation libraries are included.
 
 Publishing and pushing to GitHub remain separate steps requiring a user request.

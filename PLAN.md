@@ -1,5 +1,24 @@
 # DigiSpine implementation plan
 
+## Portfolio implementation and deployment — 26 October 2026
+
+- [x] User authorized applying the reviewed content and pushing the update (existing Vercel auto-deploy).
+- [x] Replace draft copy with sourced positioning and six consistent service categories.
+- [x] Add Foundation/Growth/Scale packages, S.P.I.N.E. methodology, growth layers, industry focus and sourced engagement process.
+- [x] Add real WhatsApp/email/call routes and a reviewed audit-request handoff; preserve downloadable brief support.
+- [x] Preserve approved D choreography, blue branding, four pages and original files; keep unapproved client proof/sample metrics out.
+- [x] Run build, source/link/content checks and audit handoff checks; record browser verification limitations honestly.
+- [ ] Push source/docs, confirm Vercel status and synchronize local Git state.
+
+## Client content intake — 23 October 2026
+
+- [x] Read both supplied portfolios and visually review all 22 pages.
+- [x] Compare content, map to four pages and record source references in `docs/CONTENT_REVIEW.md`.
+- [x] Identify real contact details, service taxonomy, methodology, offers, missing project evidence and claims requiring confirmation.
+- [ ] Confirm canonical service/package version, current audit offer and blue/purple brand direction.
+- [ ] Obtain real project images, work descriptions, approved results and client-name/logo display permission.
+- [x] Adapt page-by-page copy and replace provisional content from the supplied PDFs on user authorization (26 October); final client review and missing case-study evidence remain pending.
+
 ## Vercel output-directory fix — 23 October 2026
 
 - [x] Diagnose successful `dist/` build versus Vercel's configured `public` expectation.
