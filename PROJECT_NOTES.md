@@ -4,6 +4,10 @@
 
 Started 23 October 2026 (Asia/Kolkata). This is the user's first freelance project: a website for DigiSpine, a digital marketing company. Repository: https://github.com/riyan-10/DIGISPINE. Connected GitHub account verified as `riyannizar-am`; this differs from the repository owner.
 
+## Remove decorative scene identifier — 27 October 2026
+
+User asked what `DS / 001` meant, then explicitly requested its removal. Removed only that decorative span from the Home template/generated page. Kept the adjacent strategy/creativity/digital line aligned to the right by changing its wrapper's justification; all other content and animations remain unchanged. Static build, four-page structure/link checks and diff checks passed; source comparison confirms the exact span removal, no change to the three interior pages or animation/card code, and absence in `dist/index.html`. Continuing the established GitHub/Vercel delivery flow; deployment result to follow. Existing browser visual-review limitations remain.
+
 ## Background finish refinement — 27 October 2026
 
 User disliked the rebranded background texture and requested another premium gradient/finish. Replaced procedural grain and the fine grid overlay with smooth satin-like amethyst/charcoal gradients and a broad, soft decorative highlight behind the D. The old narrow blurred streak is now a broad radial-gradient sheen. Added restrained pearl gradients to light service cards/interior page headings and coordinated satin gradients for the dark cards, methodology sections, About artwork and CTA bands. Client purple `#24104F` and white remain the brand colours.

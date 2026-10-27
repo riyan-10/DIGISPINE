@@ -1,5 +1,11 @@
 # Verification record — 23 October 2026
 
+## Remove DS / 001 — 27 October 2026
+
+- Static build and four-page structure/83 local-reference checks passed; `git diff --check` passed.
+- Exact source comparison confirms only the requested span was removed from Home template/generated markup. Its adjacent tagline remains, with right alignment preserved in CSS. The built homepage omits the identifier. Three interior pages and timeline/renderer/mobile helper are byte-identical. No new tests or browser/device verification were added for this small text removal.
+- GitHub/Vercel delivery in progress; verified result to follow.
+
 ## Smooth background finish — 27 October 2026
 
 - Passed existing `npm run check` and static build. After final highlight-opacity adjustment, rebuilt successfully and passed `git diff --check`.

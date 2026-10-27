@@ -1,5 +1,10 @@
 # Work log
 
+## 27 October 2026 — remove DS / 001
+
+- User requested removing the decorative scene identifier. Removed its Home span and kept the adjacent line right-aligned.
+- Build, four-page reference checks, diff checks and exact source comparison passed. Other pages and animation code are unchanged. Push/deployment in progress; verified outcome to follow.
+
 ## 27 October 2026 — smoother background finish
 
 - User disliked the rebranded texture and requested a premium alternative. Replaced grain/grid with smooth amethyst-to-charcoal gradients and changed the sharp blurred light streak into a broad, soft gradient highlight.

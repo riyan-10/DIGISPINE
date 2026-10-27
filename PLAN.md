@@ -1,5 +1,11 @@
 # DigiSpine implementation plan
 
+## Remove decorative scene identifier — 27 October 2026
+
+- [x] Remove `DS / 001` from Home and preserve the adjacent tagline's position.
+- [x] Rebuild and check four-page references plus exact source scope.
+- [ ] Push and confirm existing Vercel deployment.
+
 ## Background finish refinement — 27 October 2026
 
 - [x] Record feedback: the rebranded background texture needs a more premium finish.
