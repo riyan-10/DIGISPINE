@@ -1,4 +1,5 @@
 import { createSpineRenderer } from './spine-renderer.js';
+import { layoutChapterCards } from './chapter-layout.js';
 
 const clamp = value => Math.max(0,Math.min(1,value));
 const lerp = (a,b,t) => a+(b-a)*t;
@@ -47,6 +48,7 @@ function initializeGraphics() {
 function measure() {
   storyStart=story.getBoundingClientRect().top+scrollY;
   storyLength=Math.max(story.offsetHeight-innerHeight,1);
+  layoutChapterCards(cards,innerHeight,header.offsetHeight);
   renderer?.resize();
   const bounds=logoDestination.getBoundingClientRect();
   targetRect={x:bounds.x,y:bounds.y,width:bounds.width,height:bounds.height};
@@ -175,6 +177,10 @@ addEventListener('scroll',()=>{
   requestFrame();
 },{passive:true});
 addEventListener('resize',measure,{passive:true});
+// Re-measure after font/content reflow as well as viewport/orientation changes.
+const chapterObserver=new ResizeObserver(measure);
+cards.forEach(card=>chapterObserver.observe(card));
+chapterObserver.observe(header);
 document.addEventListener('visibilitychange',()=>{previousTime=0;requestFrame();});
 sticky.addEventListener('pointermove',event=>{
   if(event.pointerType==='touch') return;

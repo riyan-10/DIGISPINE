@@ -1,5 +1,15 @@
 # DigiSpine implementation plan
 
+## Mobile chapter stacking correction — 27 October 2026
+
+- [x] Trace the reported mobile regression to the portfolio update's short-screen static fallback; explain the cause.
+- [x] Restore sticky chapters on short phones/landscape and allow natural-height phone content.
+- [x] Measure individual sticky insets; refresh on resize and content/header reflow while preserving reduced-motion/static reading mode.
+- [x] Run chapter geometry regression checks, existing source checks and the static build.
+- [ ] Visually review phone scroll/stacking, keyboard access and static/reduced-motion behavior; browser checks remain unavailable.
+- [x] User explicitly requested pushing the correction; recheck source/build before updating `main`.
+- [ ] Push correction and verify the existing Vercel deployment.
+
 ## Portfolio implementation and deployment — 26 October 2026
 
 - [x] User authorized applying the reviewed content and pushing the update (existing Vercel auto-deploy).

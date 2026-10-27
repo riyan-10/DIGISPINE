@@ -4,6 +4,14 @@
 
 Started 23 October 2026 (Asia/Kolkata). This is the user's first freelance project: a website for DigiSpine, a digital marketing company. Repository: https://github.com/riyan-10/DIGISPINE. Connected GitHub account verified as `riyannizar-am`; this differs from the repository owner.
 
+## Mobile service-card regression — 27 October 2026
+
+User reported that Home service cards became a plain vertical list on mobile after the portfolio push, losing the approved desktop-style stacking. Confirmed cause: the portfolio update deliberately added a `max-width:800px` / `max-height:700px` fallback with `position:relative!important`. Its content-clipping safeguard unintentionally removed the desired interaction. Explained this directly to the user.
+
+Local correction removes that cutoff and the older landscape-only static-card fallback. Phone cards use natural content height; each card's sticky inset is measured from its untransformed height, viewport height and header height. Cards that fit pin below the header; taller cards scroll through naturally before pinning with their bottom inside the viewport. ResizeObserver remeasures after content/header reflow, and the existing resize handler covers orientation/viewport changes. Scroll-driven scaling/artwork remain; manual static mode and OS reduced motion still explicitly use normal document flow. D geometry and film choreography were not edited.
+
+Passed full `npm run check` and `npm run build`. New chapter-layout checks cover six card heights across seven viewport/header combinations, content growth and resizing. These are numerical/fixture checks, not browser or real-phone verification. Prior browser restriction was not bypassed. Real touch/scroll, keyboard access and reduced-motion visual review remain pending. The user subsequently explicitly requested pushing the correction; checks/build passed again and the existing GitHub/Vercel deployment is being updated. Verified deployment outcome will be recorded below.
+
 ## Where we began
 
 - Cloned the repository into `/Users/user/Documents/Riyan/Personal/DIGISPINE` on branch `main`, tracking `origin/main`.

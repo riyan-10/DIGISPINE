@@ -1,5 +1,13 @@
 # Verification record — 23 October 2026
 
+## Mobile chapter correction — 27 October 2026 (local)
+
+- Removed the portfolio CSS's short-screen `position:relative!important` override and the older landscape static-card override; normal-motion cards retain native sticky positioning.
+- Phone cards now have natural content height. Inset checks exercise six varied heights over seven viewport/header combinations (568/667/700/844px phone heights, 390px landscape, tablet and desktop), ensuring the pinned bottom remains reachable and fitting cards clear the header. Content growth to 950px and shrink/viewport resize update the inset.
+- `npm run check` and `npm run build` passed. The build includes the imported chapter-layout module. Existing four-page references, D renderer numerics, content and audit interaction checks also passed.
+- Inspected CSS cascade: manual static and OS reduced-motion modes still set relative positioning with `top:auto` and disable the card transform. This is source inspection, not OS/browser verification.
+- Pending: real phone stack/reading/scroll feel, text zoom, orientation/browser chrome changes, keyboard focus and visual reduced-motion check. Browser restriction was not bypassed; no current screenshots or device verification claimed. User requested pushing the correction; source/build rechecks passed, deployment status to be recorded after verification.
+
 ## Portfolio integration — 26 October 2026
 
 - `npm run check` passed: module syntax, four-page structure/83 local references, existing D mesh/hole/projection checks, shared six-service consistency, five method stages, three plans and supplied contact routes.
