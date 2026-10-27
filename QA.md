@@ -1,5 +1,15 @@
 # Verification record — 23 October 2026
 
+## White/purple rebrand — 27 October 2026
+
+- Sampled supplied PNGs (`3.png`, `6.png`): dominant RGB (36,16,79), `#24104F`. Both originals preserved: SHA-256 `e5a3bc055f2ad79e745024155916f45efbfaaee52e8ca47233cbd0e1ddfaec0b` and `c2f48d9e6f49276271f30fc0bdc0b1703c317ba9c3554d025b194e6b40884f27` respectively.
+- `npm run check` and `npm run build` passed, including four-page structure/83 local references, existing renderer geometry/projection checks, six-service/content/audit-handler checks and mobile-card layout checks.
+- Compared three stylesheets against HEAD with colour tokens normalized: layout, selectors, sizing, responsive queries, sticky and motion declarations unchanged. Only extra rule sets chapter-link focus outline colour to its current foreground colour. Four generated HTML files differ only in theme-colour metadata.
+- Timeline JS, chapter-layout helper, logo contour, mesh generation and contact handlers are byte-identical. Renderer differs only inside fragment-shader material RGB constants/name; vertex shader, lighting calculations, camera, handoff and timings are unchanged.
+- Source-colour contrast: body 16.81:1, muted body 5.76:1, white on brand 16.64:1, dark secondary body 8.79:1. Six card paragraphs including `.8` opacity: 10.50/8.53/9.70/9.24/7.99/8.62:1. Form boundaries: 3.30:1. All checked text pairs exceed 4.5:1, checked input boundary exceeds 3:1.
+- Browser/device appearance, actual shader compilation/material finish, perceived wordmark crossfade and client approval remain pending; previous browser restriction was not bypassed. These are source/numerical checks, not new screenshots or touch QA.
+- Deployment status will be recorded after the existing GitHub/Vercel flow completes.
+
 ## Mobile chapter correction — 27 October 2026
 
 - Removed the portfolio CSS's short-screen `position:relative!important` override and the older landscape static-card override; normal-motion cards retain native sticky positioning.

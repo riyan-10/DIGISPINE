@@ -1,5 +1,14 @@
 # Work log
 
+## 27 October 2026 — client white/purple UI rebrand
+
+- User relayed the client's switch to white/purple and supplied `assets/3.png` / `assets/6.png`. Sampled exact dominant background `#24104F`; original source PNGs remain byte-identical.
+- Applied a restrained palette across shared/interior/Home styles, artwork, favicon and browser theme. Updated only WebGL material RGB constants for a pearl D with violet reflections.
+- Kept white/stone surfaces and charcoal scenes with concentrated brand accents, rather than making all surfaces purple. Service cards alternate purple, lavender, charcoal, white, stone and neutral.
+- Preserved copy, layout, typography, motion, camera, D geometry and mobile stack. Added a foreground-colour focus outline on chapter links for light/dark contrast.
+- Full checks/build passed; source comparisons confirm colour-only CSS/metadata changes and unchanged interaction/geometry code. Principal text/button/card contrast and form boundaries passed numerical calculations. Browser/device/WebGL appearance remains unverified; no browser restriction workaround.
+- Added `docs/BRAND_THEME.md` and updated project records. GitHub/Vercel delivery is in progress; verified outcome to follow.
+
 ## 27 October 2026 — mobile service-card stacking correction
 
 - User flagged the mobile Home cards losing the approved stack after the last push. Confirmed the added short-screen fallback intentionally used normal flow to prevent clipping; losing the effect was an unintended consequence.

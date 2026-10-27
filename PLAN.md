@@ -1,5 +1,14 @@
 # DigiSpine implementation plan
 
+## Client colour rebrand — 27 October 2026
+
+- [x] Review supplied updated assets and sample the client's exact purple: `#24104F`.
+- [x] Recolour all four pages, artwork, WebGL material, favicon and browser theme with restrained purple, white and neutrals.
+- [x] Preserve layout, copy, typography, logo geometry, choreography, mobile stacking and contact behavior; verify via source comparison.
+- [x] Run existing checks/build and calculate principal text/control contrast; document the palette and original-asset preservation.
+- [ ] Verify actual browser/device appearance and obtain client colour approval; existing browser restriction remains.
+- [ ] Push through the established GitHub/Vercel flow and record the verified deployment result.
+
 ## Mobile chapter stacking correction — 27 October 2026
 
 - [x] Trace the reported mobile regression to the portfolio update's short-screen static fallback; explain the cause.
@@ -25,7 +34,8 @@
 - [x] Read both supplied portfolios and visually review all 22 pages.
 - [x] Compare content, map to four pages and record source references in `docs/CONTENT_REVIEW.md`.
 - [x] Identify real contact details, service taxonomy, methodology, offers, missing project evidence and claims requiring confirmation.
-- [ ] Confirm canonical service/package version, current audit offer and blue/purple brand direction.
+- [ ] Confirm canonical service/package version and current audit offer.
+- [x] Confirm brand direction: client requested white and purple via new logo assets (27 October); earlier blue direction is superseded.
 - [ ] Obtain real project images, work descriptions, approved results and client-name/logo display permission.
 - [x] Adapt page-by-page copy and replace provisional content from the supplied PDFs on user authorization (26 October); final client review and missing case-study evidence remain pending.
 

@@ -4,6 +4,14 @@
 
 Started 23 October 2026 (Asia/Kolkata). This is the user's first freelance project: a website for DigiSpine, a digital marketing company. Repository: https://github.com/riyan-10/DIGISPINE. Connected GitHub account verified as `riyannizar-am`; this differs from the repository owner.
 
+## Client white/purple rebrand — 27 October 2026
+
+Client has replaced blue with white and purple. User supplied updated assets `assets/3.png` and `assets/6.png`, requested the supplied purple with a restrained premium balance, and explicitly limited changes to the UI. This supersedes the earlier blue-theme decision. Sampled both original 6250 × 6250 PNGs: dominant background RGB (36,16,79), **#24104F**. Preserved their bytes and all existing brand geometry. Palette/application details are in `docs/BRAND_THEME.md`.
+
+Recoloured the three stylesheets, favicon, browser theme metadata and WebGL material constants. Light surfaces use white/stone, dark scenes use violet-tinted charcoal, and purple is concentrated in brand accents/CTAs and one service card. The cinematic D has pearl-white highlights with restrained violet reflections. Preserved page content/structure, typography, logo contour/mesh, camera/timing, scrolling, mobile stacking, audit handlers and all existing layout/breakpoint rules. Added only a foreground-coloured focus outline for service-card links so focus remains visible across light/dark surfaces.
+
+Full checks/build passed. A source comparison confirms CSS changes are colour-only except that focus-colour rule; generated pages differ only in browser theme metadata. Timeline/mobile layout helper/logo geometry/contact JS are byte-identical. Calculated contrast passes for principal text/buttons, six card paragraphs including opacity (all above 4.5:1), and input boundaries (3.30:1). Source PNG hashes remained unchanged. Browser access restriction was not bypassed; real appearance, WebGL material rendering and device review remain pending. Continuing the existing GitHub-to-Vercel delivery flow established by the user's preceding push request; source/deployment outcome will be recorded after verification.
+
 ## Mobile service-card regression — 27 October 2026
 
 User reported that Home service cards became a plain vertical list on mobile after the portfolio push, losing the approved desktop-style stacking. Confirmed cause: the portfolio update deliberately added a `max-width:800px` / `max-height:700px` fallback with `position:relative!important`. Its content-clipping safeguard unintentionally removed the desired interaction. Explained this directly to the user.
