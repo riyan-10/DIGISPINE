@@ -6,7 +6,7 @@
 - Coordinated pearl gradients on light cards/interior heroes and satin gradients on dark cards, About artwork, dark sections and CTA bands. Kept the white/purple brand and existing UI structure/motion.
 - Only three website CSS files changed. Verified all page markup, interaction code, renderer and mobile stacking remain byte-identical; other CSS declarations are unchanged outside backgrounds/decorative film layers.
 - Existing checks/build passed. Conservative gradient contrast bounds pass 4.5:1 for checked text pairs; no new animated background, raster asset or blur filter. Actual browser/device appearance remains pending.
-- Updated durable project records and palette guidance. GitHub/Vercel delivery is in progress; verified result to follow.
+- Updated durable project records and palette guidance. Pushed source `f8c26f3882a1c4ba73cf4f9d1de7791979277ce3` with an expected-SHA guard and no force; Vercel status **success**: https://vercel.com/riyan-10s-projects/digispine/7qKKn9LNc3uVMH4euYdLkc7m95gE. This follow-up records the verified outcome; visual/device review remains pending.
 
 ## 27 October 2026 — client white/purple UI rebrand
 

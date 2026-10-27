@@ -5,7 +5,8 @@
 - Passed existing `npm run check` and static build. After final highlight-opacity adjustment, rebuilt successfully and passed `git diff --check`.
 - Comparison against the deployed rebrand confirms only background declarations and `.cinema-noise`, `.cinema-grid`, `.cinema-radial` decorative rules changed. Four pages, renderer/timeline, geometry, mobile-card helper and audit handlers are byte-identical. Procedural SVG turbulence was removed; no new background animation, raster download or blur filter.
 - Bounded the hero's layered gradients conservatively by combining per-channel maxima and maximum alpha, even though highlight peaks do not coincide. Resulting RGB upper bound (75.7,58.1,99.2) gives secondary text contrast **4.82:1**. Conservative bounds for purple card paragraphs: 7.32:1; charcoal card: 7.30:1; muted light copy: 4.68:1; stone card: 7.63:1; CTA eyebrow: 7.64:1. Calculations include `.8` card-copy opacity.
-- Actual perceived finish, gradient banding and device appearance remain pending user/browser review. Prior browser restriction was not bypassed; no visual verification claimed. Deployment result to be recorded after GitHub/Vercel delivery.
+- Actual perceived finish, gradient banding and device appearance remain pending user/browser review. Prior browser restriction was not bypassed; no visual verification claimed.
+- Source commit `f8c26f3882a1c4ba73cf4f9d1de7791979277ce3` reached `main`; GitHub's Vercel status **success**: https://vercel.com/riyan-10s-projects/digispine/7qKKn9LNc3uVMH4euYdLkc7m95gE. This confirms hosted build delivery, not visual quality.
 
 ## White/purple rebrand — 27 October 2026
 

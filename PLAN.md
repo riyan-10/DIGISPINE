@@ -6,7 +6,7 @@
 - [x] Replace grain/grid/sharp light streak with smooth satin amethyst/charcoal gradients and a broad sheen; coordinate pearl/light surfaces.
 - [x] Preserve white/purple branding, all copy/layout, D rendering/choreography, mobile stacking and contact functionality.
 - [x] Run source comparison, existing checks/build and conservative gradient contrast checks.
-- [ ] Push through existing GitHub/Vercel flow and record verified deployment.
+- [x] Push through existing GitHub/Vercel flow and record verified deployment: `f8c26f3`, Vercel **success**.
 - [ ] User/device visual review of the new finish; browser restriction remains.
 
 ## Client colour rebrand — 27 October 2026
