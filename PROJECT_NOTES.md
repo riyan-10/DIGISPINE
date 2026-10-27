@@ -6,7 +6,9 @@ Started 23 October 2026 (Asia/Kolkata). This is the user's first freelance proje
 
 ## Remove decorative scene identifier — 27 October 2026
 
-User asked what `DS / 001` meant, then explicitly requested its removal. Removed only that decorative span from the Home template/generated page. Kept the adjacent strategy/creativity/digital line aligned to the right by changing its wrapper's justification; all other content and animations remain unchanged. Static build, four-page structure/link checks and diff checks passed; source comparison confirms the exact span removal, no change to the three interior pages or animation/card code, and absence in `dist/index.html`. Continuing the established GitHub/Vercel delivery flow; deployment result to follow. Existing browser visual-review limitations remain.
+User asked what `DS / 001` meant, then explicitly requested its removal. Removed only that decorative span from the Home template/generated page. Kept the adjacent strategy/creativity/digital line aligned to the right by changing its wrapper's justification; all other content and animations remain unchanged. Static build, four-page structure/link checks and diff checks passed; source comparison confirms the exact span removal, no change to the three interior pages or animation/card code, and absence in `dist/index.html`. Existing browser visual-review limitations remain.
+
+Pushed source `2f8445fdc4664b70ea2964af65a33b31d27feba2` to `main` with an expected-SHA guard and no force. Vercel status **success**: https://vercel.com/riyan-10s-projects/digispine/9JMqqTtarUkhGLxGS99aMueZHZYD. This documentation follow-up records the verified deployment.
 
 ## Background finish refinement — 27 October 2026
 

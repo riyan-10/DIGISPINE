@@ -4,7 +4,7 @@
 
 - Static build and four-page structure/83 local-reference checks passed; `git diff --check` passed.
 - Exact source comparison confirms only the requested span was removed from Home template/generated markup. Its adjacent tagline remains, with right alignment preserved in CSS. The built homepage omits the identifier. Three interior pages and timeline/renderer/mobile helper are byte-identical. No new tests or browser/device verification were added for this small text removal.
-- GitHub/Vercel delivery in progress; verified result to follow.
+- Source `2f8445fdc4664b70ea2964af65a33b31d27feba2` reached `main`; Vercel **success**: https://vercel.com/riyan-10s-projects/digispine/9JMqqTtarUkhGLxGS99aMueZHZYD.
 
 ## Smooth background finish — 27 October 2026
 

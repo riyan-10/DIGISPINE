@@ -3,7 +3,8 @@
 ## 27 October 2026 — remove DS / 001
 
 - User requested removing the decorative scene identifier. Removed its Home span and kept the adjacent line right-aligned.
-- Build, four-page reference checks, diff checks and exact source comparison passed. Other pages and animation code are unchanged. Push/deployment in progress; verified outcome to follow.
+- Build, four-page reference checks, diff checks and exact source comparison passed. Other pages and animation code are unchanged.
+- Pushed source `2f8445fdc4664b70ea2964af65a33b31d27feba2` to `main` with an expected-SHA guard and no force; Vercel **success**: https://vercel.com/riyan-10s-projects/digispine/9JMqqTtarUkhGLxGS99aMueZHZYD.
 
 ## 27 October 2026 — smoother background finish
 

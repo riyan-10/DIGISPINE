@@ -4,7 +4,7 @@
 
 - [x] Remove `DS / 001` from Home and preserve the adjacent tagline's position.
 - [x] Rebuild and check four-page references plus exact source scope.
-- [ ] Push and confirm existing Vercel deployment.
+- [x] Push and confirm existing Vercel deployment: `2f8445f`, **success**.
 
 ## Background finish refinement — 27 October 2026
 
