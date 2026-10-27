@@ -1,5 +1,14 @@
 # DigiSpine implementation plan
 
+## Background finish refinement — 27 October 2026
+
+- [x] Record feedback: the rebranded background texture needs a more premium finish.
+- [x] Replace grain/grid/sharp light streak with smooth satin amethyst/charcoal gradients and a broad sheen; coordinate pearl/light surfaces.
+- [x] Preserve white/purple branding, all copy/layout, D rendering/choreography, mobile stacking and contact functionality.
+- [x] Run source comparison, existing checks/build and conservative gradient contrast checks.
+- [ ] Push through existing GitHub/Vercel flow and record verified deployment.
+- [ ] User/device visual review of the new finish; browser restriction remains.
+
 ## Client colour rebrand — 27 October 2026
 
 - [x] Review supplied updated assets and sample the client's exact purple: `#24104F`.

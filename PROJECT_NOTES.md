@@ -4,6 +4,12 @@
 
 Started 23 October 2026 (Asia/Kolkata). This is the user's first freelance project: a website for DigiSpine, a digital marketing company. Repository: https://github.com/riyan-10/DIGISPINE. Connected GitHub account verified as `riyannizar-am`; this differs from the repository owner.
 
+## Background finish refinement — 27 October 2026
+
+User disliked the rebranded background texture and requested another premium gradient/finish. Replaced procedural grain and the fine grid overlay with smooth satin-like amethyst/charcoal gradients and a broad, soft decorative highlight behind the D. The old narrow blurred streak is now a broad radial-gradient sheen. Added restrained pearl gradients to light service cards/interior page headings and coordinated satin gradients for the dark cards, methodology sections, About artwork and CTA bands. Client purple `#24104F` and white remain the brand colours.
+
+Only the three CSS files changed for the website. Source comparison confirms all other declarations are identical after excluding background declarations and the three decorative film backdrop rules. All four generated pages, interaction JS, logo geometry, WebGL renderer, mobile stack helper and contact code are byte-identical. No new background animation, image download or blur filter. Existing checks and build passed. A conservative bound that assumes all hero highlight peaks overlap gives 4.82:1 for secondary film text; sampled conservative bounds for card/body/CTA text also exceed 4.5:1. Browser/device appearance remains unverified; the previous browser restriction was not bypassed. Continuing the established GitHub/Vercel delivery flow; deployment result will be recorded after verification.
+
 ## Client white/purple rebrand — 27 October 2026
 
 Client has replaced blue with white and purple. User supplied updated assets `assets/3.png` and `assets/6.png`, requested the supplied purple with a restrained premium balance, and explicitly limited changes to the UI. This supersedes the earlier blue-theme decision. Sampled both original 6250 × 6250 PNGs: dominant background RGB (36,16,79), **#24104F**. Preserved their bytes and all existing brand geometry. Palette/application details are in `docs/BRAND_THEME.md`.

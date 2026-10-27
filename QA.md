@@ -1,5 +1,12 @@
 # Verification record — 23 October 2026
 
+## Smooth background finish — 27 October 2026
+
+- Passed existing `npm run check` and static build. After final highlight-opacity adjustment, rebuilt successfully and passed `git diff --check`.
+- Comparison against the deployed rebrand confirms only background declarations and `.cinema-noise`, `.cinema-grid`, `.cinema-radial` decorative rules changed. Four pages, renderer/timeline, geometry, mobile-card helper and audit handlers are byte-identical. Procedural SVG turbulence was removed; no new background animation, raster download or blur filter.
+- Bounded the hero's layered gradients conservatively by combining per-channel maxima and maximum alpha, even though highlight peaks do not coincide. Resulting RGB upper bound (75.7,58.1,99.2) gives secondary text contrast **4.82:1**. Conservative bounds for purple card paragraphs: 7.32:1; charcoal card: 7.30:1; muted light copy: 4.68:1; stone card: 7.63:1; CTA eyebrow: 7.64:1. Calculations include `.8` card-copy opacity.
+- Actual perceived finish, gradient banding and device appearance remain pending user/browser review. Prior browser restriction was not bypassed; no visual verification claimed. Deployment result to be recorded after GitHub/Vercel delivery.
+
 ## White/purple rebrand — 27 October 2026
 
 - Sampled supplied PNGs (`3.png`, `6.png`): dominant RGB (36,16,79), `#24104F`. Both originals preserved: SHA-256 `e5a3bc055f2ad79e745024155916f45efbfaaee52e8ca47233cbd0e1ddfaec0b` and `c2f48d9e6f49276271f30fc0bdc0b1703c317ba9c3554d025b194e6b40884f27` respectively.

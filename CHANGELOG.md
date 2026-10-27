@@ -1,5 +1,13 @@
 # Work log
 
+## 27 October 2026 — smoother background finish
+
+- User disliked the rebranded texture and requested a premium alternative. Replaced grain/grid with smooth amethyst-to-charcoal gradients and changed the sharp blurred light streak into a broad, soft gradient highlight.
+- Coordinated pearl gradients on light cards/interior heroes and satin gradients on dark cards, About artwork, dark sections and CTA bands. Kept the white/purple brand and existing UI structure/motion.
+- Only three website CSS files changed. Verified all page markup, interaction code, renderer and mobile stacking remain byte-identical; other CSS declarations are unchanged outside backgrounds/decorative film layers.
+- Existing checks/build passed. Conservative gradient contrast bounds pass 4.5:1 for checked text pairs; no new animated background, raster asset or blur filter. Actual browser/device appearance remains pending.
+- Updated durable project records and palette guidance. GitHub/Vercel delivery is in progress; verified result to follow.
+
 ## 27 October 2026 — client white/purple UI rebrand
 
 - User relayed the client's switch to white/purple and supplied `assets/3.png` / `assets/6.png`. Sampled exact dominant background `#24104F`; original source PNGs remain byte-identical.
