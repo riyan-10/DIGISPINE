@@ -7,7 +7,7 @@
 - [x] Preserve layout, copy, typography, logo geometry, choreography, mobile stacking and contact behavior; verify via source comparison.
 - [x] Run existing checks/build and calculate principal text/control contrast; document the palette and original-asset preservation.
 - [ ] Verify actual browser/device appearance and obtain client colour approval; existing browser restriction remains.
-- [ ] Push through the established GitHub/Vercel flow and record the verified deployment result.
+- [x] Push through the established GitHub/Vercel flow and record the verified deployment result: rebrand `5440b2a`, Vercel **success**.
 
 ## Mobile chapter stacking correction — 27 October 2026
 

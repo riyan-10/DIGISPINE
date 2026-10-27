@@ -7,7 +7,8 @@
 - Kept white/stone surfaces and charcoal scenes with concentrated brand accents, rather than making all surfaces purple. Service cards alternate purple, lavender, charcoal, white, stone and neutral.
 - Preserved copy, layout, typography, motion, camera, D geometry and mobile stack. Added a foreground-colour focus outline on chapter links for light/dark contrast.
 - Full checks/build passed; source comparisons confirm colour-only CSS/metadata changes and unchanged interaction/geometry code. Principal text/button/card contrast and form boundaries passed numerical calculations. Browser/device/WebGL appearance remains unverified; no browser restriction workaround.
-- Added `docs/BRAND_THEME.md` and updated project records. GitHub/Vercel delivery is in progress; verified outcome to follow.
+- Added `docs/BRAND_THEME.md` and updated project records. Rebrand commit `5440b2afa166562aa1d6c9236e416c3a77a810a5` was pushed to `main` with an expected-SHA guard and no force. Original PNGs were included with exact matching blob hashes.
+- Verified GitHub's Vercel status **success**: https://vercel.com/riyan-10s-projects/digispine/2LzoJjJa9iUNTMrrKgG9vFCJu4zu. This documentation follow-up records the deployment; client/device visual review remains pending.
 
 ## 27 October 2026 — mobile service-card stacking correction
 

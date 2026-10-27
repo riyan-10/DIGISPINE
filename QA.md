@@ -8,7 +8,7 @@
 - Timeline JS, chapter-layout helper, logo contour, mesh generation and contact handlers are byte-identical. Renderer differs only inside fragment-shader material RGB constants/name; vertex shader, lighting calculations, camera, handoff and timings are unchanged.
 - Source-colour contrast: body 16.81:1, muted body 5.76:1, white on brand 16.64:1, dark secondary body 8.79:1. Six card paragraphs including `.8` opacity: 10.50/8.53/9.70/9.24/7.99/8.62:1. Form boundaries: 3.30:1. All checked text pairs exceed 4.5:1, checked input boundary exceeds 3:1.
 - Browser/device appearance, actual shader compilation/material finish, perceived wordmark crossfade and client approval remain pending; previous browser restriction was not bypassed. These are source/numerical checks, not new screenshots or touch QA.
-- Deployment status will be recorded after the existing GitHub/Vercel flow completes.
+- Rebrand commit `5440b2afa166562aa1d6c9236e416c3a77a810a5` was pushed to `main`; GitHub's Vercel status returned **success**: https://vercel.com/riyan-10s-projects/digispine/2LzoJjJa9iUNTMrrKgG9vFCJu4zu. New PNG Git blob hashes match local originals. Hosted build success does not replace pending visual review.
 
 ## Mobile chapter correction — 27 October 2026
 
