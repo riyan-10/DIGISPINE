@@ -8,7 +8,7 @@
 - [x] Run chapter geometry regression checks, existing source checks and the static build.
 - [ ] Visually review phone scroll/stacking, keyboard access and static/reduced-motion behavior; browser checks remain unavailable.
 - [x] User explicitly requested pushing the correction; recheck source/build before updating `main`.
-- [ ] Push correction and verify the existing Vercel deployment.
+- [x] Push correction (`72599be`) and verify the existing Vercel deployment: **success**; synchronize local Git metadata.
 
 ## Portfolio implementation and deployment — 26 October 2026
 

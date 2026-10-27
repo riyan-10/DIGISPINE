@@ -1,12 +1,13 @@
 # Work log
 
-## 27 October 2026 — mobile service-card stacking correction (local)
+## 27 October 2026 — mobile service-card stacking correction
 
 - User flagged the mobile Home cards losing the approved stack after the last push. Confirmed the added short-screen fallback intentionally used normal flow to prevent clipping; losing the effect was an unintended consequence.
 - Removed the static short-screen/landscape cutoffs. Phone cards grow with content; measured sticky insets let tall cards scroll through before pinning. ResizeObserver and viewport resize keep the inset current.
 - Preserved scroll-driven card/art transforms, manual static mode, system reduced motion and the D film.
 - Full checks/build passed, including new six-card/seven-viewport inset and reflow checks. Actual phone rendering/scroll remains unverified; no browser-policy workaround was attempted.
-- Updated project records. User then explicitly requested pushing; rechecks/build passed and the GitHub/Vercel update is in progress. Verified deployment outcome will follow.
+- User explicitly requested pushing. Rechecks/build passed; fix commit `72599be7605430d74fcafc8227397e76d5b04863` reached `main` with no force and Vercel status **success**: https://vercel.com/riyan-10s-projects/digispine/8Nb7oh4vksi5sErTP2DhdwWdu7tb.
+- Synchronized local Git metadata, preserving working files and ignored PDFs; clean checkout confirmed. This documentation follow-up records the deployment result.
 
 ## 26 October 2026 — portfolio copy and audit journey
 
