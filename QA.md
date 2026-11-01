@@ -1,5 +1,9 @@
 # Verification record — 23 October 2026
 
+## Bilingual website deployment verified — 1 November 2026
+
+Pushed complete source `9fd6eb3b7eb73b19ae2e23af380e1799a288a7e3` to `main` with an expected-SHA guard and no force. Vercel reports **success**: https://vercel.com/riyan-10s-projects/digispine/CbxFzKQfxc7Ep77kuN3PEUFRZCKh. This release includes the simplified English pages, complete Malayalam versions and remembered language switch, source-based customer testimonial, and portfolio-based About. Final build/full automated checks/diff checks passed. Client wording/translation and actual browser/device visual checks remain pending; no claim of those checks being complete. This documentation follow-up records the verified release and supersedes earlier local-only entries for this revision.
+
 ## Portfolio-based About — 1 November 2026 (local)
 
 - Build/full suite/diff checks pass with eight pages and 228 local references; existing bilingual navigation, menu/Escape/focus, form handoffs, D geometry and seasonal reduced-motion tests remain passing.

@@ -8,7 +8,7 @@
 - [x] Verify selected English passages against PDFs; build/full checks and both About HTTP routes pass.
 - [ ] Client confirms content selection and reviews Malayalam; actual browser/phone layout review remains pending.
 - [x] User requested GitHub push / Vercel deployment for the full current revision.
-- [ ] Verify guarded main update and Vercel deployment; record actual result.
+- [x] Verify guarded main update (`9fd6eb3`) and Vercel deployment: **success**; record actual result.
 
 ## About page: portfolio alignment clarification — 1 November 2026
 

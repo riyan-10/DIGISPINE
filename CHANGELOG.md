@@ -1,5 +1,9 @@
 # Work log
 
+## Bilingual website deployment verified — 1 November 2026
+
+Pushed complete source `9fd6eb3b7eb73b19ae2e23af380e1799a288a7e3` to `main` with an expected-SHA guard and no force. Vercel reports **success**: https://vercel.com/riyan-10s-projects/digispine/CbxFzKQfxc7Ep77kuN3PEUFRZCKh. This release includes the simplified English pages, complete Malayalam versions and remembered language switch, source-based customer testimonial, and portfolio-based About. Final build/full automated checks/diff checks passed. Client wording/translation and actual browser/device visual checks remain pending; no claim of those checks being complete. This documentation follow-up records the verified release and supersedes earlier local-only entries for this revision.
+
 ## Bilingual website release authorized — 1 November 2026
 
 User explicitly requested pushing the current changes to GitHub, authorizing the existing Vercel deployment. Scope includes plain-English copy, complete Malayalam pages/language switch, the supplied text testimonial, and the portfolio-based About page. Final build/full checks/diff checks pass. Source images/PDFs remain local; the site uses the previously supplied public artwork and text testimonial. Client wording/translation and real-device review remain pending as documented. Push/deployment verification to follow.
