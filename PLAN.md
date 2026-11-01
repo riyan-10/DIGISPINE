@@ -6,7 +6,7 @@
 - [x] Fit full landscape width at bottom on portrait phones with a purple fade; preserve other layouts/animation.
 - [x] Run full checks/build and verify preview HTTP 200.
 - [x] User explicitly requested pushing the correction now.
-- [ ] Verify GitHub update and Vercel deployment.
+- [x] Verify GitHub update (`894fecd`) and Vercel deployment: **success**.
 
 ## Approved cinematic release — 1 November 2026
 

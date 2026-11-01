@@ -1,5 +1,9 @@
 # Verification record — 23 October 2026
 
+## Mobile background deployment verified — 1 November 2026
+
+Mobile framing fix `894fecd4423ecb4d7a1451f12d8ea6495a01aa35` pushed to main using an expected-SHA guard, without force. Vercel reports **success**: https://vercel.com/riyan-10s-projects/digispine/513rRZsB8XDaSuKHa4tphoQr6Snn. Full build/checks passed; only portrait background framing changed on the website. Real-phone visual review remains pending. This follow-up records the verified deployment.
+
 ## Mobile backdrop framing — 1 November 2026
 
 Source asset inspection confirms 1672×941 landscape composition. At 390×844, cover scales it to approximately 1500px wide, exposing only 26% of its width. New portrait CSS fits all 1672 source pixels across 390px (about 219px high), bottom-aligned without stretching and faded into purple. Full build/check suite/diff checks pass; preview HTTP 200. No browser/mobile rendering verification claimed. Local-only change awaiting composition review.

@@ -1,5 +1,9 @@
 # Work log
 
+## Mobile background deployment verified — 1 November 2026
+
+Mobile framing fix `894fecd4423ecb4d7a1451f12d8ea6495a01aa35` pushed to main using an expected-SHA guard, without force. Vercel reports **success**: https://vercel.com/riyan-10s-projects/digispine/513rRZsB8XDaSuKHa4tphoQr6Snn. Full build/checks passed; only portrait background framing changed on the website. Real-phone visual review remains pending. This follow-up records the verified deployment.
+
 ## Mobile framing release authorized — 1 November 2026
 
 User explicitly requested pushing the mobile backdrop correction now. Build/full checks/diff checks pass. Publishing this CSS-only website correction and project records through the existing GitHub/Vercel flow; deployment result pending verification.
