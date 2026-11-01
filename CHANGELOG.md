@@ -1,5 +1,72 @@
 # Work log
 
+## 1 November 2026 — cinematic selected for release
+
+- User authorized publishing the selected Cinematic through GitHub/Vercel.
+- Removed comparison toolbar, alternate runtime modes and unused morph/outline code/styles. Enabled Cinematic only for 1 November IST, with normal homepage fallback at midnight.
+- Included latest greeting/palm refinements and About poster. All four-page, logo, audit, chapter and seasonal checks/build pass; real-device appearance remains unverified.
+- Push/deployment result pending verification.
+
+## 1 November 2026 — preview server restarted
+
+- Restarted local development server on port 4173 after unreachable-preview report; verified cinematic route HTTP 200. Left server running. No site changes or deployment.
+
+## 1 November 2026 — lower greeting, stronger palms and cleaner gallery
+
+- Moved the cinematic greeting farther right/down with responsive phone/landscape targets.
+- Removed its “View our greeting” button, unused styles/state and extra layout space; kept keyboard focus continuity after Skip.
+- Increased joined-canopy wind amplitude and shortened its cycle to 4.8 seconds. Reduced motion/pause behavior retained.
+- Removed the confirmed Kerala outline/source-credit paragraph from About; source attribution retained in code/docs.
+- Full checks/build/diff checks pass; visual/device review remains pending. Local only; no push/deployment.
+
+## 1 November 2026 — smoother, faster greeting with return to the original hero
+
+- Implemented five requested refinements: cubic-smoothed source lettering, intact joined two-tree canopy, 3.1-second drawing, 0.9-second move to the right and automatic restoration of the normal DigiSpine opening.
+- Removed pixel-stair outline rendering/text shadow; source contour areas remain within 3%. Joined canopy removes the cut leaf seam under wind. Original poster remains untouched.
+- Added responsive dock layout and an explicit writing → docking → restored controller with a renderer-resume callback. Preserved story height and control footprint to avoid a handoff layout jump. Reduced-motion skips directly to docked/static site; gallery/pause/skip/focus behavior retained.
+- Full checks/build pass; tests cover exact timed phases, callback, dock bounds and existing geometry/mode behavior. Inspected enlarged artwork only; real browser/device appearance remains pending. HTTP readiness verified; existing server retained.
+- Updated durable records. No GitHub commit/push or public deployment.
+
+## 1 November 2026 — original-poster calligraphy hero
+
+- User rejected moving background shadows; promoted the prior Kerala-to-D cinematic to Softer and requested an on-load drawing of the exact poster lettering/palms for the new Cinematic.
+- Deterministically traced original artwork into 18 SVG parts / 105 pen reveals, preserving all thresholded ink and source contour areas within 1%. Added a 6.2-second automatic handwriting reveal, independently swaying palms, Skip/Pause controls, static/reduced-motion and delayed accessible gallery CTA.
+- Used built-in image_gen to remove poster text/ornamental palms and extend scenery into a wide hero background. Inspected generated result, saved `assets/kerala-piravi-hero.jpg`, applied opacity/vignette; exact prompt/path recorded in seasonal preview docs. Original poster remains unchanged.
+- Removed rejected moving frond code. New Cinematic is a viewport hero without the ordinary D scene; Softer retains that previous morph. Gallery/Recommended/Original preserved.
+- Full checks/build and updated trace/controller/source-isolation checks pass. Asset reveal frames inspected and local HTTP/MIME readiness passes. Browser/device/motion realism still awaits review; no restriction workaround.
+- Local only; no GitHub commit/push or Vercel deployment. No new command approval requests.
+
+## 1 November 2026 — three local seasonal concepts
+
+- User requested Cinematic, Softer, then Recommended to compare. Added loopback-only comparison/Replay/Original controls; no production variant selected.
+- Cinematic uses a sourced Kerala contour morph into the exact D, with preserved inner cut and projected SVG-to-WebGL crossfade; remapped existing brand handoff timing. Softer adds moving translucent palm fronds; Recommended adds a small outline drawing beside Malayalam wishes.
+- Removed rejected Home poster feature and moved complete dated artwork into About → Studio Moments. Image bytes preserved; no new poster editing.
+- Bundled simplified DataMeet-based geographic contour with CC BY 4.0 credit and modification notice. No runtime external map dependency.
+- Static/reduced-motion paths, production date boundary and local query isolation implemented; free replay remains intentional for review. Production session-playback policy awaits selected concept.
+- Full checks/build pass (88 references), including new expiry/mode/controller/morph/projection tests and local HTTP/MIME readiness. Browser/device visuals remain pending; no browser restriction workaround.
+- Updated records and added `docs/SEASONAL_PREVIEWS.md`. No GitHub commit/push or Vercel deployment; local server retained.
+
+## 1 November 2026 — seasonal preview feedback
+
+- User rejected the poster's inline Home placement and suggested a gallery plus a special homepage animation only for today; asked for advice and alternatives.
+- Recommended a dated About-page celebrations gallery, brief Kerala-outline/Malayalam greeting hero accent, gallery link, once-per-session playback and static reduced-motion treatment. Proposed automatic expiry at 2 November, 00:00 Asia/Kolkata.
+- Recorded alternative palm-shadow and Kerala-outline-to-D concepts. No new website edits or deployment in this discussion turn; previous local prototype remains unapproved and pending replacement. Local-review-before-push constraint remains.
+
+## 1 November 2026 — Kerala Piravi local preview
+
+- User requested localhost review before any GitHub push. Added a pearl-white, two-column greeting/poster section after the cinematic D story, stacking greeting above artwork on phones.
+- Preserved the entire poster in a byte-identical public asset copy, with explicit dimensions/lazy loading and native full-image links. Added JPEG MIME types to the local dev server.
+- Existing checks/build passed; generated page checks resolve 86 references. Verified feature order, unchanged surrounding homepage/other pages/interaction JS, preserved source image and HTTP 200 for page/JPEG/CSS.
+- Started and retained localhost at http://127.0.0.1:4173/; review anchor is `#kerala-piravi`. Actual browser/device/keyboard visual review remains pending. No expiry logic yet; feature period still needs approval.
+- All changes remain local. No GitHub commit/push or Vercel deployment for this feature.
+
+## 1 November 2026 — Kerala Piravi poster consultation
+
+- Client supplied a purple DigiSpine Kerala Piravi poster; user asked whether/where to feature it and how other agencies handle seasonal material.
+- Reviewed the attachment and concrete agency examples (Blusteak social greeting, Viral Mafia celebration gallery, Reel Tribe seasonal campaign work).
+- Recommended a temporary Home feature immediately after the cinematic sequence, full uncropped portrait artwork, concise greeting/date and a defined feature period; optional future updates archive if content becomes regular.
+- Recorded proposal/pending decisions. No website changes, poster processing, GitHub push or deployment; supplied JPEG remains unchanged.
+
 ## 27 October 2026 — remove DS / 001
 
 - User requested removing the decorative scene identifier. Removed its Home span and kept the adjacent line right-aligned.

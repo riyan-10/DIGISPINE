@@ -1,5 +1,50 @@
 # Verification record — 23 October 2026
 
+## Cinematic release checks — 1 November 2026
+
+Production now selects only Cinematic during the exact IST date window; production query strings cannot disable/extend it. Local normal preview remains available. Comparison toolbar is absent; alternate-mode code/styles are removed. Final build/full check suite/diff check pass, including 12 dock viewport pairs, source contours, focus/pause/reduced motion/timing, original logo geometry, mobile chapters and all four pages. No real-phone/browser rendering verification claimed. Release authorized by user; deployment result to follow.
+
+## Greeting placement and cleanup — 1 November 2026 (local)
+
+- Full `npm run build`, `npm run check` and `git diff --check` passed. Four-page headings/navigation/IDs/references, original D geometry, audit and mobile chapters remain covered by existing checks.
+- Updated actual seasonal-controller fixture verifies the cinematic gallery CTA is absent, Skip focus transfers to the remaining palm control (or labelled region when reduced motion disables the control), 3100ms/900ms sequence resumes once and reduced motion/pause remain operational.
+- Numeric checks validate lower/right docking bounds across the existing 12 viewport pairs; CSS inspection confirms increased continuous-canopy wind, no CTA rules and corrected layout spacer. About source-credit paragraph is absent from generated source; original poster remains unchanged.
+- No browser/device rendering verified; perceived overlap, wind and real keyboard/touch review remain pending. Local only, existing preview retained.
+
+## Five-point cinematic refinement — 1 November 2026 (local)
+
+- Full check suite/build/diff checks passed. Automatic controller test verifies 3100ms writing, 900ms docking, exactly one resume callback and restoration of canvas eligibility; reduced-motion/Skip/focus paths also pass.
+- Smooth closed cubic contours replace pixel-edge polylines. Numerically flattened curve areas remain within 3% of source component masks; original extracted ink total remains 89,748 pixels. Two trees share a continuous canopy path, removing the transformed cutout seam. New trace is 17 parts / 105 pen paths.
+- Dock targets/transforms are finite and inside viewport bounds across 12 tested width/height combinations. Uses untransformed offsets on resize; page story height is unchanged by handoff and CTA/control footprint is retained. CSS/source inspection covers restoration of normal hero rules; these are not browser layout tests.
+- Inspected 2× art-only rasterization of smoothed vectors: continuous leaves and curved letter edges. No browser screenshot or real wind/dock animation verification claimed. Existing D mesh/shader checks still pass unchanged.
+- Local preview/lettering/layout-helper routes return HTTP 200 and correct MIME. Initial sandboxed curl was unable to connect; existing approved curl-prefix escalation succeeded. Existing server occupied port 4173, so no duplicate server was left running. No push/deployment; user/device visual review remains pending.
+
+## Poster calligraphy hero revision — 1 November 2026 (local)
+
+- Full build/check suite and diff checks pass. Source artwork traces retain all 89,748 thresholded ink pixels in 18 components, with each contour's area within 1% of its source mask. Two separately anchored palms; 105 reveal paths; all pen timings finish before the 6.2-second CTA release.
+- Actual dedicated controller exercised in DOM fixtures: CTA initially inert/tabIndex -1; Skip reveals/enables it and transfers focused Skip to CTA; Pause/Resume toggles state; reduced-motion immediately completes lettering and disables palm motion control; disposal clears timer/observers. These fixtures do not simulate browser CSS/keyboard navigation.
+- Inspected source extraction and rendered **art-only** mask frames at 0.5/1.8/3/4.5/6.2 seconds; source lettering fills progressively in line order. This is not browser UI evidence. Real pen rhythm/palm motion/hero composition/device layout still need user review.
+- Built-in generated background visually inspected: text/logo/service marks removed, wide purple scenery/negative space present. New JPEG 1672 × 941, 225,205 bytes; opacity/vignette added in CSS.
+- HTTP 200/correct MIME for cinematic route, hero JPEG, calligraphy data and controller. Existing allowed curl command used; no new command approval. Original poster SHA-256 unchanged; D geometry/renderer/mobile layout helper/contact handlers and Services/Contact markup byte-identical. New build assets match source exactly. Rejected moving frond selectors/keyframes absent.
+- Previous browser restriction remains; not bypassed. Local preview only; no production variant, commit, push or deployment.
+
+## Three seasonal concepts — 1 November 2026 (local)
+
+- Build/full checks pass; four pages resolve 88 references. Seasonal syntax and model/controller tests are included in `npm run check`.
+- Verified half-open 1 November IST window, exact midnight expiry (1 November 18:30 UTC), local review override after expiry, malicious/non-loopback host rejection and production-default-off behavior. No production variant selected.
+- Morph endpoints match sourced Kerala contour and exact brand `LOGO_PATH`; finite values/reversible interpolation, monotonic renderer progress and complementary crossfade weights tested across 101 scroll values and 12 width/height pairs. SVG front plane matches WebGL D size/center numerically at crossfade start; shader/geometry are unchanged.
+- Actual seasonal controller runs in DOM fixtures: four toolbar choices with one current item, valid gallery route, note hidden/inert after opening and restored in static mode, exact D endpoint and final transparent SVG/opaque canvas. This does not establish real browser layout, focus behavior or visual smoothness.
+- Local HTTP 200 / correct MIME for three comparison query routes, seasonal JS/CSS/shape module, About gallery and original JPEG. Rejected Home poster removed; About gallery anchor exists. Original poster SHA-256 remains `7ca8f199e842a2ba7d07e538f6b8242c2a6d875a908b780d3c9a1582d8116d8c`.
+- Pending: user visual choice, real shader/CSS/mobile/keyboard/OS preference checks, final once-per-session policy after selection. Prior browser restriction not bypassed. No deployment; local-only review remains required.
+
+## Kerala Piravi local feature — 1 November 2026
+
+- Existing full check suite and build passed; post-build four-page/reference check resolves 86 references. `git diff --check` passed.
+- Inserted section is after the cinematic sequence and before the kinetic introduction. Removing the added section yields the exact previously committed Home markup. Interior pages, animation/renderer/card/contact JS are byte-identical.
+- Poster public copy is identical to supplied JPEG: 2047 × 2560, 355,976 bytes, SHA-256 `7ca8f199e842a2ba7d07e538f6b8242c2a6d875a908b780d3c9a1582d8116d8c`. Image keeps its full aspect ratio with natural height; no crop. Native links, meaningful alt text, a semantic date, local Malayalam text, visible purple focus colour and existing reduced-motion-aware reveals are implemented.
+- Local server returned HTTP 200 for homepage, image and CSS, with correct image/jpeg MIME. Sandbox initially blocked local HTTP; approved escalation completed readiness verification. Server retained for user review at http://127.0.0.1:4173/#kerala-piravi.
+- Visual layout/scroll/keyboard/phone review remains pending; no browser rendering or screenshots claimed. Local-only preview; no push/deployment or automatic expiry.
+
 ## Remove DS / 001 — 27 October 2026
 
 - Static build and four-page structure/83 local-reference checks passed; `git diff --check` passed.

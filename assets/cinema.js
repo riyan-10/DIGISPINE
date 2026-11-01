@@ -1,5 +1,6 @@
 import { createSpineRenderer } from './spine-renderer.js';
 import { layoutChapterCards } from './chapter-layout.js';
+import { createFestival } from './festival.js';
 
 const clamp = value => Math.max(0,Math.min(1,value));
 const lerp = (a,b,t) => a+(b-a)*t;
@@ -22,6 +23,7 @@ const ribbon=document.querySelector('.kinetic-ribbon');
 const closing=document.querySelector('.closing-scene');
 const cards=[...document.querySelectorAll('[data-chapter]')];
 const header=document.querySelector('.site-header');
+const festival=createFestival(sticky);
 const words=wordHeading.textContent.trim().split(/\s+/);
 wordHeading.textContent='';
 words.forEach((word,index)=>{const span=document.createElement('span');span.textContent=word+(index===words.length-1?'':' ');wordHeading.append(span);});
@@ -39,7 +41,7 @@ let desiredPointer={x:0,y:0};
 let revealActive=-1;
 
 function initializeGraphics() {
-  if(renderer || reduced.matches || manualStatic) return;
+  if(festival.dedicated || renderer || reduced.matches || manualStatic) return;
   try {renderer=createSpineRenderer(canvas);} catch(error) {
     console.warn('DigiSpine: using the vector graphics fallback.',error.message);
   }
@@ -59,12 +61,20 @@ function setPanel(element,opacity,x=0,y=0,scale=1) {
   element.style.transform=`translate3d(${x}px,${y}px,0) scale(${scale})`;
   element.style.visibility=opacity>.001?'visible':'hidden';
 }
-function paintStory(progress,arrival) {
+function paintStory(nativeProgress,arrival) {
+  const seasonal=festival.paint(nativeProgress);
+  if(festival.dedicated) {
+    canvas.style.opacity='0';
+    panels.forEach(panel=>{panel.inert=true;panel.setAttribute('aria-hidden','true');});
+    return;
+  }
+  const progress=seasonal.rendererProgress;
+  canvas.style.opacity=String(seasonal.canvasOpacity);
   const width=innerWidth,height=innerHeight;
-  const introOpacity=1-smooth(.12,.29,progress);
-  const connectOpacity=smooth(.22,.34,progress)*(1-smooth(.48,.64,progress));
+  const introOpacity=1-smooth(.12,.29,nativeProgress);
+  const connectOpacity=smooth(.22,.34,nativeProgress)*(1-smooth(.48,.64,progress));
   const brandOpacity=smooth(.58,.72,progress);
-  setPanel(panels[0],introOpacity,-progress*width*.22,-progress*height*.1,1+progress*.1);
+  setPanel(panels[0],introOpacity,-nativeProgress*width*.22,-nativeProgress*height*.1,1+nativeProgress*.1);
   setPanel(panels[1],connectOpacity,-(1-smooth(.22,.4,progress))*75,(1-connectOpacity)*25);
   setPanel(panels[2],brandOpacity,0,0);
   const active=brandOpacity>.5?2:connectOpacity>.5?1:0;
@@ -80,23 +90,24 @@ function paintStory(progress,arrival) {
   });
   const crossfade=smooth(.92,.995,progress);
   wordmarkInitial.style.opacity=String(crossfade);
-  sticky.style.setProperty('--film-progress',progress);
+  sticky.style.setProperty('--film-progress',nativeProgress);
   sticky.style.setProperty('--halo-x',`${-progress*width*.33}px`);
   sticky.style.setProperty('--halo-scale',1+progress*.4);
-  percent.textContent=String(Math.round(progress*100)).padStart(2,'0');
-  const label=progress<.27?'01 / The possibilities':progress<.62?'02 / The mark':'03 / DigiSpine';
+  percent.textContent=String(Math.round(nativeProgress*100)).padStart(2,'0');
+  const label=festival.cinematic&&nativeProgress<.28?'01 / Our roots':progress<.27?'01 / The possibilities':progress<.62?'02 / The mark':'03 / DigiSpine';
   if(chapterLabel.textContent!==label) chapterLabel.textContent=label;
-  story.dataset.progress=progress.toFixed(3);
+  story.dataset.progress=nativeProgress.toFixed(3);
   if(fallback && targetRect) {
     const travel=smooth(.62,.90,progress);
+    const origin=festival.cinematic?festival.origin(width,height):null;
     const destinationX=targetRect.x+targetRect.width/2;
     const destinationY=targetRect.y+targetRect.height/2;
-    fallback.style.left=`${lerp(width*.65,destinationX,travel)}px`;
-    fallback.style.top=`${lerp(height*.5,destinationY,travel)}px`;
-    fallback.style.transform=`translate(-50%,-50%) scale(${lerp(1,targetRect.height/350,travel)}) rotateY(${(1-travel)*-25}deg)`;
-    fallback.style.opacity=String(1-crossfade);
+    fallback.style.left=`${lerp(origin?origin.x+origin.width/2:width*.65,destinationX,travel)}px`;
+    fallback.style.top=`${lerp(origin?origin.y+origin.height/2:height*.5,destinationY,travel)}px`;
+    fallback.style.transform=`translate(-50%,-50%) scale(${lerp(origin?origin.height/350:1,targetRect.height/350,travel)}) rotateY(${(1-travel)*(festival.cinematic?0:-25)}deg)`;
+    fallback.style.opacity=String((1-crossfade)*seasonal.canvasOpacity);
   }
-  renderer?.render(progress,pointer,arrival,targetRect);
+  renderer?.render(seasonal.rendererProgress,pointer,festival.cinematic?1:arrival,targetRect);
 }
 function paintPage() {
   const height=innerHeight;
@@ -148,6 +159,7 @@ function updatePreference() {
   toggle.disabled=reduced.matches;
   toggle.setAttribute('aria-pressed',String(isStatic));
   if(isStatic) {
+    festival.paint(0);
     cancelAnimationFrame(frame);frame=0;
     panels[0].inert=false;panels[0].setAttribute('aria-hidden','false');
     panels.slice(1).forEach(panel=>{panel.inert=true;panel.setAttribute('aria-hidden','true');});
@@ -187,6 +199,12 @@ sticky.addEventListener('pointermove',event=>{
   desiredPointer={x:(event.clientX/innerWidth-.5)*2,y:(.5-event.clientY/innerHeight)*2};requestFrame();
 });
 sticky.addEventListener('pointerleave',()=>{desiredPointer={x:0,y:0};requestFrame();});
+festival.onResume?.(()=>{
+  initializeGraphics();measure();
+  current=clamp((scrollY-storyStart)/storyLength);
+  arrivalStart=performance.now();
+  paintStory(current,reduced.matches?1:0);requestFrame();
+});
 initializeGraphics();
 updatePreference();
 current=clamp((scrollY-storyStart)/storyLength);

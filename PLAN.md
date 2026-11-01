@@ -1,5 +1,77 @@
 # DigiSpine implementation plan
 
+## Approved cinematic release — 1 November 2026
+
+- [x] User chose Cinematic and authorized GitHub push / existing Vercel deployment.
+- [x] Remove alternate runtime modes/comparison toolbar; enable date-gated production Cinematic and normal fallback at midnight IST.
+- [x] Rebuild/check responsive math, reduced motion/controller, original logo and all four pages.
+- [ ] Push guarded main update and verify Vercel deployment; record actual result.
+- [ ] Real-phone visual QA remains pending; responsive implementation and fixture checks pass.
+
+This release authorization supersedes earlier local-only/pending-selection entries below.
+
+## Preview availability — 1 November 2026
+
+- [x] Restart local server after unreachable-preview report and verify cinematic route returns HTTP 200. Leave running for review.
+
+## Latest seasonal cleanup — 1 November 2026
+
+- [x] Move completed lettering lower/right, with phone/landscape positioning.
+- [x] Remove cinematic gallery button and its layout/state; preserve Skip focus continuity.
+- [x] Increase joined-palm wind while preserving pause/reduced motion.
+- [x] Remove the About source-credit paragraph confirmed by the user; retain source attribution in documentation/code.
+- [x] Run full checks/build and update records.
+- [ ] User reviews current placement/motion locally; no seasonal push/deployment authorized.
+
+Earlier sections below record prior iterations; this revision supersedes their gallery-button and placement behavior.
+
+## Kerala Piravi poster — 1 November 2026 (proposal)
+
+Five-point refinement update:
+
+- [x] Replace pixel-stepped filled outlines with smooth cubic contours and remove the soft text shadow.
+- [x] Preserve both palms as an intact joined canopy so overlapping leaves do not tear apart.
+- [x] Halve drawing time to 3.1 seconds and add a 0.9-second responsive move to the right-hand poster area.
+- [x] Restore original headline/D/scroll sequence/controls after docking, with stable page/layout height.
+- [x] Test timed phases, callback, reduced-motion/skip/focus, contour area and responsive docking; rebuild and confirm local HTTP readiness.
+- [ ] User reviews the five changes locally; real browser/mobile visual checks remain pending. No push authorized for this preview.
+
+Latest design steering: rejected moving background; previous Cinematic becomes Softer. New Cinematic is original-poster calligraphy drawn on load with two swaying palms, followed by a gallery button over a text-free poster backdrop.
+
+- [x] Remove rejected frond background and reassign Kerala-to-D to Softer.
+- [x] Trace the actual source Malayalam/palms and create automatic pen-mask reveal; keep original lettering rather than replace the font.
+- [x] Add independent palm wind, pause/skip/reduced-motion paths and reveal/focus-enable gallery CTA after drawing.
+- [x] Generate/inspect/save a text-free wide poster background; apply opacity/vignette in the new Cinematic hero.
+- [x] Run updated controller/trace tests, full checks/build and HTTP readiness without new command approval requests.
+- [ ] User reviews the revised Cinematic and Softer at the existing local comparison links; real browser/mobile/keyboard checks remain pending.
+
+Latest review: user rejected the inline Home poster placement. Do not publish that prototype. Gallery + today-only homepage animation is the new proposed direction; local review before pushing still applies.
+
+Comparison update: user requested all three options to try in order. Cinematic / Softer / Recommended plus Original/Replay controls are implemented locally; detailed URLs/source/verification are in `docs/SEASONAL_PREVIEWS.md`.
+
+- [x] Remove rejected Home feature and place poster in About → Studio Moments.
+- [x] Implement three local seasonal concepts with a loopback-only comparison switcher.
+- [x] Align cinematic morph with existing WebGL D; preserve its inner cut and coordinate normal wordmark handoff.
+- [x] Implement normal/static/reduced-motion paths and date-window model; test host/date isolation and controller math.
+- [x] Run checks/build and verify local HTTP readiness for all concept routes and assets.
+- [ ] User compares concepts; verify perceived handoff, actual keyboard/mobile/reduced-motion rendering and select one.
+- [ ] After selection, set the approved live variant and finalize once-per-session behavior; local previews deliberately replay freely. No release authorized yet.
+
+- [x] Record placement rejection and propose a dated About-page celebrations gallery plus integrated seasonal hero accent.
+- [x] Replace rejected local Home feature; final animation selection awaits comparison.
+- [x] Implement/test date-window isolation for a future chosen variant at 2 November 2026, 00:00 Asia/Kolkata; retain dated gallery item. No live variant selected yet.
+- [ ] Verify reduced motion, repeat-visit behavior, expiry boundary and mobile layout before local review.
+
+- [x] Review supplied poster and research concrete agency examples of seasonal posts/gallery/campaign placement.
+- [x] Recommend a temporary inline Home feature after the cinematic sequence, preserving the full portrait artwork and existing hero.
+- [ ] User selects gallery placement/animation; homepage feature is now today-only, superseding the earlier 1–3 November suggestion.
+- [x] User requested a localhost preview before pushing; implement the responsive feature with accessible greeting/alt text and full uncropped image.
+- [x] Build/check local feature, verify page/image HTTP responses and leave preview server running.
+- [ ] User reviews local layout, real mobile rendering and keyboard links; choose final feature period/expiry.
+- [ ] Push/deploy only after a subsequent user request; current instruction is local preview first.
+
+Consultation was followed by a local implementation on 1 November. No GitHub push or deployment for this feature.
+
 ## Remove decorative scene identifier — 27 October 2026
 
 - [x] Remove `DS / 001` from Home and preserve the adjacent tagline's position.
