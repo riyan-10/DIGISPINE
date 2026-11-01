@@ -1,5 +1,13 @@
 # DigiSpine — project record
 
+## Mobile framing release authorized — 1 November 2026
+
+User explicitly requested pushing the mobile backdrop correction now. Build/full checks/diff checks pass. Publishing this CSS-only website correction and project records through the existing GitHub/Vercel flow; deployment result pending verification.
+
+## Mobile backdrop framing — 1 November 2026
+
+User reported the background poster size on mobile while confirming the rest looks good. Source artwork is landscape (1672×941); mobile cover fills a portrait screen by magnifying/cropping most horizontal content. Added portrait-only CSS at widths ≤800px: fit image to full width, anchor scenery at bottom and fade into the purple upper field. Desktop/landscape framing, greeting placement, choreography and poster remain unchanged. This keeps all scene elements visible at their natural aspect ratio, with a smaller scenic band and purple space for the lettering. Full checks/build/diff checks pass, preview HTTP 200. Source art inspected; actual mobile composition requires user review. Local correction only; no new push/deployment.
+
 ## Cinematic deployment verified — 1 November 2026
 
 Pushed selected cinematic source `19337ddd7993fecf7669a1246d8d41fd2ba8d71c` to `main` with an expected-SHA guard and no force. GitHub Vercel status reports **success**: https://vercel.com/riyan-10s-projects/digispine/EVNnhGvFsmMUNFFukuUCdiQ8ksAK. Final build/full checks pass; real-phone visual review remains pending. Only Cinematic is enabled; normal homepage resumes at 2 November 00:00 IST. Dated About poster remains. This documentation follow-up records the verified deployment.

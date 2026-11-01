@@ -1,5 +1,14 @@
 # Work log
 
+## Mobile framing release authorized — 1 November 2026
+
+User explicitly requested pushing the mobile backdrop correction now. Build/full checks/diff checks pass. Publishing this CSS-only website correction and project records through the existing GitHub/Vercel flow; deployment result pending verification.
+
+## 1 November 2026 — portrait-phone background framing
+
+- Replaced oversized cover crop with full-width, bottom-aligned scenery on portrait screens ≤800px, fading into purple above.
+- Preserved desktop/landscape, artwork bytes and all animation. Build/checks pass; local preview ready. Not pushed; actual mobile appearance pending review.
+
 ## Cinematic deployment verified — 1 November 2026
 
 Pushed selected cinematic source `19337ddd7993fecf7669a1246d8d41fd2ba8d71c` to `main` with an expected-SHA guard and no force. GitHub Vercel status reports **success**: https://vercel.com/riyan-10s-projects/digispine/EVNnhGvFsmMUNFFukuUCdiQ8ksAK. Final build/full checks pass; real-phone visual review remains pending. Only Cinematic is enabled; normal homepage resumes at 2 November 00:00 IST. Dated About poster remains. This documentation follow-up records the verified deployment.

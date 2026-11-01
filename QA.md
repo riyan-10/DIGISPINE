@@ -1,5 +1,9 @@
 # Verification record — 23 October 2026
 
+## Mobile backdrop framing — 1 November 2026
+
+Source asset inspection confirms 1672×941 landscape composition. At 390×844, cover scales it to approximately 1500px wide, exposing only 26% of its width. New portrait CSS fits all 1672 source pixels across 390px (about 219px high), bottom-aligned without stretching and faded into purple. Full build/check suite/diff checks pass; preview HTTP 200. No browser/mobile rendering verification claimed. Local-only change awaiting composition review.
+
 ## Cinematic deployment verified — 1 November 2026
 
 Pushed selected cinematic source `19337ddd7993fecf7669a1246d8d41fd2ba8d71c` to `main` with an expected-SHA guard and no force. GitHub Vercel status reports **success**: https://vercel.com/riyan-10s-projects/digispine/EVNnhGvFsmMUNFFukuUCdiQ8ksAK. Final build/full checks pass; real-phone visual review remains pending. Only Cinematic is enabled; normal homepage resumes at 2 November 00:00 IST. Dated About poster remains. This documentation follow-up records the verified deployment.
