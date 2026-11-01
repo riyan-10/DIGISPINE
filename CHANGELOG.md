@@ -1,5 +1,9 @@
 # Work log
 
+## Cinematic deployment verified — 1 November 2026
+
+Pushed selected cinematic source `19337ddd7993fecf7669a1246d8d41fd2ba8d71c` to `main` with an expected-SHA guard and no force. GitHub Vercel status reports **success**: https://vercel.com/riyan-10s-projects/digispine/EVNnhGvFsmMUNFFukuUCdiQ8ksAK. Final build/full checks pass; real-phone visual review remains pending. Only Cinematic is enabled; normal homepage resumes at 2 November 00:00 IST. Dated About poster remains. This documentation follow-up records the verified deployment.
+
 ## 1 November 2026 — cinematic selected for release
 
 - User authorized publishing the selected Cinematic through GitHub/Vercel.

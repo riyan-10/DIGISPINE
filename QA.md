@@ -1,5 +1,9 @@
 # Verification record — 23 October 2026
 
+## Cinematic deployment verified — 1 November 2026
+
+Pushed selected cinematic source `19337ddd7993fecf7669a1246d8d41fd2ba8d71c` to `main` with an expected-SHA guard and no force. GitHub Vercel status reports **success**: https://vercel.com/riyan-10s-projects/digispine/EVNnhGvFsmMUNFFukuUCdiQ8ksAK. Final build/full checks pass; real-phone visual review remains pending. Only Cinematic is enabled; normal homepage resumes at 2 November 00:00 IST. Dated About poster remains. This documentation follow-up records the verified deployment.
+
 ## Cinematic release checks — 1 November 2026
 
 Production now selects only Cinematic during the exact IST date window; production query strings cannot disable/extend it. Local normal preview remains available. Comparison toolbar is absent; alternate-mode code/styles are removed. Final build/full check suite/diff check pass, including 12 dock viewport pairs, source contours, focus/pause/reduced motion/timing, original logo geometry, mobile chapters and all four pages. No real-phone/browser rendering verification claimed. Release authorized by user; deployment result to follow.
