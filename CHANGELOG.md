@@ -1,5 +1,36 @@
 # Work log
 
+## Bilingual website release authorized — 1 November 2026
+
+User explicitly requested pushing the current changes to GitHub, authorizing the existing Vercel deployment. Scope includes plain-English copy, complete Malayalam pages/language switch, the supplied text testimonial, and the portfolio-based About page. Final build/full checks/diff checks pass. Source images/PDFs remain local; the site uses the previously supplied public artwork and text testimonial. Client wording/translation and real-device review remain pending as documented. Push/deployment verification to follow.
+
+## 1 November 2026 — About updated from supplied portfolios
+
+- Replaced brief About introduction with selected portfolio wording and original method/process descriptions; added beliefs and market context.
+- Added About-specific source data, optional parameters in shared render helpers, responsive beliefs/market cards and complete Malayalam translation.
+- Preserved seasonal gallery, other-page copy, animations and supplied originals. Delivered and expansion markets remain distinct; no invented history/offices.
+- PDF passage matching, full checks/build/diff checks and English/Malayalam About HTTP readiness pass. Source mapping and pending client/device review recorded. Local only; no push/deployment.
+
+## 1 November 2026 — About portfolio direction clarified
+
+- Rechecked both PDFs' company positioning, team/service approach, S.P.I.N.E. method, engagement process, geography and beliefs.
+- Recorded a portfolio-based About outline that preserves the client's simple-language and bilingual requirements. Existing About already uses some source content; latest simplification is briefer.
+- Advice/notes only; no website edits or release. Five-year history attribution and expansion/office distinctions remain tracked.
+
+## 1 November 2026 — clearer copy, English/Malayalam and source-based testimonial
+
+- Planned and implemented simpler company/service/process/enquiry copy across all four pages; retained visual direction and animations, added direct opening Services/Contact links.
+- Added complete static Malayalam pages, visible remembered language switch, English first-visit default, native fallback, same-page/hash links and translated metadata/accessibility/form/motion text.
+- Added a native text testimonial from the supplied five-star Sajad Sharabil Sajad / Varkala Rental Bikes review. Labelled Malayalam translation retains original English; no invented date/link/aggregate. Source preserved and documented.
+- Added Malayalam typography/mobile header rules and eight-route/language/menu/bilingual form checks. Build/full checks and HTTP readiness pass; actual browser/device and client wording review remain pending.
+- Updated plan, notes, source/maintenance docs and QA. Local preview retained; no commit/push/deployment.
+
+## 1 November 2026 — clarity and bilingual requirements received
+
+- Client praised seasonal work and requested easier-to-understand company/service descriptions plus English-default/Malayalam-switchable website.
+- Reviewed current wording; proposed simpler English before translation, complete four-page language coverage, visible switch and readable Malayalam typography.
+- Recorded pending copy, implementation and verification work. Advice/notes only; website unchanged, no push/deployment.
+
 ## Mobile background deployment verified — 1 November 2026
 
 Mobile framing fix `894fecd4423ecb4d7a1451f12d8ea6495a01aa35` pushed to main using an expected-SHA guard, without force. Vercel reports **success**: https://vercel.com/riyan-10s-projects/digispine/513rRZsB8XDaSuKHa4tphoQr6Snn. Full build/checks passed; only portrait background framing changed on the website. Real-phone visual review remains pending. This follow-up records the verified deployment.

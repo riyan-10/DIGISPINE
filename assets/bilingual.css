@@ -1,0 +1,51 @@
+/* Shared language controls and readable source-based customer review. */
+.site-header .language-switch{display:flex;align-items:center;gap:7px;flex-shrink:0;font:12px/1.5 Arial,sans-serif;letter-spacing:0;text-transform:none}
+.language-switch a{display:inline-flex;align-items:center;min-height:44px;padding:5px 7px;border-bottom:1px solid transparent}
+.language-switch a[aria-current="true"]{border-color:currentColor;font-weight:700}.language-switch>span{opacity:.4}
+.testimonial-section{display:grid;grid-template-columns:.85fr 1.4fr;gap:clamp(28px,6vw,100px);align-items:start;padding-block:95px;border-top:1px solid #b5a4cb35}
+.testimonial-intro h2{font-size:clamp(34px,4.5vw,62px);line-height:1.15;letter-spacing:-.04em;margin:24px 0}.testimonial-intro em{font-style:normal;color:#cbbde0}.testimonial-intro>p{font-size:14px;color:#c5bbd0;max-width:340px}
+.review-card{margin:0;background:linear-gradient(145deg,#fcfaff,#eee7f6);color:#24104f;padding:clamp(24px,4vw,48px);border:1px solid #ffffff50;border-radius:5px;min-width:0}.review-top{display:flex;justify-content:space-between;gap:18px;align-items:center;flex-wrap:wrap}.review-stars{color:#76502a;font-size:22px;letter-spacing:3px}.review-top .micro{font-size:9px}.review-card blockquote{margin:27px 0}.review-card blockquote p{font-size:clamp(16px,1.4vw,20px);line-height:1.8;margin-top:18px}.review-card figcaption{display:flex;gap:14px;align-items:center;border-top:1px solid #24104f25;padding-top:22px}.review-avatar{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:#24104f;color:white;flex-shrink:0}.review-card strong{font-size:14px;line-height:1.6}.review-business{display:block;color:#62546e;font-size:12px;margin-top:3px}.review-original{font-size:12px;line-height:1.8;border-top:1px solid #24104f25;padding:15px 0}.review-original summary{cursor:pointer;padding-block:8px}.review-original blockquote p{font-size:14px}.review-translation-note{font-size:11px;color:#62546e;margin-top:20px}
+html[lang="ml"] body{font-family:"Noto Sans Malayalam","Malayalam Sangam MN","Nirmala UI",sans-serif}
+html[lang="ml"] :is(h1,h2,h3,p,.micro,.eyebrow,.section-index,.cinema-kicker,.button,.chapter-link,.text-link,.film-tools,.film-scroll,.footer-links,.navigation,.brief-result pre){letter-spacing:0;text-transform:none;line-height:1.7;font-family:inherit}
+html[lang="ml"] :is(h1,h2,h3){line-height:1.5;overflow-wrap:anywhere}
+html[lang="ml"] .panel-intro h1{font-size:clamp(40px,6.5vw,96px);line-height:1.35;margin-top:24px}
+html[lang="ml"] .cinema-line{max-width:100%}
+html[lang="ml"] .chapter-copy h3{font-size:clamp(28px,3.7vw,52px)}
+html[lang="ml"] .page-hero h1{font-size:clamp(38px,6vw,88px)}
+html[lang="ml"] .section-heading{font-size:clamp(30px,4.2vw,59px)}
+html[lang="ml"] .cinema-kicker{font-size:11px}
+html[lang="ml"] .chapter-link{gap:16px;white-space:normal}
+html[lang="ml"] .brand-word,html[lang="ml"] .assembled-word{font-family:Arial,Helvetica,sans-serif;line-height:1;letter-spacing:-.075em}
+html[lang="ml"] .method-letter{font-family:Arial,sans-serif}
+html[lang="ml"] .intro-bottom p{max-width:600px}
+html[lang="ml"] .film-tools button{white-space:normal}
+@media(min-width:801px) and (max-width:1100px){.site-header .navigation{gap:15px}.site-header .navigation a{font-size:12px}.site-header .brand-word{font-size:23px}.site-header .language-switch{font-size:11px;gap:2px}}
+@media(max-width:800px){
+ body .site-header,body.cinematic-home .site-header{height:112px;padding-bottom:32px;flex-wrap:nowrap}
+ .site-header .language-switch{position:absolute;right:var(--gutter);top:68px;font-size:11px;gap:5px}
+ .language-switch a{min-height:36px;padding:4px 6px}
+ .site-header .menu-toggle{margin-left:auto}
+ body .site-header .navigation{top:111px}
+ .testimonial-section{grid-template-columns:1fr;padding-block:60px;gap:30px}.testimonial-intro>p{max-width:100%}
+ html[lang="ml"] .panel-intro{padding-top:27svh}
+ html[lang="ml"] .panel-intro h1{font-size:clamp(31px,7.8vw,56px);margin-top:20px}
+ html[lang="ml"] .cinema-kicker{font-size:9px;max-width:100%}
+ html[lang="ml"] .intro-bottom{margin-top:22px;gap:16px}
+ html[lang="ml"] .intro-bottom p{font-size:12px;max-width:100%}
+ html[lang="ml"] .connection-labels{display:none}
+ html[lang="ml"] .film-chapter-label,html[lang="ml"] .film-tools button{font-size:8px}
+ html[lang="ml"] .chapter-copy h3{font-size:30px}
+ html[lang="ml"] .closing-copy h2{font-size:clamp(34px,8vw,60px)}
+ html[lang="ml"] .cinematic-button{font-size:12px;gap:15px}
+ html[lang="ml"] .choice{max-width:100%}
+ html[lang="ml"] .footer-main{gap:30px}
+}
+@media(max-height:600px) and (min-width:600px){html[lang="ml"] .panel-intro h1{font-size:7svh;line-height:1.35;margin-top:10px}html[lang="ml"] .intro-bottom p{font-size:10px}html[lang="ml"] .cinema-kicker{font-size:8px}}
+.panel-intro .intro-action{display:inline-flex;align-items:center;min-height:44px;font-size:12px;margin:8px 22px 0 0;border-bottom:1px solid #cbbde066;color:#fff}
+@media(max-width:480px) and (max-height:700px){html[lang="ml"] .panel-intro{padding-top:130px}html[lang="ml"] .panel-intro h1{font-size:28px;line-height:1.25;margin-top:14px}html[lang="ml"] .intro-bottom{margin-top:15px}html[lang="ml"] .intro-bottom p{line-height:1.65}}
+@media(max-width:800px){.site-header .language-switch a{min-height:44px}html:not(.js) body .site-header{height:auto;flex-wrap:wrap;padding-block:20px}html:not(.js) .site-header .language-switch{position:static;margin-left:auto}html:not(.js) .site-header .navigation{position:static;flex-basis:100%}}
+/* Portfolio About: beliefs and delivered/next markets remain distinct. */
+.portfolio-beliefs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px;margin:0}.portfolio-beliefs>div{border-top:1px solid #ffffff35;padding-top:22px}.portfolio-beliefs dt{font-size:15px;color:#cbbde0;line-height:1.7}.portfolio-beliefs dd{font-size:clamp(22px,2.6vw,34px);line-height:1.5;margin:12px 0 0;overflow-wrap:anywhere}.portfolio-beliefs dd span{color:#cbbde0;margin-right:10px}
+.portfolio-markets{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:30px}.portfolio-markets article{border-top:1px solid var(--line);padding-top:22px;min-width:0}.portfolio-markets .micro{color:var(--brand)}.portfolio-markets h3{font-size:30px;margin:20px 0 12px;overflow-wrap:anywhere}.portfolio-markets p{font-size:14px;color:var(--muted)}
+@media(max-width:1000px){.portfolio-markets{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.portfolio-beliefs{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.portfolio-markets{grid-template-columns:1fr;gap:28px}.portfolio-markets h3{margin-top:12px}}

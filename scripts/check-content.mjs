@@ -40,7 +40,7 @@ const email=new URL(links.email);
 assert.equal(email.protocol,'mailto:');
 assert.equal(email.pathname,CONTACT.email);
 assert.equal(email.searchParams.get('body'),message,'Email preserves exact request body');
-assert.equal(email.searchParams.get('subject'),'Free growth audit enquiry');
+assert.equal(email.searchParams.get('subject'),'Free business review enquiry');
 assert.equal([...email.searchParams.keys()].length,2);
 const source=await read('assets/app.js');
 assert.ok(!/\b(fetch|XMLHttpRequest|sendBeacon)\s*\(/.test(source),'Request builder does not send data automatically');

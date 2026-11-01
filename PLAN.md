@@ -1,5 +1,48 @@
 # DigiSpine implementation plan
 
+## Portfolio-based About review version — 1 November 2026
+
+- [x] User authorized selecting portfolio wording for About to confirm the intended direction with the client.
+- [x] Add original introduction, S.P.I.N.E., engagement/review process, beliefs and Kerala/market descriptions; retain gallery and enquiry links.
+- [x] Update Malayalam translation and responsive beliefs/market sections; preserve other-page copy and animation.
+- [x] Verify selected English passages against PDFs; build/full checks and both About HTTP routes pass.
+- [ ] Client confirms content selection and reviews Malayalam; actual browser/phone layout review remains pending.
+- [x] User requested GitHub push / Vercel deployment for the full current revision.
+- [ ] Verify guarded main update and Vercel deployment; record actual result.
+
+## About page: portfolio alignment clarification — 1 November 2026
+
+- [x] Recheck portfolio company positioning, process, geography and beliefs against current simplified About.
+- [x] Record likely interpretation: keep source-specific identity and method while explaining them simply in both languages.
+- [ ] Apply an About structure covering company identity, connected team approach, work/review process and Kerala/India/UAE context when continuing implementation.
+- [ ] Confirm any proposed five-year/company-history attribution; no invented founder/team/office details.
+
+This turn is advice; no About rewrite or push performed.
+
+## Bilingual clarity and testimonial implementation — 1 November 2026
+
+User authorized planning and executing the clarity/language changes plus adding the supplied review as a conventional testimonial rather than a poster. Local implementation; no new push/deployment requested.
+
+- [x] Simplify four-page English introduction, services, working process and enquiry UI while preserving purple branding/D choreography/mobile cards/seasonal feature.
+- [x] Render four complete Malayalam equivalents with visible English | മലയാളം switch, English first-visit default, remembered choice and equivalent-page/hash navigation; work without JS through native links.
+- [x] Add native testimonial quote/rating/name from supplied source, no invented review URL/date/aggregate; translated Malayalam labelled with original English available.
+- [x] Localize form/status/animation/accessibility text and metadata; add Malayalam typography and mobile language controls.
+- [x] Build/check eight routes, translations, link integrity, language persistence, form Unicode handoff, keyboard/reduced-motion behavior through available checks; document browser/device limitations.
+- [x] Update records and leave localhost ready for review; client English/Malayalam wording review remains pending.
+
+Implemented and checked locally. See `docs/BILINGUAL_CONTENT.md` for routes, editing, source handling and validation. Final client wording approval and actual browser/device visual QA remain pending; no push/deployment requested for this revision.
+
+## Client clarity and language requests — 1 November 2026
+
+- [x] Record praise for Kerala Piravi plus requested plain language and English/Malayalam support.
+- [x] Review existing copy and propose a clearer opening, concrete service labels and simpler enquiry language.
+- [ ] Rewrite English across all four pages with clear company/service explanations while preserving approved visual direction.
+- [ ] Review draft wording with client; prepare natural Malayalam for the approved content.
+- [ ] Implement a visible English | മലയാളം switch, English default, remembered user choice and equivalent-page navigation.
+- [ ] Translate navigation, services, forms/messages, accessibility labels and page metadata consistently; use Malayalam typography/layout rules.
+- [ ] Verify both languages on all pages, mobile/keyboard/reduced motion, form handoffs, animation and language persistence.
+- [ ] Show local preview and release when requested. Current turn is advice/requirements intake only; no website implementation.
+
 ## Mobile background correction — 1 November 2026
 
 - [x] Identify portrait cover enlargement/cropping of wide artwork.

@@ -1,5 +1,54 @@
 # DigiSpine — project record
 
+## Bilingual website release authorized — 1 November 2026
+
+User explicitly requested pushing the current changes to GitHub, authorizing the existing Vercel deployment. Scope includes plain-English copy, complete Malayalam pages/language switch, the supplied text testimonial, and the portfolio-based About page. Final build/full checks/diff checks pass. Source images/PDFs remain local; the site uses the previously supplied public artwork and text testimonial. Client wording/translation and real-device review remain pending as documented. Push/deployment verification to follow.
+
+## Portfolio-based About implemented for review — 1 November 2026
+
+User authorized taking content from the portfolios and preparing About to ask the client whether this is what he intended. Updated English About with selected original wording: growth-department introduction and one-team message, original S.P.I.N.E. stage descriptions (long p5), five-stage process including quarterly review (long p12), beliefs (long p14) and market descriptions (long p13). Full source mapping/selection and adaptation notes in `docs/ABOUT_PORTFOLIO.md`. Data lives in `scripts/about-content.mjs`; shared method/process helpers now accept optional data while preserving other-page defaults. Retained seasonal gallery and contact CTA.
+
+Updated complete Malayalam counterpart and responsive beliefs/market cards. Market status distinguishes delivered India/served UAE from expanding GCC and next international markets. No invented biography/offices/client proofs; unresolved five-year attribution omitted. English is selected source wording with extraction whitespace/capitalization and website arrangement changes; Malayalam remains a draft translation. Client approval of content direction/wording is pending.
+
+Build/full checks/diff checks pass: eight pages/228 references, existing bilingual/menu/form/geometry/seasonal checks. Direct PDF checks confirm introduction/one-team text, five method descriptions, five process descriptions and six belief pairs, normalizing whitespace/case. Both About URLs HTTP 200. No browser/device rendering verification claimed; prior restriction not bypassed. No commit/push/deployment; local preview is ready at `/about.html?lang=en` and `/ml/about.html?lang=ml`.
+
+## About-page portfolio clarification — 1 November 2026
+
+User reports client additionally requested About “according to the portfolio” and asks what that likely means. Rechecked source text: short portfolio pp3–5 (one team/six services, process, experience/geography claims) and long pp2–5/12–14 (growth-department positioning, connected service model, S.P.I.N.E., engagement/reviews, Kerala/India/UAE delivered versus expansion ambitions, beliefs). Existing About already includes some source material; the latest simplified page is brief and omits some distinctive positioning and beliefs.
+
+Interpretation, not confirmed client intent: use the supplied company identity/story, connected-team approach, working method, Kerala roots and delivery context as About's factual basis, explained in plain English/Malayalam. Proposed structure: who DigiSpine is; why branding/marketing/websites/follow-up work together; how the team works and reviews progress; Kerala roots/India-UAE experience and guiding principles. Preserve clarity request and bilingual support. Optional draft company paragraph can be prepared from those facts; do not invent a founder biography/team size, convert five years into company age, or present planned GCC/Europe expansion as current offices. Five-year attribution remains unresolved. This session is clarification/advice only: no website edits or deployment; previously implemented bilingual work remains local.
+
+## Bilingual clarity and testimonial completed locally — 1 November 2026
+
+Implemented plain-English copy across all four pages, including a direct agency/service description, tangible service labels, simpler About/process/packages/enquiry text and direct opening Services/Contact links. Preserved approved D choreography, white/purple theme, phone card behavior and seasonal art. Implemented four full static Malayalam counterparts, an English-default remembered language switch with native fallback, equivalent-page/anchor links, localized metadata/accessibility/UI/motion labels, translated form validation/status/outgoing request text, and Malayalam OS typography/responsive spacing.
+
+Supplied review was visually read from `Let’s Build together_20261101_113136_0000.png`: five stars, Sajad Sharabil Sajad, Varkala Rental Bikes. Added one Home quote card with exact original text/name/rating, no poster-as-review-image, invented date/link/aggregate or owner title. Malayalam translation is labelled with original English disclosure. Source/provenance/hash in `docs/TESTIMONIAL_SOURCE.md`; source PNG unchanged. Review claims remain attributed customer experience, not a business-wide promise.
+
+Verified: full build/checks/diff checks, eight pages/228 local links/assets, dictionary coverage, menu/Escape focus fixtures, bilingual enquiry/Unicode handoffs, preference/default/override/blocked storage, equivalent-page/hash/metadata and exact quote checks; existing D mesh/chapter/seasonal timing/reduced-motion checks pass. HTTP 200 for all eight routes. Restarted verified local development server to serve new Malayalam routes; retained port 4173. Prior browser restriction not bypassed; no actual browser/device rendering claimed. Client copy/translation and real-device review remain pending.
+
+Detailed maintenance/verification: `docs/BILINGUAL_CONTENT.md`. No public deployment, commit or GitHub push for this revision. Local preview links: English `http://127.0.0.1:4173/index.html?lang=en`, Malayalam `http://127.0.0.1:4173/ml/index.html?lang=ml`, testimonial `http://127.0.0.1:4173/index.html?lang=en#customer-review`.
+
+## Bilingual clarity and testimonial implementation — 1 November 2026
+
+User authorized planning and executing the clarity/language changes plus adding the supplied review as a conventional testimonial rather than a poster. Local implementation; no new push/deployment requested.
+
+- [x] Simplify four-page English introduction, services, working process and enquiry UI while preserving purple branding/D choreography/mobile cards/seasonal feature.
+- [x] Render four complete Malayalam equivalents with visible English | മലയാളം switch, English first-visit default, remembered choice and equivalent-page/hash navigation; work without JS through native links.
+- [x] Add native testimonial quote/rating/name from supplied source, no invented review URL/date/aggregate; translated Malayalam labelled with original English available.
+- [x] Localize form/status/animation/accessibility text and metadata; add Malayalam typography and mobile language controls.
+- [x] Build/check eight routes, translations, link integrity, language persistence, form Unicode handoff, keyboard/reduced-motion behavior through available checks; document browser/device limitations.
+- [x] Update records and leave localhost ready for review; client English/Malayalam wording review remains pending.
+
+Implemented and checked locally. See `docs/BILINGUAL_CONTENT.md` for routes, editing, source handling and validation. Final client wording approval and actual browser/device visual QA remain pending; no push/deployment requested for this revision.
+
+## Client feedback: clarity and bilingual website — 1 November 2026
+
+User reports client praised the Kerala Piravi work. Client finds the main website complex: an ordinary visitor should immediately understand what kind of company DigiSpine is and which services it offers. Client also requests both English and Malayalam, with English as the default and an explicit language switch. User asked for advice; no website rewrite or bilingual implementation is performed in this session.
+
+Reviewed current Home/Services/About/Contact templates and service data. Current opening DISCOVERED / TRUSTED / CHOSEN plus “brand engineering”, “customer journey” and “growth systems” assumes marketing knowledge. Proposed direction: keep the approved visual identity/animation, put a direct digital-marketing-agency description and concrete offerings in the opening, simplify service names/explanations and enquiry calls to action across all four pages. Draft example: “We help your business reach more customers online”, supported by websites, social media, online ads, branding and video descriptions. All suggested wording remains draft pending client review; no outcome guarantees or invented proof.
+
+Bilingual recommendation (planned, not implemented): visible English | മലയാളം switch in desktop header and phone menu, English on first visit, remember an explicit choice across pages, switch to equivalent current page, translate navigation/services/forms/validation/enquiry UI/metadata/alt text consistently, use a suitable Malayalam font and review natural Malayalam with the client. Keep DigiSpine logo unchanged; check Malayalam line lengths and touch targets rather than forcing English uppercase/spacing. Proposed next sequence: simplify English, client review, translate the approved copy, implement/test both languages locally, release on request. Need final wording/client language review. No website edits, push or deployment this session.
+
 ## Mobile background deployment verified — 1 November 2026
 
 Mobile framing fix `894fecd4423ecb4d7a1451f12d8ea6495a01aa35` pushed to main using an expected-SHA guard, without force. Vercel reports **success**: https://vercel.com/riyan-10s-projects/digispine/513rRZsB8XDaSuKHa4tphoQr6Snn. Full build/checks passed; only portrait background framing changed on the website. Real-phone visual review remains pending. This follow-up records the verified deployment.

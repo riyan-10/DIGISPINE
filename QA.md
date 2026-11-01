@@ -1,5 +1,21 @@
 # Verification record — 23 October 2026
 
+## Portfolio-based About — 1 November 2026 (local)
+
+- Build/full suite/diff checks pass with eight pages and 228 local references; existing bilingual navigation, menu/Escape/focus, form handoffs, D geometry and seasonal reduced-motion tests remain passing.
+- Direct source-PDF text checks confirm introduction/one-team paragraphs, all five S.P.I.N.E. descriptions, five process descriptions and six belief pairs after whitespace/case normalization. Selected sources/adaptations mapped in `docs/ABOUT_PORTFOLIO.md`.
+- English and Malayalam About routes return HTTP 200. Source inspection: semantic beliefs definition list, market articles, natural wrapping with responsive 3→2 and 4→2→1 column layouts; existing reveal/reduced-motion behavior reused.
+- No actual browser/device/visual verification claimed; prior browser restriction not bypassed. Client selection/translation review remains pending. No deployment.
+
+## Bilingual clarity and testimonial — 1 November 2026 (local)
+
+- Build/full check suite/diff checks pass. Eight localized pages have one H1 each, correct active navigation, unique IDs and 228 valid local links/assets. All eight preview routes return HTTP 200. New Malayalam routes required restart of the verified development server; retained on 4173.
+- Static generation rejects missing translatable text. Fixtures cover English-first default, remembered/explicit language, blocked storage, equivalent-page/hash/query links, correct alternate metadata, translated review/original English and no fabricated relative date/aggregate.
+- Actual app handlers run for both languages: menu open/close, Escape returning focus to menu, link/outside click dismissal; form prepare/review/focus, custom validation, input invalidation and Unicode-safe WhatsApp/email body/subject. No external messages sent.
+- Existing logo mesh/inner-cut/projection, mobile chapter geometry and seasonal timing/reduced-motion checks pass; seasonal controller exercised in both languages. Source inspection confirms native language links/44px mobile targets, Malayalam typography overrides, reduced/static CSS reuse and original review transcription/source asset preservation.
+- Original supplied review image SHA-256 recorded in `docs/TESTIMONIAL_SOURCE.md`. New content is text, not the source poster. Malayalam translation explicitly labelled with native original-English disclosure.
+- These are numerical/source/DOM fixture/HTTP checks, not actual browser rendering, screen-reader or real-phone evidence. Prior browser-policy restriction remains and was not bypassed. Client English/Malayalam copy review and actual device/overflow/font/scroll/keyboard visual checks remain pending. No commit/push/deployment.
+
 ## Mobile background deployment verified — 1 November 2026
 
 Mobile framing fix `894fecd4423ecb4d7a1451f12d8ea6495a01aa35` pushed to main using an expected-SHA guard, without force. Vercel reports **success**: https://vercel.com/riyan-10s-projects/digispine/513rRZsB8XDaSuKHa4tphoQr6Snn. Full build/checks passed; only portrait background framing changed on the website. Real-phone visual review remains pending. This follow-up records the verified deployment.

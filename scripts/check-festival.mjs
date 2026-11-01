@@ -19,11 +19,11 @@ assert.equal(selectVariant('localhost','?festival=normal',DAY_START),null);
 assert.equal(selectVariant('evil-localhost.example','?festival=soft',DAY_END),null);
 assert.equal(selectVariant('localhost','?festival=soft',DAY_START),'cinematic');
 // Exercise the real controller without a browser or external navigation.
-for(const mode of ['cinematic','normal']) {
+for(const language of ['en','ml'])for(const mode of ['cinematic','normal']) {
   let isStatic=false;
   function element(){const classes=new Set();return {children:[],nodes:new Map(),offsetLeft:22,offsetTop:180,offsetWidth:346,style:{setProperty(k,v){this[k]=v}},dataset:{},attributes:{},events:{},classList:{add(...keys){keys.forEach(k=>classes.add(k))},toggle(k,on){on?classes.add(k):classes.delete(k)},contains(k){return k==='static-motion'?isStatic:classes.has(k)}},append(node){this.children.push(node)},remove(){},setAttribute(k,v){this.attributes[k]=v},removeAttribute(k){delete this.attributes[k]},addEventListener(k,cb){this.events[k]=cb},focus(){document.activeElement=this},querySelector(key){if(!this.nodes.has(key))this.nodes.set(key,element());return this.nodes.get(key)}};}
   const body=element();
-  globalThis.document={body,createElement:element,createElementNS:element,addEventListener(){},removeEventListener(){},hidden:false};
+  globalThis.document={body,documentElement:{lang:language},createElement:element,createElementNS:element,addEventListener(){},removeEventListener(){},hidden:false};
   globalThis.location={hostname:'127.0.0.1',search:`?festival=${mode}`,pathname:'/index.html',reload(){}};
   globalThis.history={replaceState(){}};globalThis.scrollTo=()=>{};
   const media={matches:false,events:{},addEventListener(k,cb){this.events[k]=cb},removeEventListener(){}};
@@ -39,6 +39,8 @@ for(const mode of ['cinematic','normal']) {
     assert.equal(controller.dedicated,true);
     const hero=sticky.children[0],skip=hero.querySelector('.wish-skip'),motion=hero.querySelector('.wish-motion');
     assert.ok(hero.innerHTML.includes('poster-pen'));
+    if(language==='ml')assert.ok(hero.innerHTML.includes('എഴുത്തിന്റെ ചലനം ഒഴിവാക്കുക'));
+    else assert.ok(hero.innerHTML.includes('Skip handwriting'));
     assert.ok(!hero.innerHTML.includes('wish-cta'));
     assert.equal(controller.paint(0).canvasOpacity,0);
     motion.events.click();assert.equal(motion.attributes['aria-pressed'],'true');assert.ok(hero.classList.contains('wish-paused'));

@@ -1,3 +1,5 @@
+import { translate } from './translations.js';
+const ui=text=>translate(text,document.documentElement.lang);
 import { createSpineRenderer } from './spine-renderer.js';
 import { layoutChapterCards } from './chapter-layout.js';
 import { createFestival } from './festival.js';
@@ -94,7 +96,7 @@ function paintStory(nativeProgress,arrival) {
   sticky.style.setProperty('--halo-x',`${-progress*width*.33}px`);
   sticky.style.setProperty('--halo-scale',1+progress*.4);
   percent.textContent=String(Math.round(nativeProgress*100)).padStart(2,'0');
-  const label=festival.cinematic&&nativeProgress<.28?'01 / Our roots':progress<.27?'01 / The possibilities':progress<.62?'02 / The mark':'03 / DigiSpine';
+  const label=ui(festival.cinematic&&nativeProgress<.28?'01 / Our roots':progress<.27?'01 / The possibilities':progress<.62?'02 / The mark':'03 / DigiSpine');
   if(chapterLabel.textContent!==label) chapterLabel.textContent=label;
   story.dataset.progress=nativeProgress.toFixed(3);
   if(fallback && targetRect) {
@@ -155,7 +157,7 @@ function requestFrame() {if(!frame && !document.hidden && !reduced.matches && !m
 function updatePreference() {
   const isStatic=reduced.matches||manualStatic;
   document.body.classList.toggle('static-motion',isStatic);
-  toggle.textContent=reduced.matches?'Reduced motion is on':manualStatic?'Enable cinematic motion':'View without motion';
+  toggle.textContent=ui(reduced.matches?'Reduced motion is on':manualStatic?'Enable cinematic motion':'View without motion');
   toggle.disabled=reduced.matches;
   toggle.setAttribute('aria-pressed',String(isStatic));
   if(isStatic) {

@@ -4,11 +4,13 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg' };
-const allowed = new Set(['index.html', 'services.html', 'about.html', 'contact.html']);
+const pages=['index.html','services.html','about.html','contact.html'];
+const allowed = new Set([...pages,...pages.map(p=>'ml/'+p)]);
 const server = http.createServer(async (request, response) => {
   try {
     const url = new URL(request.url, 'http://localhost');
     let relative = decodeURIComponent(url.pathname).replace(/^\/+/, '') || 'index.html';
+    if(relative==='ml/'||relative==='ml')relative='ml/index.html';
     if (!allowed.has(relative) && !relative.startsWith('assets/')) throw new Error('Not found');
     const file = path.resolve(root, relative);
     if (!file.startsWith(root + path.sep) && !file.startsWith(root)) throw new Error('Not found');
