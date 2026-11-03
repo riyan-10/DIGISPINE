@@ -7,7 +7,7 @@
 - [x] Group Marketing / Development; add app development and Edu entry/page, update shared navigation/footer/enquiry/metadata/build routes.
 - [x] Add single-visit archived Kerala Piravi replay, consumed activation, normal refresh and BFCache handling; preserve language/reduced motion and avoid expired timer.
 - [x] Run full regressions: ten pages/312 links, 5+2 grouped offerings, bilingual Edu/form/menu/locale, seven-card layouts, archive/date/refresh/BFCache and original renderer/fallback. Package and HTTP checks pass.
-- [ ] Push guarded main update and verify Vercel deployment; record result.
+- [x] Push guarded main update (`c09c7b3`) and verify Vercel deployment: **success**; record result.
 - [ ] Add client-supplied courses later; actual browser/device and client wording/translation review remain pending.
 
 Current approval supersedes earlier advice-only/local-only entries for this revision.

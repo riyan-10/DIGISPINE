@@ -1,5 +1,9 @@
 # Verification record — 23 October 2026
 
+## Business areas and edition deployment verified — 4 November 2026
+
+Pushed source `c09c7b3db7e3cd55efa5fd90fa384aa1c308c8e8` to main using an expected-SHA guard without force. Vercel reports **success**: https://vercel.com/riyan-10s-projects/digispine/GpP9SkkpKLn4WnkJoSMyTRK2Avhv. Release includes complete-business-solutions positioning, grouped Marketing/Development services with app development, dedicated bilingual DigiSpine.edu with course information forthcoming, and explicit single-visit Kerala Piravi replay. Build/full regression, ten-page/312-reference, package and HTTP checks passed as detailed below. Actual device/browser appearance and client course/wording review remain pending. This follow-up records the verified deployment and supersedes earlier pending/local-only entries for this revision.
+
 ## Business areas, education and edition regressions — 4 November 2026
 
 - `npm run build`, full `npm run check`, diff checks pass. Ten generated English/Malayalam pages: one H1, correct active nav, unique IDs, 312 valid local references. New Edu routes included in locale/default/persistence/explicit override/blocked-storage/menu focus tests.
