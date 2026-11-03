@@ -7,7 +7,7 @@ const root=new URL('../',import.meta.url);
 const read=path=>readFile(new URL(path,root),'utf8');
 const pages=await Promise.all(['index.html','services.html','about.html','contact.html'].map(read));
 const [home,services,about,contact]=pages;
-assert.equal(SERVICES.length,6);
+assert.equal(SERVICES.length,7);
 for(const service of SERVICES){
   assert.ok(home.includes(`href="services.html#${service.id}"`),`Home links to ${service.id}`);
   assert.ok(services.includes(`id="${service.id}"`),`Services includes ${service.id}`);
@@ -22,7 +22,7 @@ for(const page of pages){
 }
 for(const word of ['Strategy','Positioning','Intelligence','Navigation','Expansion'])assert.ok(about.includes(`<h3>${word}</h3>`));
 for(const name of ['Foundation','Growth','Scale'])assert.ok(services.includes(`<h3>${name}</h3>`));
-assert.equal((home.match(/data-chapter>/g)||[]).length,6);
+assert.equal((home.match(/data-chapter>/g)||[]).length,7);
 assert.ok(contact.includes('type="submit" disabled'),'No fallback GET submission without JS');
 
 const minimal=buildAuditRequest({company:' Example Brand '});
@@ -44,4 +44,4 @@ assert.equal(email.searchParams.get('subject'),'Free business review enquiry');
 assert.equal([...email.searchParams.keys()].length,2);
 const source=await read('assets/app.js');
 assert.ok(!/\b(fetch|XMLHttpRequest|sendBeacon)\s*\(/.test(source),'Request builder does not send data automatically');
-console.log('Content checks passed: six consistent services, five S.P.I.N.E. stages, three plans, real contact routes and exact Unicode-safe WhatsApp/email handoffs.');
+console.log('Content checks passed: seven consistent services, five S.P.I.N.E. stages, three plans, real contact routes and exact Unicode-safe WhatsApp/email handoffs.');

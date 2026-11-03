@@ -1,5 +1,14 @@
 # Verification record — 23 October 2026
 
+## Business areas, education and edition regressions — 4 November 2026
+
+- `npm run build`, full `npm run check`, diff checks pass. Ten generated English/Malayalam pages: one H1, correct active nav, unique IDs, 312 valid local references. New Edu routes included in locale/default/persistence/explicit override/blocked-storage/menu focus tests.
+- New regression runs actual edition controller at deterministic post-festival time for both languages and reduced-motion states. Checks URL activation consumed, unrelated query and language pathname preserved, refresh mode normal, BFCache event reloads normal URL, no expired-day reload timer, draw/dock/restoration timing, and disposal. Pure date-window/ordinary localhost+production/unknown edition behavior also pass.
+- Data/render checks verify three areas, correct five Marketing/two Development offerings, seven shared enquiry choices including app development, valid Edu links, no fabricated catalogue/prices/enrolment form, and no agency-only positioning. Existing testimonial/source quote tests remain passing.
+- Existing bilingual form event/Unicode handoff, menu/Escape focus, seven-height/seven-viewport sticky cards with phone header height, original D geometry/front alignment/shader-call/fallback and seasonal pause/skip/reduced-motion tests pass. No messages sent.
+- Ten dist HTML pages and changed public modules/styles match source exactly. All ten local routes plus archive query return HTTP 200. Core logo renderer/geometry, drawing/docking art/controller, audit handlers and testimonial source code are unchanged from last deployed HEAD.
+- No actual browser/real-phone/touch/screen-reader or native font/layout evidence claimed. Browser tools unavailable; previous URL policy not bypassed. Course content/client wording/translation and device review remain pending. Release authorized; deployment result to follow.
+
 ## Bilingual website deployment verified — 1 November 2026
 
 Pushed complete source `9fd6eb3b7eb73b19ae2e23af380e1799a288a7e3` to `main` with an expected-SHA guard and no force. Vercel reports **success**: https://vercel.com/riyan-10s-projects/digispine/CbxFzKQfxc7Ep77kuN3PEUFRZCKh. This release includes the simplified English pages, complete Malayalam versions and remembered language switch, source-based customer testimonial, and portfolio-based About. Final build/full automated checks/diff checks passed. Client wording/translation and actual browser/device visual checks remain pending; no claim of those checks being complete. This documentation follow-up records the verified release and supersedes earlier local-only entries for this revision.

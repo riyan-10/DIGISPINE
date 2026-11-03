@@ -4,7 +4,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg' };
-const pages=['index.html','services.html','about.html','contact.html'];
+const pages=['index.html','services.html','about.html','contact.html','edu.html'];
 const allowed = new Set([...pages,...pages.map(p=>'ml/'+p)]);
 const server = http.createServer(async (request, response) => {
   try {

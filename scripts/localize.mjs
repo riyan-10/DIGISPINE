@@ -2,7 +2,7 @@ import { ML } from '../assets/translations.js';
 import { REVIEW } from './testimonial.mjs';
 const decode=s=>s.replaceAll('&amp;','&').replaceAll('&quot;','"').replaceAll('&#39;',"'").replaceAll('&lt;','<').replaceAll('&gt;','>');
 const escape=s=>s.replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;').replaceAll('>','&gt;');
-const identities=new Set(['DIGI','SPINE','DS','DigiSpine','Sajad Sharabil Sajad','Varkala Rental Bikes','Google Ads','Meta Ads','Google Business Profile','WhatsApp','WhatsApp: +91 9074555720','English','© 2026 DigiSpine']);
+const identities=new Set(['D','DIGI','SPINE','DS','DigiSpine','Sajad Sharabil Sajad','Varkala Rental Bikes','Google Ads','Meta Ads','Google Business Profile','WhatsApp','WhatsApp: +91 9074555720','English','Edu','DigiSpine.edu','edu','© 2026 DigiSpine']);
 export const missing=new Set();
 function tr(raw) {
  const key=decode(raw.trim());let result=ML[key];
@@ -35,7 +35,7 @@ export function malayalamHTML(html,filename='index.html') {
  html=html.replace(/href="#([^"]*)"/g,(_,anchor)=>`href="ml/${filename}#${anchor}"`);
  html=html.replace(/href="(https:\/\/wa.me\/[^"]+)"/g,(_,address)=>{const url=new URL(decode(address));const text=url.searchParams.get('text');if(ML[text])url.searchParams.set('text',ML[text]);return `href="${escape(url.href)}"`;});
  // Assets resolve against the root; page links retain the Malayalam locale.
- html=html.replace(/href="(index|services|about|contact)\.html([#?][^"]*)?"/g,(_,p,suffix='')=>`href="ml/${p}.html${suffix}"`);
+ html=html.replace(/href="(index|services|about|contact|edu)\.html([#?][^"]*)?"/g,(_,p,suffix='')=>`href="ml/${p}.html${suffix}"`);
  html=html.replace(/hreflang="en" href="ml\/([^"]+)"/g,'hreflang="en" href="$1"');
  // Explicit English choice always returns to the equivalent root page.
  html=html.replace(/href="ml\/([^"/]+\.html)\?lang=en"/g,'href="$1?lang=en"');

@@ -31,3 +31,7 @@ Pending: client English/Malayalam wording and translated-review review, actual p
 ## About content follow-up
 
 On 1 November the user requested an About review version using the portfolio wording. About now uses selected original company/method/process/belief/market passages with new Malayalam translations; other pages retain simplified content. See `docs/ABOUT_PORTFOLIO.md` for sources, adaptations and pending approval. Still local only.
+
+## 4 November 2026 update
+
+Client requested broader business-solutions positioning, app development, grouped Marketing/Development, dedicated DigiSpine.edu and archived-edition replay. This supersedes the earlier agency-only wording/four-page/six-service scope. About introduction/overview was adapted for this new brief; portfolio method, beliefs, work process and market sections remain. Five page types now exist in both languages. See `docs/BUSINESS_AREAS_AND_EDITIONS.md`.

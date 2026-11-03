@@ -1,7 +1,7 @@
 import { readFile, stat } from 'node:fs/promises';
 import assert from 'node:assert/strict';
 const root = new URL('../', import.meta.url);
-const english=['index.html','services.html','about.html','contact.html'];
+const english=['index.html','services.html','about.html','contact.html','edu.html'];
 const pages=[...english,...english.map(p=>'ml/'+p)];
 let links = 0;
 for (const page of pages) {
@@ -25,4 +25,4 @@ for (const page of pages) {
     links++;
   }
 }
-console.log(`Checked eight localized pages: headings, active navigation, unique IDs and ${links} local links/assets.`);
+console.log(`Checked ten localized pages: headings, active navigation, unique IDs and ${links} local links/assets.`);

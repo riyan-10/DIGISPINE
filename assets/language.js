@@ -2,7 +2,7 @@
 (() => {
  const url=new URL(location.href),parts=url.pathname.split('/').filter(Boolean);
  const page=parts.at(-1)?.endsWith('.html')?parts.at(-1):'index.html';
- if(!['index.html','services.html','about.html','contact.html'].includes(page))return;
+ if(!['index.html','services.html','about.html','contact.html','edu.html'].includes(page))return;
  const ml=parts.includes('ml'),explicit=url.searchParams.get('lang');
  let saved=null;
  try {

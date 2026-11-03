@@ -21,3 +21,7 @@ No new team biography, founding date, offices, metrics or client list. The unres
 Only About content and its Malayalam translation changed for the website in this session, with small reusable data parameters and responsive beliefs/market styles. Shared method/process defaults remain unchanged for other pages. The two original PDFs and brand assets remain untouched. `scripts/about-content.mjs` keeps selected source data separate from simplified shared content.
 
 Built eight pages; full check suite and diff checks pass. Verified introduction, one-team wording, all five method descriptions, all five process descriptions and all six belief pairs against PDF text with whitespace/case normalization. Both About preview routes return HTTP 200. Beliefs use 3→2 columns; markets use 4→2→1 columns with natural height/wrapping and existing reduced-motion/reveal behavior. These source/HTTP/fixture checks are not browser or real-phone rendering verification. Prior browser restriction remains; no bypass. Client review is pending. No push/deployment.
+
+## 4 November 2026 update
+
+Client requested broader business-solutions positioning, app development, grouped Marketing/Development, dedicated DigiSpine.edu and archived-edition replay. This supersedes the earlier agency-only wording/four-page/six-service scope. About introduction/overview was adapted for this new brief; portfolio method, beliefs, work process and market sections remain. Five page types now exist in both languages. See `docs/BUSINESS_AREAS_AND_EDITIONS.md`.

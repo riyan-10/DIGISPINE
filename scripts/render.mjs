@@ -2,7 +2,7 @@ import { missing, malayalamHTML } from './localize.mjs';
 import { writeFile, mkdir } from 'node:fs/promises';
 import { renderHome } from './home.mjs';
 import { SERVICES, CONTACT, buildAuditLinks } from './content.mjs';
-import { renderServices, renderAbout, renderContact } from './pages.mjs';
+import { renderServices, renderAbout, renderContact, renderEdu } from './pages.mjs';
 import { LOGO_PATH, LOGO_VIEWBOX } from '../assets/brand-shape.js';
 const root = new URL('../', import.meta.url);
 const arrow = '<span class="arrow" aria-hidden="true">↗</span>';
@@ -12,12 +12,12 @@ const brand = () => `<a class="brand" href="index.html" aria-label="DigiSpine ho
 function header(active) {
   const page=active==='home'?'index':active;
   const language=`<nav class="language-switch" aria-label="Language"><a href="${page}.html?lang=en" data-language="en" aria-current="true" lang="en" hreflang="en">English</a><span aria-hidden="true">/</span><a href="ml/${page}.html?lang=ml" data-language="ml" lang="ml" hreflang="ml">മലയാളം</a></nav>`;
-  const links = [['home','index.html','Home'],['services','services.html','Services'],['about','about.html','About']].map(([key,url,label]) => `<a href="${url}"${active === key ? ' aria-current="page"' : ''}>${label}</a>`).join('');
+  const links = [['home','index.html','Home'],['services','services.html','Services'],['about','about.html','About'],['edu','edu.html','Edu']].map(([key,url,label]) => `<a href="${url}"${active === key ? ' aria-current="page"' : ''}>${label}</a>`).join('');
   return `<a class="skip-link" href="#main">Skip to content</a><header class="site-header wrap">${brand()}${language}<button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false">Menu <span aria-hidden="true">＋</span></button><nav class="navigation" id="site-navigation" aria-label="Main navigation">${links}<a class="nav-cta" href="contact.html" ${active === 'contact' ? 'aria-current="page"' : ''}>Contact ${arrow}</a></nav></header>`;
 }
 const directAudit = buildAuditLinks('Hi DigiSpine, I would like a free business review.');
 function footer() {
-  return `<footer class="site-footer wrap"><div class="footer-main"><div>${brand()}<p>Websites, marketing and design<br>for your business.</p></div><div class="footer-links"><div><span class="micro">Explore</span><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About DigiSpine</a><a href="services.html#plans">Ways to work together</a></div><div><span class="micro">Start with a free audit</span><a href="contact.html#start-audit">Request a free review ↗</a><a href="${directAudit.whatsapp}" target="_blank" rel="noopener noreferrer">WhatsApp: ${CONTACT.phone}</a><a href="mailto:${CONTACT.email}">${CONTACT.email}</a><a href="tel:${CONTACT.telephone}">Call ${CONTACT.phone}</a></div></div></div><div class="footer-bottom"><span>© 2026 DigiSpine</span><span>Rooted in Kerala. Working across borders.</span><span>Branding · Social media · Ads · Websites</span></div></footer>`;
+  return `<footer class="site-footer wrap"><div class="footer-main"><div>${brand()}<p>Complete business solutions.<br>The Digital Backbone.</p></div><div class="footer-links"><div><span class="micro">Explore</span><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About DigiSpine</a><a href="edu.html">DigiSpine.edu</a><a href="services.html#plans">Ways to work together</a></div><div><span class="micro">Start with a free audit</span><a href="contact.html#start-audit">Request a free review ↗</a><a href="${directAudit.whatsapp}" target="_blank" rel="noopener noreferrer">WhatsApp: ${CONTACT.phone}</a><a href="mailto:${CONTACT.email}">${CONTACT.email}</a><a href="tel:${CONTACT.telephone}">Call ${CONTACT.phone}</a></div></div></div><div class="footer-bottom"><span>© 2026 DigiSpine</span><span>Rooted in Kerala. Working across borders.</span><span>Marketing · Development · Education</span></div></footer>`;
 }
 function cta(title = 'Tell us about<br>your business.') {
   return `<section class="cta-band wrap"><div><div class="eyebrow">Start with a free business review</div><h2>${title}</h2></div><a class="button button-light" href="contact.html#start-audit">Get your free review ${arrow}</a></section>`;
@@ -26,11 +26,13 @@ const pageHero = (eyebrow,title,description,meta) => `<section class="page-hero 
 const home = renderHome({ arrow, symbol, services: SERVICES });
 const servicesPage = renderServices({ pageHero, arrow, cta });
 const about = renderAbout({ pageHero, arrow, symbol, cta });
+const edu = renderEdu({pageHero,arrow});
 const contact = renderContact({ pageHero, arrow });
 const pages = [
-  ['home','DigiSpine — The digital backbone of your business','DigiSpine is a digital marketing agency in Kerala offering branding, social media, online advertising, videos, websites and customer follow-up.',home],
-  ['services','Services — DigiSpine','Explore DigiSpine services: branding, digital marketing, online ads, video production, websites and customer follow-up.',servicesPage],
-  ['about','About — DigiSpine','Meet DigiSpine, a Kerala-based digital marketing agency helping businesses explain their services and reach customers online.',about],
+  ['edu','DigiSpine.edu — Education','DigiSpine.edu is the education space from DigiSpine. Course information and schedules will be shared when available.',edu],
+  ['home','DigiSpine — The digital backbone of your business','DigiSpine provides complete business solutions: marketing, branding, websites, app development and customer follow-up. Explore DigiSpine.edu for upcoming courses.',home],
+  ['services','Services — DigiSpine','Explore DigiSpine Marketing and Development services, including branding, digital marketing, websites and apps, plus the dedicated DigiSpine.edu page.',servicesPage],
+  ['about','About — DigiSpine','Meet DigiSpine, your digital backbone for marketing, development and education. Complete business solutions with roots in Kerala.',about],
   ['contact','Free business review — DigiSpine','Request your free DigiSpine growth audit. Share your business and website through WhatsApp or email, or call +91 9074555720.',contact]
 ];
 await mkdir(new URL('ml/',root),{recursive:true});
@@ -43,4 +45,4 @@ for (const [name,title,description,content] of pages) {
   await writeFile(new URL(name === 'home' ? 'index.html' : `${name}.html`, root), rendered);
 }
 if(missing.size){console.error('Missing Malayalam:',JSON.stringify([...missing],null,2));throw Error('Incomplete translations');}
-console.log('Rendered four pages in English and Malayalam.');
+console.log('Rendered five pages in English and Malayalam.');

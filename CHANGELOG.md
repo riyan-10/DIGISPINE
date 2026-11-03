@@ -1,5 +1,18 @@
 # Work log
 
+## 4 November 2026 — business solutions, dedicated Edu and edition replay
+
+- Implemented broader Complete business solutions positioning with The Digital Backbone tagline; Marketing/Development grouping, app development and three Home area entries.
+- Added dedicated English/Malayalam DigiSpine.edu pages with forthcoming course information, shared nav/footer and language/build/server support. No course catalogue/enrolment invented.
+- About text CTA now replays the Kerala Piravi edition once per explicit visit. Activation is removed from URL; normal post-holiday refresh/BFCache return resumes normal site, with correct language, no stale live expiry timer and existing reduced-motion behavior.
+- Full regression suite, package/source comparison, ten route/edition HTTP checks pass. Notes/source mapping updated; real-device/browser appearance remains pending. User authorized push/deployment; result to follow.
+
+## 4 November 2026 — broader services and archived-edition proposal
+
+- Recorded client request for complete-business-solutions positioning, Digital Backbone tagline, Marketing / Development / DigiSpine Edu grouping and future course content.
+- Reviewed feasibility of replacing About's poster CTA with explicit, nonpersistent Kerala Piravi edition replay; recorded date-gate, local-default, language and expired-timer considerations.
+- Advice/notes only; no website edits, push or deployment. Edu domain/page interpretation and course material remain pending.
+
 ## Bilingual website deployment verified — 1 November 2026
 
 Pushed complete source `9fd6eb3b7eb73b19ae2e23af380e1799a288a7e3` to `main` with an expected-SHA guard and no force. Vercel reports **success**: https://vercel.com/riyan-10s-projects/digispine/CbxFzKQfxc7Ep77kuN3PEUFRZCKh. This release includes the simplified English pages, complete Malayalam versions and remembered language switch, source-based customer testimonial, and portfolio-based About. Final build/full automated checks/diff checks passed. Client wording/translation and actual browser/device visual checks remain pending; no claim of those checks being complete. This documentation follow-up records the verified release and supersedes earlier local-only entries for this revision.

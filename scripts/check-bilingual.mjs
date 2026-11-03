@@ -11,7 +11,7 @@ function visit(address,saved=null,blocked=false){
  vm.runInNewContext(boot,context);
  return {redirected,cleaned,saved:state.value};
 }
-const pages=['index','services','about','contact'];
+const pages=['index','services','about','contact','edu'];
 for(const page of pages){
  const en=await readFile(new URL(`../${page}.html`,import.meta.url),'utf8'),ml=await readFile(new URL(`../ml/${page}.html`,import.meta.url),'utf8');
  assert.match(en,/<html lang="en">/);assert.match(ml,/<html lang="ml">/);
@@ -19,7 +19,9 @@ for(const page of pages){
  assert.ok(ml.includes(`hreflang="en" href="${page}.html"`));assert.ok(ml.includes(`hreflang="ml" href="ml/${page}.html"`));
  assert.equal((ml.match(/data-language="ml" aria-current="true"/g)||[]).length,1);
  assert.ok(!ml.includes('data-language="en" aria-current="true"'));
- for(const [,href] of ml.matchAll(/<a\b[^>]*href="([^"]+)"/g))if(/^(index|services|about|contact)\.html/.test(href))assert.ok(href.includes('?lang=en'),'Only explicit English switch links leave the Malayalam route');
+ for(const [,href] of ml.matchAll(/<a\b[^>]*href="([^"]+)"/g))if(/^(index|services|about|contact|edu)\.html/.test(href))assert.ok(href.includes('?lang=en'),'Only explicit English switch links leave the Malayalam route');
+ assert.equal(visit(`https://example.com/${page}.html?edition=kerala-piravi-2026`,'ml').redirected,`https://example.com/ml/${page}.html?edition=kerala-piravi-2026`,'Language redirect preserves unconsumed edition');
+ assert.equal(visit(`https://example.com/${page}.html?lang=en&edition=kerala-piravi-2026`,'ml').cleaned,`/${page}.html?edition=kerala-piravi-2026`,'Explicit English cleanup preserves edition');
  assert.equal(visit(`https://example.com/${page}.html`).redirected,null,'First visit stays English');
  assert.equal(visit(`https://example.com/${page}.html?festival=normal#main`,'ml').redirected,`https://example.com/ml/${page}.html?festival=normal#main`,'Saved choice preserves page/query/hash');
  const english=visit(`https://example.com/${page}.html?lang=en#main`,'ml');assert.equal(english.redirected,null);assert.equal(english.saved,'en');assert.equal(english.cleaned,`/${page}.html#main`);
@@ -31,9 +33,9 @@ for(const p of REVIEW.paragraphs){assert.ok(home.includes(p));assert.ok(ml.inclu
 assert.ok(home.includes(REVIEW.name));assert.ok(home.includes(REVIEW.business));assert.ok(home.includes('5 out of 5 stars'));
 assert.ok(ml.includes('review-translation-note'));assert.ok(ml.includes('<blockquote lang="ml">'));
 assert.ok(!/6 days ago|aggregateRating|verified review/i.test(home));
-assert.ok(home.includes('Digital marketing agency · Kerala'));assert.ok(!home.includes('DISCOVERED.'));
+assert.ok(home.includes('Complete business solutions · Kerala'));assert.ok(!home.includes('DISCOVERED.'));
 assert.ok(Object.values(ML).every(value=>typeof value==='string'&&value.length));
-console.log('Bilingual: eight static routes, exact-page language links, English default, saved/explicit choices, blocked storage, anchors/metadata and source testimonial passed. Browser/device review remains pending.');
+console.log('Bilingual: ten static routes, exact-page language links, English default, saved/explicit choices, blocked storage, anchors/metadata and source testimonial passed. Browser/device review remains pending.');
 
 // Exercise the unchanged menu handlers with the new bilingual header context.
 const app=(await readFile(new URL('../assets/app.js',import.meta.url),'utf8')).replace(/^import[^\n]+\n/gm,'');

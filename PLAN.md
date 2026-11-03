@@ -1,5 +1,29 @@
 # DigiSpine implementation plan
 
+## Approved business areas and edition release — 4 November 2026
+
+- [x] User confirmed a dedicated DigiSpine.edu page; course content later. Implement and push authorized.
+- [x] Apply complete-business-solutions positioning and retain Digital Backbone tagline in both languages.
+- [x] Group Marketing / Development; add app development and Edu entry/page, update shared navigation/footer/enquiry/metadata/build routes.
+- [x] Add single-visit archived Kerala Piravi replay, consumed activation, normal refresh and BFCache handling; preserve language/reduced motion and avoid expired timer.
+- [x] Run full regressions: ten pages/312 links, 5+2 grouped offerings, bilingual Edu/form/menu/locale, seven-card layouts, archive/date/refresh/BFCache and original renderer/fallback. Package and HTTP checks pass.
+- [ ] Push guarded main update and verify Vercel deployment; record result.
+- [ ] Add client-supplied courses later; actual browser/device and client wording/translation review remain pending.
+
+Current approval supersedes earlier advice-only/local-only entries for this revision.
+
+## New positioning, service groups and edition replay — 4 November 2026
+
+- [x] Record client's broader complete-business-solutions positioning and Digital Backbone tagline.
+- [x] Record Marketing, Development (website + app) and separate DigiSpine Edu direction; course content forthcoming.
+- [ ] Apply broader wording in both languages across visible copy and metadata.
+- [ ] Group services under Marketing / Development; provide an Education entry linking to DigiSpine Edu.
+- [ ] Establish whether “digispine.edu” means a brand/page or an actual separate domain/site. Prepare no invented course details; add real material when supplied.
+- [x] Check current date gate, local preview override, About poster CTA and language redirect behavior for feasibility.
+- [ ] Implement explicit single-visit Kerala Piravi edition replay with activation removed from URL/state, normal refresh, correct language, no expired live-day reload, and normal loopback default after holiday.
+- [ ] Check refresh/back behavior, ordinary visits, both languages, mobile/reduced motion, new route/build links and unchanged normal animation.
+- [ ] Show local review; push/deploy only on request. Current session is advice/recording only.
+
 ## Portfolio-based About review version — 1 November 2026
 
 - [x] User authorized selecting portfolio wording for About to confirm the intended direction with the client.
