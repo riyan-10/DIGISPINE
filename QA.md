@@ -1,5 +1,9 @@
 # Verification record — 23 October 2026
 
+## iPhone arrow presentation — 6 November 2026
+
+Full build/check suite and diff checks pass. Additional generated-output audit finds 118 inline SVG direction icons across ten English/Malayalam pages and no remaining visible ↗/↓/→ glyphs. Each icon uses currentColor, aria-hidden and focusable=false; dist pages equal generated source. Conversion preserves Unicode inside URLs, labels, raw script and style strings; runtime calligraphy hero also uses shared SVG. Existing navigation/menu/Escape/form/language/edition/geometry/card regressions pass. No iPhone/browser visual test claimed; prior limitation remains. Not deployed.
+
 ## Business areas and edition deployment verified — 4 November 2026
 
 Pushed source `c09c7b3db7e3cd55efa5fd90fa384aa1c308c8e8` to main using an expected-SHA guard without force. Vercel reports **success**: https://vercel.com/riyan-10s-projects/digispine/GpP9SkkpKLn4WnkJoSMyTRK2Avhv. Release includes complete-business-solutions positioning, grouped Marketing/Development services with app development, dedicated bilingual DigiSpine.edu with course information forthcoming, and explicit single-visit Kerala Piravi replay. Build/full regression, ten-page/312-reference, package and HTTP checks passed as detailed below. Actual device/browser appearance and client course/wording review remain pending. This follow-up records the verified deployment and supersedes earlier pending/local-only entries for this revision.

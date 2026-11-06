@@ -1,5 +1,15 @@
 # DigiSpine — project record
 
+## Arrow fix publication authorized — 6 November 2026
+
+User explicitly requested pushing the SVG arrow correction. Final build and full regression checks pass; scope is the shared vector icon module, static pages in both languages, runtime seasonal arrow and styling plus records. Publishing through the existing main/Vercel flow; deployment verification pending.
+
+## iPhone arrow presentation fix — 6 November 2026
+
+User reports directional arrows appear as emoji on iPhone and requested checking/fixing. Source uses Unicode ↗/↓/→, whose presentation depends on platform fonts. Implemented shared inline-SVG arrows in `assets/icons.js`, a build-time text-only conversion after Malayalam localization, and SVG down arrow in the runtime Kerala Piravi hero. SVG inherits text size/currentColor, is nonfocusable and hidden from assistive technology; visible link wording remains the accessible label. Conversion preserves HTML attributes/URLs/raw scripts/styles and keeps translation keys intact. CSS provides inline dimensions and baseline/flex alignment.
+
+Build/full regression/diff checks passed. Additional output audit verifies 118 vector arrows across ten pages with no visible Unicode direction glyphs, correct accessibility/colour attributes, untouched URLs/scripts/styles and exact dist/source output. Seasonal controller tests pass with new icon import. Actual iPhone rendering not directly verified; earlier browser limitation remains. All source and generated pages updated locally; no push/deployment requested this session. Existing release stays live until a push is requested.
+
 ## Business areas and edition deployment verified — 4 November 2026
 
 Pushed source `c09c7b3db7e3cd55efa5fd90fa384aa1c308c8e8` to main using an expected-SHA guard without force. Vercel reports **success**: https://vercel.com/riyan-10s-projects/digispine/GpP9SkkpKLn4WnkJoSMyTRK2Avhv. Release includes complete-business-solutions positioning, grouped Marketing/Development services with app development, dedicated bilingual DigiSpine.edu with course information forthcoming, and explicit single-visit Kerala Piravi replay. Build/full regression, ten-page/312-reference, package and HTTP checks passed as detailed below. Actual device/browser appearance and client course/wording review remain pending. This follow-up records the verified deployment and supersedes earlier pending/local-only entries for this revision.

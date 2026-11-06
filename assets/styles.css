@@ -26,3 +26,6 @@
 @media(prefers-reduced-motion:reduce){.vertebra::before{animation:none}}
 .button:disabled{opacity:.55;cursor:default}
 @media(max-width:800px){html:not(.js) .site-header{height:auto;padding-block:20px}html:not(.js) .navigation{position:static;padding-inline:0;border:0}html:not(.js) .menu-toggle{display:none}}
+
+/* Shared vector arrows inherit link/button colour and text size, never emoji fonts. */
+.ui-arrow{display:inline-block;width:1em;height:1em;vertical-align:-.15em;flex:0 0 auto;overflow:visible;pointer-events:none}

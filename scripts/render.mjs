@@ -1,3 +1,4 @@
+import { renderArrowIcons } from '../assets/icons.js';
 import { missing, malayalamHTML } from './localize.mjs';
 import { writeFile, mkdir } from 'node:fs/promises';
 import { renderHome } from './home.mjs';
@@ -41,8 +42,8 @@ for (const [name,title,description,content] of pages) {
   const filename=name==='home'?'index.html':`${name}.html`;
   const alternates=`<link rel="alternate" hreflang="en" href="${filename}"><link rel="alternate" hreflang="ml" href="ml/${filename}">`;
   const rendered=html.replace('</head>',alternates+'</head>');
-  await writeFile(new URL('ml/'+filename,root), malayalamHTML(rendered,filename));
-  await writeFile(new URL(name === 'home' ? 'index.html' : `${name}.html`, root), rendered);
+  await writeFile(new URL('ml/'+filename,root), renderArrowIcons(malayalamHTML(rendered,filename)));
+  await writeFile(new URL(name === 'home' ? 'index.html' : `${name}.html`, root), renderArrowIcons(rendered));
 }
 if(missing.size){console.error('Missing Malayalam:',JSON.stringify([...missing],null,2));throw Error('Incomplete translations');}
 console.log('Rendered five pages in English and Malayalam.');

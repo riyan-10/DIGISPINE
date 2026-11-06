@@ -1,3 +1,4 @@
+import { arrowIcon } from './icons.js';
 import { translate } from './translations.js';
 import { POSTER_CALLIGRAPHY as art } from './poster-calligraphy.js';
 import { DOCK_DURATION, dockFrame } from './calligraphy-layout.js';
@@ -11,7 +12,7 @@ function lettering() {
 export function createCalligraphyHero(sticky) {
   const ui=text=>translate(text,document.documentElement?.lang||'en');
   const root=document.createElement('section');root.className='festival-wish';root.tabIndex=-1;root.setAttribute('aria-label',ui('Kerala Piravi wishes from DigiSpine'));
-  root.innerHTML=`<div class="wish-backdrop" aria-hidden="true"></div><div class="wish-vignette" aria-hidden="true"></div><div class="wish-inner"><p class="wish-date">${ui('KERALA PIRAVI')} <span>·</span> 01 NOVEMBER 2026</p><h1 class="wish-heading"><span class="wish-sr" lang="ml">കേരളപ്പിറവി ആശംസകൾ</span>${lettering()}</h1><p class="wish-caption">${ui('Our land. Our pride. Our growth.')}</p><div class="wish-controls"><button type="button" class="wish-skip">${ui('Skip handwriting')}</button><button type="button" class="wish-motion" aria-pressed="false">${ui('Pause palms')}</button></div></div><a class="wish-explore" href="${document.documentElement?.lang==='ml'?'ml/index.html#home-content':'#home-content'}">${ui('Explore DigiSpine')} <span aria-hidden="true">↓</span></a>`;
+  root.innerHTML=`<div class="wish-backdrop" aria-hidden="true"></div><div class="wish-vignette" aria-hidden="true"></div><div class="wish-inner"><p class="wish-date">${ui('KERALA PIRAVI')} <span>·</span> 01 NOVEMBER 2026</p><h1 class="wish-heading"><span class="wish-sr" lang="ml">കേരളപ്പിറവി ആശംസകൾ</span>${lettering()}</h1><p class="wish-caption">${ui('Our land. Our pride. Our growth.')}</p><div class="wish-controls"><button type="button" class="wish-skip">${ui('Skip handwriting')}</button><button type="button" class="wish-motion" aria-pressed="false">${ui('Pause palms')}</button></div></div><a class="wish-explore" href="${document.documentElement?.lang==='ml'?'ml/index.html#home-content':'#home-content'}">${ui('Explore DigiSpine')} <span aria-hidden="true">${arrowIcon('down')}</span></a>`;
   sticky.append(root);
   const skip=root.querySelector('.wish-skip'),motion=root.querySelector('.wish-motion'),heading=root.querySelector('.wish-heading');
   const preference=matchMedia('(prefers-reduced-motion: reduce)');

@@ -1,5 +1,11 @@
 # Work log
 
+## 6 November 2026 — consistent vector arrows for iPhone
+
+- Replaced rendered diagonal/down/right Unicode arrows with shared inline SVG across both languages and the runtime seasonal hero.
+- Kept link text, colours, focus behavior and translation keys; added shared inline icon sizing/alignment.
+- Build/full regressions and 118-arrow/ten-page output audit passed. Local correction only; actual iPhone visual review pending, no push/deployment.
+
 ## Business areas and edition deployment verified — 4 November 2026
 
 Pushed source `c09c7b3db7e3cd55efa5fd90fa384aa1c308c8e8` to main using an expected-SHA guard without force. Vercel reports **success**: https://vercel.com/riyan-10s-projects/digispine/GpP9SkkpKLn4WnkJoSMyTRK2Avhv. Release includes complete-business-solutions positioning, grouped Marketing/Development services with app development, dedicated bilingual DigiSpine.edu with course information forthcoming, and explicit single-visit Kerala Piravi replay. Build/full regression, ten-page/312-reference, package and HTTP checks passed as detailed below. Actual device/browser appearance and client course/wording review remain pending. This follow-up records the verified deployment and supersedes earlier pending/local-only entries for this revision.
