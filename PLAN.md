@@ -6,7 +6,7 @@
 - [x] Update runtime seasonal hero arrow and shared icon alignment/colour/accessibility.
 - [x] Build/full regressions and ten-page/118-icon output audit pass; preserve URLs, scripts and translation keys.
 - [x] User authorized publishing the arrow fix; build and regression checks passed.
-- [ ] Verify GitHub/Vercel deployment and record result.
+- [x] Verify GitHub/Vercel deployment (`cf162b8`): **success**; record result.
 - [ ] Actual iPhone visual confirmation remains pending.
 
 ## Approved business areas and edition release — 4 November 2026

@@ -1,5 +1,9 @@
 # DigiSpine — project record
 
+## SVG arrow deployment verified — 6 November 2026
+
+Pushed source `cf162b8b388845a5f9e39bd09e45f959c7cda68c` to main with an expected-SHA guard and no force. Vercel reports **success**: https://vercel.com/riyan-10s-projects/digispine/FzghvZMyHXcqXKYbF6PMX8YUrk67. Inline vector arrows replace platform-font directional glyphs in both languages and the seasonal hero; full build/regression checks passed. Actual iPhone visual confirmation remains pending. This follow-up records the verified deployment and supersedes the earlier local-only status for this fix.
+
 ## Arrow fix publication authorized — 6 November 2026
 
 User explicitly requested pushing the SVG arrow correction. Final build and full regression checks pass; scope is the shared vector icon module, static pages in both languages, runtime seasonal arrow and styling plus records. Publishing through the existing main/Vercel flow; deployment verification pending.

@@ -1,5 +1,9 @@
 # Verification record — 23 October 2026
 
+## SVG arrow deployment verified — 6 November 2026
+
+Pushed source `cf162b8b388845a5f9e39bd09e45f959c7cda68c` to main with an expected-SHA guard and no force. Vercel reports **success**: https://vercel.com/riyan-10s-projects/digispine/FzghvZMyHXcqXKYbF6PMX8YUrk67. Inline vector arrows replace platform-font directional glyphs in both languages and the seasonal hero; full build/regression checks passed. Actual iPhone visual confirmation remains pending. This follow-up records the verified deployment and supersedes the earlier local-only status for this fix.
+
 ## iPhone arrow presentation — 6 November 2026
 
 Full build/check suite and diff checks pass. Additional generated-output audit finds 118 inline SVG direction icons across ten English/Malayalam pages and no remaining visible ↗/↓/→ glyphs. Each icon uses currentColor, aria-hidden and focusable=false; dist pages equal generated source. Conversion preserves Unicode inside URLs, labels, raw script and style strings; runtime calligraphy hero also uses shared SVG. Existing navigation/menu/Escape/form/language/edition/geometry/card regressions pass. No iPhone/browser visual test claimed; prior limitation remains. Not deployed.
