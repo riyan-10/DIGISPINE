@@ -1,5 +1,9 @@
 # Work log
 
+## Client showcase deployment verified — 10 November 2026
+
+Published client-name showcase source `7e39067b1a722900720f115040de1cf8f86325e6` to main without force. Vercel reports success: https://vercel.com/riyan-10s-projects/digispine/BARSWfntW2mTfev2Z4ks71ELHhjq. Build and full regressions passed. Both languages include the eight portfolio names, desktop cylinder, mobile swipe cards and static/reduced-motion controls. Actual device visual checks and authentic logo sourcing remain pending. This entry supersedes the local-only/pending release status below.
+
 ## Client showcase release authorized — 10 November 2026
 
 User requested publishing the current client-name showcase to production. Final build and full regression checks passed, including bilingual showcase controls and all ten page routes/reference checks. Publishing current names-only treatment; internet logo sourcing remains future work. Real-device visual review remains pending. Deployment result will be recorded after verification.
