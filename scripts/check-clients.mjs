@@ -41,3 +41,10 @@ for(const lang of ['en','ml']) {
  f.events.intersection([{isIntersecting:false}]);assert.ok(!f.classes.has('clients-visible'));
 }
 console.log('Client showcase checks passed: eight source names in both languages, ordering, motion toggle, mobile/static/reduced-motion, visibility and localized controls.');
+
+// Resuming from the control must work even while it retains keyboard focus.
+// A pointer resting anywhere in the large section must not silently stop rotation.
+const css = await read('assets/clients.css');
+assert.ok(!/\.clients-animated:(?:hover|focus-within)/.test(css), 'No implicit section-wide hover/focus pause');
+assert.ok(css.includes('.clients-animated:not(.clients-visible)'));
+assert.ok(css.includes('.clients-animated.clients-tab-hidden'));

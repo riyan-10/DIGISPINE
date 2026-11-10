@@ -16,8 +16,6 @@
  .clients-animated .clients-ring { position: relative; display: block; width: 260px; height: 170px; transform-style: preserve-3d; animation: clients-turn 64s linear infinite; }
  .clients-animated .client-panel { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; transform: rotateY(var(--client-angle)) translateZ(350px); box-shadow: 0 20px 60px #0003; }
  .clients-animated:not(.clients-visible) .clients-ring,
- .clients-animated:hover .clients-ring,
- .clients-animated:focus-within .clients-ring,
  .clients-animated.clients-tab-hidden .clients-ring { animation-play-state: paused; }
 }
 @media (max-width: 800px) {

@@ -1,5 +1,9 @@
 # DigiSpine — project record
 
+## Client rotation correction — 10 November 2026
+
+User reports production showcase does not rotate. Confirmed source defect: section-wide :hover and :focus-within pause rotation, including after the resume button is activated. Removed these implicit pauses; explicit View all brands/static controls, reduced motion, offscreen and hidden-tab pauses remain. Mobile remains native swipe cards as originally implemented; user device clarification pending. Build/full regression checks pass, with added guard against section-wide pause rules. Production alias HTTP request redirected to Vercel authentication, so actual live rendering was not inspected. Publishing correction under the current production-release request; deployment verification pending.
+
 ## Client showcase deployment verified — 10 November 2026
 
 Published client-name showcase source `7e39067b1a722900720f115040de1cf8f86325e6` to main without force. Vercel reports success: https://vercel.com/riyan-10s-projects/digispine/BARSWfntW2mTfev2Z4ks71ELHhjq. Build and full regressions passed. Both languages include the eight portfolio names, desktop cylinder, mobile swipe cards and static/reduced-motion controls. Actual device visual checks and authentic logo sourcing remain pending. This entry supersedes the local-only/pending release status below.
