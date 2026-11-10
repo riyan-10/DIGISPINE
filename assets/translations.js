@@ -1,5 +1,12 @@
 // Draft Malayalam translations; client language review remains pending.
 export const ML = {
+  "Our clients": "ഞങ്ങളുടെ ക്ലയന്റുകൾ",
+  "Brands we’ve grown.": "ഞങ്ങൾ വളർച്ചയിൽ പങ്കാളികളായ ബ്രാൻഡുകൾ.",
+  "Businesses we’ve worked with, across India and the UAE.": "ഇന്ത്യയിലും യുഎഇയിലും ഞങ്ങൾ പ്രവർത്തിച്ച ബിസിനസുകൾ.",
+  "Client brands": "ക്ലയന്റ് ബ്രാൻഡുകൾ",
+  "View all brands": "എല്ലാ ബ്രാൻഡുകളും കാണുക",
+  "Rotate brands": "ബ്രാൻഡുകൾ കറങ്ങട്ടെ",
+
   "(opens in a new tab)": "(പുതിയ ടാബിൽ തുറക്കും)",
   "(optional)": "(നിർബന്ധമില്ല)",
   "* Business name is required.": "* ബിസിനസിന്റെ പേര് നിർബന്ധമാണ്.",

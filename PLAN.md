@@ -1,5 +1,28 @@
 # DigiSpine implementation plan
 
+## Client showcase release authorized — 10 November 2026
+
+User requested publishing the current client-name showcase to production. Final build and full regression checks passed, including bilingual showcase controls and all ten page routes/reference checks. Publishing current names-only treatment; internet logo sourcing remains future work. Real-device visual review remains pending. Deployment result will be recorded after verification.
+
+## Client showcase local implementation — 10 November 2026
+
+- [x] User approved implementation with portfolio client names.
+- [x] Add bilingual Home showcase before testimonial: desktop cylinder, pause-on-hover/focus, static toggle, offscreen/tab pause.
+- [x] Add readable mobile swipe layout, reduced-motion grid, no-JS list and site static-motion integration.
+- [x] Build/full regression and controller tests pass; ten routes and assets return HTTP 200.
+- [ ] Review actual desktop/mobile appearance locally; client logo files and exact branch attribution remain pending.
+- [ ] Push/deploy only on request. This local implementation supersedes earlier advice-only status.
+
+## Client showcase proposal — 10 November 2026
+
+- [x] Inspect “Brands we've grown” on short portfolio page 5; confirm eight client names and absence of logo artwork.
+- [x] Recommend a readable cylindrical showcase before the Home testimonial, with restrained purple treatment.
+- [ ] Settle concept; prepare local preview with supplied names or authentic logo files when implementation is requested.
+- [ ] Confirm exact client/branch labels, including Toni & Guy; obtain logo files for logo treatment.
+- [ ] Implement both languages, mobile reading/swipe layout, pause/keyboard controls, reduced-motion static alternative and offscreen pause; validate before release.
+
+Advice only; no website implementation or push this session.
+
 ## iPhone arrow fix — 6 November 2026
 
 - [x] Inspect font-based arrows and replace visible directions with shared inline SVG after translation.

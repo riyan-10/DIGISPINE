@@ -1,5 +1,21 @@
 # DigiSpine — project record
 
+## Client showcase release authorized — 10 November 2026
+
+User requested publishing the current client-name showcase to production. Final build and full regression checks passed, including bilingual showcase controls and all ten page routes/reference checks. Publishing current names-only treatment; internet logo sourcing remains future work. Real-device visual review remains pending. Deployment result will be recorded after verification.
+
+## Client showcase implemented locally — 10 November 2026
+
+User approved proceeding with the proposed showcase. Added eight exact portfolio client names as typeset cards before the Home testimonial in both languages. Desktop progressively enhances the static list into a slow 64-second cylindrical rotation; hover/focus pauses it, View all brands restores the complete grid, and Rotate brands resumes. Small screens use readable native horizontal swipe/scroll cards. OS reduced motion and the existing site static-motion control show a grid. Animation pauses outside the viewport and in hidden tabs. No invented logos, results or client links; original source assets preserved. Authentic client logo files and exact Toni & Guy branch attribution remain pending.
+
+Verified: build/full regressions, 316 local references, new bilingual eight-name/order/controller fixtures covering mobile, reduced motion, manual static view, visibility and localized control labels; diff check; HTTP 200 for ten page routes and new CSS/JS. Updated prior content test to allow user-authorized portfolio client names while retaining exclusions for sample metrics/experience claims. No browser/device visual verification performed; actual cylindrical composition and touch/keyboard rendering remain for local review. Preview running on 127.0.0.1:4173, section #our-clients. No push or deployment requested/performed.
+
+## Client showcase concept — 10 November 2026
+
+User proposes showcasing portfolio clients through a marquee or endlessly rotating cylinder of logos, with a readable heading. Inspected short portfolio page 5 visually and extracted text: “Brands we've grown” lists eight names, but supplies no client logos. Names: Toni & Guy; L12 Salon; Surgeon's Wing Hair & Skin Clinic; Sterocs Technical Services, UAE; Mehandi Ladies Salon & Spa, UAE; Three Seconds Pageants & Events; RWEN Interiors; Renting Wheels. No case-study results are provided on this page.
+
+Proposed (not implemented): a restrained, slow cylindrical carousel before Home's customer testimonial, fixed bilingual heading, legible front-facing panels, subtle purple depth, pause control/hover/focus pause, stop offscreen and static reduced-motion view. Mobile should use a shallow arc/swipe layout or readable grid rather than tiny full-cylinder labels. Source-based typographic client names can support a local concept; authentic logo artwork is still needed for a logo version. Exact Toni & Guy branch attribution remains unresolved. No website changes, publication or deployment this session; user is discussing direction.
+
 ## SVG arrow deployment verified — 6 November 2026
 
 Pushed source `cf162b8b388845a5f9e39bd09e45f959c7cda68c` to main with an expected-SHA guard and no force. Vercel reports **success**: https://vercel.com/riyan-10s-projects/digispine/FzghvZMyHXcqXKYbF6PMX8YUrk67. Inline vector arrows replace platform-font directional glyphs in both languages and the seasonal hero; full build/regression checks passed. Actual iPhone visual confirmation remains pending. This follow-up records the verified deployment and supersedes the earlier local-only status for this fix.

@@ -1,8 +1,9 @@
+import { CLIENTS } from './clients.mjs';
 import { ML } from '../assets/translations.js';
 import { REVIEW } from './testimonial.mjs';
 const decode=s=>s.replaceAll('&amp;','&').replaceAll('&quot;','"').replaceAll('&#39;',"'").replaceAll('&lt;','<').replaceAll('&gt;','>');
 const escape=s=>s.replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;').replaceAll('>','&gt;');
-const identities=new Set(['D','DIGI','SPINE','DS','DigiSpine','Sajad Sharabil Sajad','Varkala Rental Bikes','Google Ads','Meta Ads','Google Business Profile','WhatsApp','WhatsApp: +91 9074555720','English','Edu','DigiSpine.edu','edu','© 2026 DigiSpine']);
+const identities=new Set([...CLIENTS,'D','DIGI','SPINE','DS','DigiSpine','Sajad Sharabil Sajad','Varkala Rental Bikes','Google Ads','Meta Ads','Google Business Profile','WhatsApp','WhatsApp: +91 9074555720','English','Edu','DigiSpine.edu','edu','© 2026 DigiSpine']);
 export const missing=new Set();
 function tr(raw) {
  const key=decode(raw.trim());let result=ML[key];

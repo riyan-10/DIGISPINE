@@ -18,8 +18,9 @@ for(const page of pages){
   assert.ok(page.includes(`tel:${CONTACT.telephone}`),'Supplied call route');
   assert.ok(page.includes(`https://wa.me/${CONTACT.whatsapp}`),'Supplied WhatsApp route');
   assert.ok(!/Proposed capabilities|Design concept · Draft|Enquiry delivery is not connected|These are proposed capabilities/.test(page),'Obsolete placeholder copy removed');
-  assert.ok(!/47\/100|Most chosen|Five years of experience|Toni &amp; Guy|Toni & Guy/.test(page),'No unapproved proof/sample metric claims');
+  assert.ok(!/47\/100|Most chosen|Five years of experience/.test(page),'No unapproved proof/sample metric claims');
 }
+assert.equal((home.match(/Toni &amp; Guy/g)||[]).length,1,'Portfolio client name appears once in approved showcase');
 for(const word of ['Strategy','Positioning','Intelligence','Navigation','Expansion'])assert.ok(about.includes(`<h3>${word}</h3>`));
 for(const name of ['Foundation','Growth','Scale'])assert.ok(services.includes(`<h3>${name}</h3>`));
 assert.equal((home.match(/data-chapter>/g)||[]).length,7);

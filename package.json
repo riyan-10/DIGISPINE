@@ -8,7 +8,9 @@
     "render": "node scripts/render.mjs",
     "dev": "node scripts/serve.mjs",
     "build": "node scripts/build.mjs",
-    "check": "node --check assets/app.js && node --check assets/cinema.js && node --check assets/spine-renderer.js && node scripts/check.mjs && node scripts/check-cinema.mjs && node scripts/check-content.mjs && node scripts/check-audit-ui.mjs && node scripts/check-chapters.mjs && node --check assets/festival.js && node scripts/check-festival.mjs && node scripts/check-bilingual.mjs && node scripts/check-business-edition.mjs && node --check assets/language.js && node --check assets/translations.js"
+    "check": "node --check assets/app.js && node --check assets/cinema.js && node --check assets/spine-renderer.js && node scripts/check.mjs && node scripts/check-cinema.mjs && node scripts/check-content.mjs && node scripts/check-audit-ui.mjs && node scripts/check-chapters.mjs && node --check assets/festival.js && node scripts/check-festival.mjs && node scripts/check-bilingual.mjs && node scripts/check-business-edition.mjs && node --check assets/language.js && node --check assets/translations.js && node scripts/check-clients.mjs"
   },
-  "engines": { "node": "24.x" }
+  "engines": {
+    "node": "24.x"
+  }
 }

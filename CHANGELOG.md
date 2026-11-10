@@ -1,5 +1,21 @@
 # Work log
 
+## Client showcase release authorized — 10 November 2026
+
+User requested publishing the current client-name showcase to production. Final build and full regression checks passed, including bilingual showcase controls and all ten page routes/reference checks. Publishing current names-only treatment; internet logo sourcing remains future work. Real-device visual review remains pending. Deployment result will be recorded after verification.
+
+## 10 November 2026 — local client showcase
+
+- Added eight portfolio client names before Home testimonial in English/Malayalam.
+- Added desktop cylindrical rotation, readable mobile swipe cards, static/reduced-motion alternatives, keyboard-focus/hover and offscreen/tab pausing.
+- Build/full regressions and new controller fixtures passed; local preview HTTP checks passed. Actual device visual review pending; no publication.
+
+## 10 November 2026 — client showcase consultation
+
+- Visually checked short portfolio page 5: eight named brands, no client logos supplied on that page.
+- Recorded proposed slow cylindrical showcase before Home testimonial, mobile/readability and motion controls, and missing authentic logo/branch details.
+- Documentation only; website unchanged, no build needed or deployment performed.
+
 ## SVG arrow deployment verified — 6 November 2026
 
 Pushed source `cf162b8b388845a5f9e39bd09e45f959c7cda68c` to main with an expected-SHA guard and no force. Vercel reports **success**: https://vercel.com/riyan-10s-projects/digispine/FzghvZMyHXcqXKYbF6PMX8YUrk67. Inline vector arrows replace platform-font directional glyphs in both languages and the seasonal hero; full build/regression checks passed. Actual iPhone visual confirmation remains pending. This follow-up records the verified deployment and supersedes the earlier local-only status for this fix.

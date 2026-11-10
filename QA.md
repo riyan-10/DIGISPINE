@@ -1,5 +1,13 @@
 # Verification record — 23 October 2026
 
+## Client showcase release authorized — 10 November 2026
+
+User requested publishing the current client-name showcase to production. Final build and full regression checks passed, including bilingual showcase controls and all ten page routes/reference checks. Publishing current names-only treatment; internet logo sourcing remains future work. Real-device visual review remains pending. Deployment result will be recorded after verification.
+
+## Client showcase — 10 November 2026
+
+Build and full check suite pass, including eight exact portfolio names on both Home pages, section ordering, localized toggles, mobile/reduced-motion/site-static switching and viewport/tab visibility fixtures. Ten page routes plus showcase CSS/JS return HTTP 200 locally. Diff whitespace check passes. CSS defines focus outline, native keyboard-focusable horizontal scroll on mobile, hover/focus pause and a no-JS complete list. These are source/controller checks, not real browser or device rendering verification. Actual visual cylinder, touch swipe and keyboard navigation remain pending local review. No deployment.
+
 ## SVG arrow deployment verified — 6 November 2026
 
 Pushed source `cf162b8b388845a5f9e39bd09e45f959c7cda68c` to main with an expected-SHA guard and no force. Vercel reports **success**: https://vercel.com/riyan-10s-projects/digispine/FzghvZMyHXcqXKYbF6PMX8YUrk67. Inline vector arrows replace platform-font directional glyphs in both languages and the seasonal hero; full build/regression checks passed. Actual iPhone visual confirmation remains pending. This follow-up records the verified deployment and supersedes the earlier local-only status for this fix.
